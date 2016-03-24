@@ -1,0 +1,17 @@
+{
+  "name": "templater",
+  "authors": [
+    "Scott Davis <stdavis@utah.gov>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "dojo": "~1.11.0",
+    "bootstrap": "~3.3.6",
+    "dijit": "~1.11.0"
+  }
+}
