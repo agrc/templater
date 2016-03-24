@@ -2,6 +2,7 @@ require({
     packages: [
         'app',
         'dojo',
-        'dijit'
+        'dijit',
+        'lodash'
     ]
 });

@@ -12,6 +12,7 @@
   "dependencies": {
     "dojo": "~1.11.0",
     "bootstrap": "~3.3.6",
-    "dijit": "~1.11.0"
+    "dijit": "~1.11.0",
+    "lodash": "~4.6.1"
   }
 }
