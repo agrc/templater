@@ -1,0 +1,37 @@
+<div>
+    <div class="container-fluid">
+        <h1>Generate New Post</h1>
+        <div class="row">
+            <div class="col-md-4 input">
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class='form-control' data-dojo-attach-point='title'>
+                </div>
+                <div class="panel panel-default">
+                    <div class='panel-heading'>Author</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label>Display Name</label>
+                            <input type="text" class='form-control' data-dojo-attach-point='display_name'>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class='form-control' data-dojo-attach-point='email'>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-lg btn-block"
+                    data-dojo-attach-event='click: generate'>Generate</button>
+            </div>
+            <div class="col-md-8">
+                <div class="form-group">
+                    <label>File name</label>
+                    <input type="text" class="form-control" data-dojo-attach-point='fileName'>
+                </div>
+                <textarea id="" rows="15" class='form-control'
+                    data-dojo-attach-point='output'
+                ></textarea>
+            </div>
+        </div>
+    </div>
+</div>
