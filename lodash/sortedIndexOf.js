@@ -1,2 +1,2 @@
 //>>built
-define("lodash/sortedIndexOf",["./_baseSortedIndex","./eq"],function(e,t){function i(i,a){var o=i?i.length:0;if(o){var r=e(i,a);if(o>r&&t(i[r],a))return r}return-1}return i});//# sourceMappingURL=sortedIndexOf.js.map
+define("lodash/sortedIndexOf",["./_baseSortedIndex","./eq"],function(e,t){function i(i,a){var r=i?i.length:0;if(r){var o=e(i,a);if(r>o&&t(i[o],a))return o}return-1}return i});//# sourceMappingURL=sortedIndexOf.js.map

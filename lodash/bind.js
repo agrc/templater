@@ -1,2 +1,2 @@
 //>>built
-define("lodash/bind",["./_createWrapper","./_getPlaceholder","./_replaceHolders","./rest"],function(e,t,i,r){var o=1,n=32,a=r(function(r,s,d){var l=o;if(d.length){var u=i(d,t(a));l|=n}return e(r,l,s,d,u)});return a.placeholder={},a});//# sourceMappingURL=bind.js.map
+define("lodash/bind",["./_createWrapper","./_getPlaceholder","./_replaceHolders","./rest"],function(e,t,i,r){var o=1,a=32,n=r(function(r,s,l){var d=o;if(l.length){var u=i(l,t(n));d|=a}return e(r,d,s,l,u)});return n.placeholder={},n});//# sourceMappingURL=bind.js.map
