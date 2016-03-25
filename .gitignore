@@ -1,7 +1,10 @@
 .grunt/
+dist/
 node_modules/
-src/bootstrap/
+src/bootstrap-css-only/
 src/dijit/
 src/dojo/
+src/dojox/
 src/jquery/
 src/lodash/
+src/util/

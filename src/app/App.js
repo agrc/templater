@@ -7,7 +7,7 @@ define([
     'dojo/_base/declare',
     'dojo/_base/lang',
 
-    'lodash/lodash'
+    'lodash/kebabCase'
 ], function (
     _TemplatedMixin,
     _WidgetBase,
@@ -17,7 +17,7 @@ define([
     declare,
     lang,
 
-    _
+    kebabCase
 ) {
     var storageToken = 'templater_token';
     var persistData = ['display_name', 'email'];
@@ -87,7 +87,7 @@ define([
             console.log('app.App:getFileNameString', arguments);
 
             var dateString = date.toISOString().split('T')[0];
-            return dateString + '-' + _.kebabCase(title) + '.md';
+            return dateString + '-' + kebabCase(title) + '.md';
         }
     });
 });

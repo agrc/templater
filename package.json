@@ -18,6 +18,14 @@
   "homepage": "https://github.com/agrc/templater#readme",
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-gh-pages": "^1.0.0"
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-dojo": "^1.1.1",
+    "grunt-gh-pages": "^1.0.0",
+    "grunt-processhtml": "^0.3.13",
+    "load-grunt-tasks": "^3.4.1",
+    "uglify-js": "^2.6.2"
+  },
+  "dependencies": {
+    "lodash-amd": "^4.6.1"
   }
 }

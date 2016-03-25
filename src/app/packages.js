@@ -1,8 +1,12 @@
 require({
     packages: [
         'app',
-        'dojo',
         'dijit',
-        'lodash'
+        'dojo',
+        'dojox',
+        {
+            name: 'lodash',
+            location: '../node_modules/lodash-amd'
+        }
     ]
 });

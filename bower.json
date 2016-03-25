@@ -10,9 +10,10 @@
   "homepage": "",
   "private": true,
   "dependencies": {
-    "dojo": "~1.11.0",
-    "bootstrap": "~3.3.6",
-    "dijit": "~1.11.0",
-    "lodash": "~4.6.1"
+    "dijit": "~1.11",
+    "dojo": "~1.11",
+    "dojox": "1.11",
+    "util": "dojo-util#1.11",
+    "bootstrap-css-only": "~3.3.6"
   }
 }
