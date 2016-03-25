@@ -87,8 +87,7 @@ define([
             console.log('app.App:getFileNameString', arguments);
 
             var dateString = date.toISOString().split('T')[0];
-            var txt = dateString + '-' + _.snakeCase(title, '-') + '.md';
-            return txt.replace('_', '-');
+            return dateString + '-' + _.kebabCase(title) + '.md';
         }
     });
 });
