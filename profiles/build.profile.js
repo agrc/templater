@@ -42,6 +42,7 @@ var profile = {
             }
         }
     ],
+    files: ['.nojekyll'],
     userConfig: {
         packages: ['app', 'dojo', 'dijit', 'dojox', 'lodash']
     }
