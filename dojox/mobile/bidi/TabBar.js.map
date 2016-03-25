@@ -1,0 +1,1 @@
+{"version":3,"sources":["TabBar.js.uncompressed.js"],"names":["define","declare","common","_setTextDirAttr","textDir","this","_created","_set","setTextDirForButtons"],"mappings":";AAAAA,OAAO,4BACN,qBACA,YACE,SAASC,EAASC,GAKpB,MAAOD,GAAQ,MAOdE,gBAAiB,SAAoBC,GAChCC,KAAKC,UAAYD,KAAKD,UAAYA,IACrCC,KAAKE,KAAK,UAAWH,GACrBF,EAAOM,qBAAqBH","file":"TabBar.js.uncompressed.js"}

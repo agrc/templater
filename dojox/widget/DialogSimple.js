@@ -1,0 +1,2 @@
+//>>built
+define("dojox/widget/DialogSimple",["dojo/_base/declare","dijit/Dialog","dojox/layout/ContentPane"],function(e,t,i){return e("dojox.widget.DialogSimple",[i,t._DialogBase],{})});//# sourceMappingURL=DialogSimple.js.map

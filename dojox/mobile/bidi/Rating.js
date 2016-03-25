@@ -1,0 +1,2 @@
+//>>built
+define("dojox/mobile/bidi/Rating",["dojo/_base/declare","dojo/dom-style","../_css3"],function(e,t,i){return e(null,{_setCustomTransform:function(e){return t.set(e,i.add({"float":"right"},{transform:"scaleX(-1)"})),e}})});//# sourceMappingURL=Rating.js.map

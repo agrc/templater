@@ -1,0 +1,2 @@
+//>>built
+define("lodash/bind",["./_createWrapper","./_getPlaceholder","./_replaceHolders","./rest"],function(e,t,i,o){var n=1,a=32,r=o(function(o,s,d){var l=n;if(d.length){var u=i(d,t(r));l|=a}return e(o,l,s,d,u)});return r.placeholder={},r});//# sourceMappingURL=bind.js.map

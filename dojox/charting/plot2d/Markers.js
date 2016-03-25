@@ -1,0 +1,2 @@
+//>>built
+define("dojox/charting/plot2d/Markers",["dojo/_base/declare","./Default"],function(e,t){return e("dojox.charting.plot2d.Markers",t,{constructor:function(){this.opt.markers=!0}})});//# sourceMappingURL=Markers.js.map

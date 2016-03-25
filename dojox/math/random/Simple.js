@@ -1,0 +1,2 @@
+//>>built
+define("dojox/math/random/Simple",["dojo"],function(e){return e.declare("dojox.math.random.Simple",null,{destroy:function(){},nextBytes:function(e){for(var t=0,i=e.length;i>t;++t)e[t]=Math.floor(256*Math.random())}})});//# sourceMappingURL=Simple.js.map

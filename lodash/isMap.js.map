@@ -1,0 +1,1 @@
+{"version":3,"sources":["isMap.js.uncompressed.js"],"names":["define","getTag","isObjectLike","isMap","value","mapTag"],"mappings":";AAAAA,OAAO,gBAAiB,YAAa,kBAAmB,SAASC,EAAQC,GAqBvE,QAASC,GAAMC,GACb,MAAOF,GAAaE,IAAUH,EAAOG,IAAUC,EAnBjD,GAAIA,GAAS,cAsBb,OAAOF","file":"isMap.js.uncompressed.js"}

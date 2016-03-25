@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_baseOrderBy",["./_arrayMap","./_baseIteratee","./_baseMap","./_baseSortBy","./_compareMultiple"],function(e,t,i,a,o){function r(r,n,s){var l=-1;n=e(n.length?n:Array(1),t);var d=i(r,function(t,i,a){var o=e(n,function(e){return e(t)});return{criteria:o,index:++l,value:t}});return a(d,function(e,t){return o(e,t,s)})}return r});//# sourceMappingURL=_baseOrderBy.js.map

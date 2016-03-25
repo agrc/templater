@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_escapeStringChar",[],function(){function e(e){return"\\"+t[e]}var t={"\\":"\\","'":"'","\n":"n","\r":"r","\u2028":"u2028","\u2029":"u2029"};return e});//# sourceMappingURL=_escapeStringChar.js.map

@@ -1,0 +1,2 @@
+//>>built
+define("dojox/dtl/filter/logic",["dojo/_base/lang","../_base"],function(e,t){var a=e.getObject("filter.logic",!0,t);return e.mixin(a,{default_:function(e,t){return e||t||""},default_if_none:function(e,t){return null===e?t||"":e||""},divisibleby:function(e,t){return parseInt(e,10)%parseInt(t,10)===0},_yesno:/\s*,\s*/g,yesno:function(e,t){t||(t="yes,no,maybe");var a=t.split(dojox.dtl.filter.logic._yesno);return a.length<2?e:e?a[0]:!e&&null!==e||a.length<3?a[1]:a[2]}}),a});//# sourceMappingURL=logic.js.map

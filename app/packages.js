@@ -1,8 +1,2 @@
-require({
-    packages: [
-        'app',
-        'dojo',
-        'dijit',
-        'lodash'
-    ]
-});
+//>>built
+define("app/packages",["dojo","dijit","dojox"],function(o,d,a){require({packages:["app","dijit","dojo","dojox",{name:"lodash",location:"../node_modules/lodash-amd"}]})});//# sourceMappingURL=packages.js.map

@@ -1,0 +1,1 @@
+{"version":3,"sources":["negate.js.uncompressed.js"],"names":["define","negate","predicate","TypeError","FUNC_ERROR_TEXT","apply","this","arguments"],"mappings":";AAAAA,OAAO,mBAAqB,WAwB1B,QAASC,GAAOC,GACd,GAAwB,kBAAbA,GACT,KAAM,IAAIC,WAAUC,EAEtB,OAAO,YACL,OAAQF,EAAUG,MAAMC,KAAMC,YA1BlC,GAAIH,GAAkB,qBA8BtB,OAAOH","file":"negate.js.uncompressed.js"}

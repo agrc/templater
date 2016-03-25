@@ -1,0 +1,2 @@
+//>>built
+define("dojox/mobile/uacss",["dojo/_base/kernel","dojo/_base/lang","dojo/_base/window","./sniff"],function(e,t,i,a){var n=i.doc.documentElement;return n.className=t.trim(n.className+" "+[a("bb")?"dj_bb":"",a("android")?"dj_android":"",a("ios")?"dj_ios":"",a("ios")>=6?"dj_ios6":"",a("ios")?"dj_iphone":"",a("ipod")?"dj_ipod":"",a("ipad")?"dj_ipad":"",a("ie")?"dj_ie":""].join(" ").replace(/ +/g," ")),e});//# sourceMappingURL=uacss.js.map

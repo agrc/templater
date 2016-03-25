@@ -1,0 +1,2 @@
+//>>built
+define("dojox/widget/gauge/AnalogArrowIndicator",["dojo","dijit","dojox","dojo/require!dojox/gauges/AnalogArrowIndicator"],function(e,t,i){e.provide("dojox.widget.gauge.AnalogArrowIndicator"),e.require("dojox.gauges.AnalogArrowIndicator"),i.widget.gauge.AnalogArrowIndicator=i.gauges.AnalogArrowIndicator});//# sourceMappingURL=AnalogArrowIndicator.js.map

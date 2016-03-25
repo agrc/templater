@@ -1,0 +1,1 @@
+{"version":3,"sources":["throttle.js.uncompressed.js"],"names":["define","cb","wait","canrun","apply","this","arguments","setTimeout"],"mappings":";AAAAA,OAAO,mBAAqB,WAM3B,MAAO,UAASC,EAAIC,GAYnB,GAAIC,IAAS,CACb,OAAO,YACFA,IAGJA,GAAS,EACTF,EAAGG,MAAMC,KAAMC,WACfC,WAAW,WACVJ,GAAS,GACPD","file":"throttle.js.uncompressed.js"}

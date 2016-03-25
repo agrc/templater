@@ -1,0 +1,1 @@
+{"version":3,"sources":["_createCompounder.js.uncompressed.js"],"names":["define","arrayReduce","deburr","words","createCompounder","callback","string"],"mappings":";AAAAA,OAAO,4BAA6B,iBAAkB,WAAY,WAAY,SAASC,EAAaC,EAAQC,GAS1G,QAASC,GAAiBC,GACxB,MAAO,UAASC,GACd,MAAOL,GAAYE,EAAMD,EAAOI,IAAUD,EAAU,KAIxD,MAAOD","file":"_createCompounder.js.uncompressed.js"}

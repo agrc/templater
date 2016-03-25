@@ -1,0 +1,1 @@
+{"version":3,"sources":["_isPrototype.js.uncompressed.js"],"names":["define","isPrototype","value","Ctor","constructor","proto","prototype","objectProto","Object"],"mappings":";AAAAA,OAAO,yBAA2B,WAYhC,QAASC,GAAYC,GACnB,GAAIC,GAAOD,GAASA,EAAME,YACtBC,EAAwB,kBAARF,IAAsBA,EAAKG,WAAcC,CAE7D,OAAOL,KAAUG,EAbnB,GAAIE,GAAcC,OAAOF,SAgBzB,OAAOL","file":"_isPrototype.js.uncompressed.js"}

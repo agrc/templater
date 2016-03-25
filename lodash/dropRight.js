@@ -1,0 +1,2 @@
+//>>built
+define("lodash/dropRight",["./_baseSlice","./toInteger"],function(e,t){function i(i,r,o){var n=i?i.length:0;return n?(r=o||r===a?1:t(r),r=n-r,e(i,0,0>r?0:r)):[]}var a;return i});//# sourceMappingURL=dropRight.js.map

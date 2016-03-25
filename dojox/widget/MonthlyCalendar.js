@@ -1,0 +1,2 @@
+//>>built
+define("dojox/widget/MonthlyCalendar",["dojo/_base/declare","./_CalendarBase","./_CalendarMonth"],function(e,t,i){return e("dojox.widget.MonthlyCalendar",[t,i],{_makeDate:function(e){var t=new Date;return t.setMonth(e),t}})});//# sourceMappingURL=MonthlyCalendar.js.map

@@ -1,0 +1,2 @@
+//>>built
+define("lodash/memoize",["./_MapCache"],function(e){function t(e,a){if("function"!=typeof e||a&&"function"!=typeof a)throw new TypeError(i);var n=function(){var t=arguments,i=a?a.apply(this,t):t[0],o=n.cache;if(o.has(i))return o.get(i);var r=e.apply(this,t);return n.cache=o.set(i,r),r};return n.cache=new t.Cache,n}var i="Expected a function";return t.Cache=e,t});//# sourceMappingURL=memoize.js.map

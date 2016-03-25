@@ -1,12 +1,2 @@
-define(["../_base/declare", "./Source"], function(declare, Source){
-	return declare("dojo.dnd.AutoSource", Source, {
-		// summary:
-		//		a source that syncs its DnD nodes by default
-
-		constructor: function(/*===== node, params =====*/){
-			// summary:
-			//		constructor of the AutoSource --- see the Source constructor for details
-			this.autoSync = true;
-		}
-	});
-});
+//>>built
+define("dojo/dnd/AutoSource",["../_base/declare","./Source"],function(e,t){return e("dojo.dnd.AutoSource",t,{constructor:function(){this.autoSync=!0}})});//# sourceMappingURL=AutoSource.js.map

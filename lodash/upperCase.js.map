@@ -1,0 +1,1 @@
+{"version":3,"sources":["upperCase.js.uncompressed.js"],"names":["define","createCompounder","upperCase","result","word","index","toUpperCase"],"mappings":";AAAAA,OAAO,oBAAqB,uBAAwB,SAASC,GAqB3D,GAAIC,GAAYD,EAAiB,SAASE,EAAQC,EAAMC,GACtD,MAAOF,IAAUE,EAAQ,IAAM,IAAMD,EAAKE,eAG5C,OAAOJ","file":"upperCase.js.uncompressed.js"}

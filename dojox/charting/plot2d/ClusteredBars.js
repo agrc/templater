@@ -1,0 +1,2 @@
+//>>built
+define("dojox/charting/plot2d/ClusteredBars",["dojo/_base/declare","dojo/_base/array","./Bars","./common"],function(e,t,a,i){return e("dojox.charting.plot2d.ClusteredBars",a,{getBarProperties:function(){var e=this.series.length;t.forEach(this.series,function(t){t.hidden&&e--});var a=i.calculateBarSize(this._vScaler.bounds.scale,this.opt,e);return{gap:a.gap,height:a.size,thickness:a.size}}})});//# sourceMappingURL=ClusteredBars.js.map

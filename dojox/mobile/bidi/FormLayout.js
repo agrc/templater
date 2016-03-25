@@ -1,0 +1,2 @@
+//>>built
+define("dojox/mobile/bidi/FormLayout",["dojo/_base/declare","dojo/dom-class"],function(e,t){return e(null,{buildRendering:function(){this.inherited(arguments),!this.isLeftToRight()&&this.rightAlign&&t.add(this.domNode,"mblFormLayoutRightAlignRtl")}})});//# sourceMappingURL=FormLayout.js.map

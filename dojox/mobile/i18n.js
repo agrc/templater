@@ -1,0 +1,2 @@
+//>>built
+define("dojox/mobile/i18n",["dojo/_base/lang","dojo/i18n","dijit/_WidgetBase"],function(e,t,i){var a={};return e.setObject("dojox.mobile.i18n",a),a.load=function(e,i,o){return a.registerBundle(t.getLocalization(e,i,o))},a.registerBundle=function(t){return a.bundle||(a.bundle=[]),e.mixin(a.bundle,t)},a.I18NProperties={mblNoConv:!1},e.extend(i,a.I18NProperties),e.extend(i,{_cv:function(t){return this.mblNoConv||!a.bundle?t:a.bundle[e.trim(t)]||t}}),a});//# sourceMappingURL=i18n.js.map

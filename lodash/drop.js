@@ -1,0 +1,2 @@
+//>>built
+define("lodash/drop",["./_baseSlice","./toInteger"],function(e,t){function i(i,o,n){var r=i?i.length:0;return r?(o=n||o===a?1:t(o),e(i,0>o?0:o,r)):[]}var a;return i});//# sourceMappingURL=drop.js.map

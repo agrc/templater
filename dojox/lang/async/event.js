@@ -1,0 +1,2 @@
+//>>built
+define("dojox/lang/async/event",["dojo","dijit","dojox"],function(e,t,a){e.provide("dojox.lang.async.event"),function(){var t=e,i=a.lang.async.event;i.from=function(e,a){return function(){var i,r=function(){i&&(t.disconnect(i),i=null)},n=new t.Deferred(r);return i=t.connect(e,a,function(e){r(),n.callback(e)}),n}},i.failOn=function(e,a){return function(){var i,r=function(){i&&(t.disconnect(i),i=null)},n=new t.Deferred(r);return i=t.connect(e,a,function(e){r(),n.errback(new Error(e))}),n}}}()});//# sourceMappingURL=event.js.map

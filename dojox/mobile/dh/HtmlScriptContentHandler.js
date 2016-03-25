@@ -1,0 +1,2 @@
+//>>built
+define("dojox/mobile/dh/HtmlScriptContentHandler",["dojo/_base/declare","./HtmlContentHandler","../_ExecScriptMixin"],function(e,t,i){return e("dojox.mobile.dh.HtmlScriptContentHandler",[t,i],{})});//# sourceMappingURL=HtmlScriptContentHandler.js.map

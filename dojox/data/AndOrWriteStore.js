@@ -1,0 +1,2 @@
+//>>built
+define("dojox/data/AndOrWriteStore",["dojo/_base/declare","dojo/data/ItemFileWriteStore","./AndOrReadStore"],function(e,t,a){return e("dojox.data.AndOrWriteStore",[t,a],{})});//# sourceMappingURL=AndOrWriteStore.js.map

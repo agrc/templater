@@ -1,0 +1,2 @@
+//>>built
+define("dojox/charting/themes/Adobebricks",["../SimpleTheme","./common"],function(e,t){return t.Adobebricks=new e({colors:["#7f2518","#3e170c","#cc3927","#651f0e","#8c271c"]}),t.Adobebricks});//# sourceMappingURL=Adobebricks.js.map

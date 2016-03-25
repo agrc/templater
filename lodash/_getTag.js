@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_getTag",["./_Map","./_Set","./_WeakMap"],function(e,t,i){function o(e){return h.call(e)}var a="[object Map]",r="[object Object]",n="[object Set]",s="[object WeakMap]",l=Object.prototype,d=Function.prototype.toString,h=l.toString,c=e?d.call(e):"",u=t?d.call(t):"",m=i?d.call(i):"";return(e&&o(new e)!=a||t&&o(new t)!=n||i&&o(new i)!=s)&&(o=function(e){var t=h.call(e),i=t==r?e.constructor:null,o="function"==typeof i?d.call(i):"";if(o)switch(o){case c:return a;case u:return n;case m:return s}return t}),o});//# sourceMappingURL=_getTag.js.map

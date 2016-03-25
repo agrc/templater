@@ -1,0 +1,2 @@
+//>>built
+define("dojox/charting/themes/RoyalPurples",["../SimpleTheme","./common"],function(e,t){return t.RoyalPurples=new e({colors:["#473980","#685aa7","#7970b3","#231c3f","#7267ae"]}),t.RoyalPurples});//# sourceMappingURL=RoyalPurples.js.map

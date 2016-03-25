@@ -1,0 +1,1 @@
+{"version":3,"sources":["flatMap.js.uncompressed.js"],"names":["define","baseFlatten","map","flatMap","collection","iteratee"],"mappings":";AAAAA,OAAO,kBAAmB,iBAAkB,SAAU,SAASC,EAAaC,GAsB1E,QAASC,GAAQC,EAAYC,GAC3B,MAAOJ,GAAYC,EAAIE,EAAYC,GAAW,GAGhD,MAAOF","file":"flatMap.js.uncompressed.js"}

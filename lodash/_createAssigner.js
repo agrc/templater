@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_createAssigner",["./_isIterateeCall","./rest"],function(e,t){function i(i){return t(function(t,a){var r=-1,n=a.length,s=n>1?a[n-1]:o,l=n>2?a[2]:o;for(s="function"==typeof s?(n--,s):o,l&&e(a[0],a[1],l)&&(s=3>n?o:s,n=1),t=Object(t);++r<n;){var d=a[r];d&&i(t,d,r,s)}return t})}var o;return i});//# sourceMappingURL=_createAssigner.js.map

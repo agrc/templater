@@ -1,0 +1,1 @@
+{"version":3,"sources":["split.js.uncompressed.js"],"names":["define","toString","split","string","separator","limit"],"mappings":";AAAAA,OAAO,gBAAiB,cAAe,SAASC,GAmB9C,QAASC,GAAMC,EAAQC,EAAWC,GAChC,MAAOJ,GAASE,GAAQD,MAAME,EAAWC,GAG3C,MAAOH","file":"split.js.uncompressed.js"}

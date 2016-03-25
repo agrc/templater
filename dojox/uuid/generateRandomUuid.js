@@ -1,0 +1,2 @@
+//>>built
+define("dojox/uuid/generateRandomUuid",["./_base"],function(){return dojox.uuid.generateRandomUuid=function(){function e(){for(var e=Math.floor(Math.random()%1*Math.pow(2,32)),i=e.toString(t);i.length<8;)i="0"+i;return i}var t=16,i="-",a="4",o="8",r=e(),n=e();n=n.substring(0,4)+i+a+n.substring(5,8);var s=e();s=o+s.substring(1,4)+i+s.substring(4,8);var l=e(),d=r+i+n+i+s+l;return d=d.toLowerCase()},dojox.uuid.generateRandomUuid});//# sourceMappingURL=generateRandomUuid.js.map

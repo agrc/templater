@@ -1,0 +1,1 @@
+{"version":3,"sources":["lowerCase.js.uncompressed.js"],"names":["define","createCompounder","lowerCase","result","word","index","toLowerCase"],"mappings":";AAAAA,OAAO,oBAAqB,uBAAwB,SAASC,GAqB3D,GAAIC,GAAYD,EAAiB,SAASE,EAAQC,EAAMC,GACtD,MAAOF,IAAUE,EAAQ,IAAM,IAAMD,EAAKE,eAG5C,OAAOJ","file":"lowerCase.js.uncompressed.js"}

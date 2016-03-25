@@ -1,0 +1,1 @@
+{"version":3,"sources":["BarIndicator.js.uncompressed.js"],"names":["define","dojo","dijit","dojox","provide","require","widget","gauge","BarIndicator","gauges"],"mappings":";AACAA,OAAO,mCAAoC,OAAO,QAAQ,QAAQ,0CAA2C,SAASC,EAAKC,EAAMC,GACjIF,EAAKG,QAAQ,mCACbH,EAAKI,QAAQ,6BAEbF,EAAMG,OAAOC,MAAMC,aAAeL,EAAMM,OAAOD","file":"BarIndicator.js.uncompressed.js"}

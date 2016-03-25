@@ -1,0 +1,1 @@
+{"version":3,"sources":["nthArg.js.uncompressed.js"],"names":["define","toInteger","nthArg","n","arguments"],"mappings":";AAAAA,OAAO,iBAAkB,eAAgB,SAASC,GAiBhD,QAASC,GAAOC,GAEd,MADAA,GAAIF,EAAUE,GACP,WACL,MAAOC,WAAUD,IAIrB,MAAOD","file":"nthArg.js.uncompressed.js"}

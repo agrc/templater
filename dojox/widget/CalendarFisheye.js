@@ -1,0 +1,2 @@
+//>>built
+define("dojox/widget/CalendarFisheye",["dojo/_base/declare","./Calendar","./_FisheyeFX"],function(e,t,i){return e("dojox.widget.CalendarFisheye",[t,i],{})});//# sourceMappingURL=CalendarFisheye.js.map

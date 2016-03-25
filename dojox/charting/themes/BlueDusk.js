@@ -1,0 +1,2 @@
+//>>built
+define("dojox/charting/themes/BlueDusk",["../SimpleTheme","./common"],function(e,t){return t.BlueDusk=new e({colors:["#292e76","#3e56a6","#10143f","#33449c","#798dcd"]}),t.BlueDusk});//# sourceMappingURL=BlueDusk.js.map

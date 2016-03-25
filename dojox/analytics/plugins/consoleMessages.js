@@ -1,0 +1,2 @@
+//>>built
+define("dojox/analytics/plugins/consoleMessages",["dojo/_base/lang","../_base","dojo/_base/config","dojo/aspect"],function(e,t,a,i){var r=e.getObject("dojox.analytics.plugins.consoleMessages",!0);r.addData=e.hitch(t,"addData","consoleMessages");var o=a.consoleLogFuncs||["error","warn","info","rlog"];console||(console={});for(var d=0;d<o.length;d++){var n=o[d],l=e.hitch(r,"addData",n);console[n]?i.after(console,n,l,!0):console[n]=l}return r});//# sourceMappingURL=consoleMessages.js.map

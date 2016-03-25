@@ -1,0 +1,2 @@
+//>>built
+define("dojox/charting/themes/Grasslands",["../SimpleTheme","./common"],function(e,t){return t.Grasslands=new e({colors:["#70803a","#dde574","#788062","#b1cc5d","#eff2c2"]}),t.Grasslands});//# sourceMappingURL=Grasslands.js.map

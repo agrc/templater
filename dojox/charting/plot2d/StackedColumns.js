@@ -1,0 +1,2 @@
+//>>built
+define("dojox/charting/plot2d/StackedColumns",["dojo/_base/declare","./Columns","./commonStacked"],function(e,t,a){return e("dojox.charting.plot2d.StackedColumns",t,{getSeriesStats:function(){var e=a.collectStats(this.series);return e.hmin-=.5,e.hmax+=.5,e},getValue:function(e,t,i,r){var o,d;return r?(o=t,d=a.getIndexValue(this.series,i,o)):(o=e.x-1,d=a.getValue(this.series,i,e.x),d=[d[0]?d[0].y:null,d[1]?d[1]:null]),{x:o,y:d[0],py:d[1]}}})});//# sourceMappingURL=StackedColumns.js.map

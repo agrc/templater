@@ -1,0 +1,1 @@
+{"version":3,"sources":["_cloneBuffer.js.uncompressed.js"],"names":["define","cloneBuffer","buffer","isDeep","slice","result","constructor","length","copy"],"mappings":";AAAAA,OAAO,yBAA2B,WAUhC,QAASC,GAAYC,EAAQC,GAC3B,GAAIA,EACF,MAAOD,GAAOE,OAEhB,IAAIC,GAAS,GAAIH,GAAOI,YAAYJ,EAAOK,OAE3C,OADAL,GAAOM,KAAKH,GACLA,EAGT,MAAOJ","file":"_cloneBuffer.js.uncompressed.js"}

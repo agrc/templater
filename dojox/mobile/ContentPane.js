@@ -1,0 +1,2 @@
+//>>built
+define("dojox/mobile/ContentPane",["dojo/_base/declare","./Container","./_ContentPaneMixin"],function(e,t,i){return e("dojox.mobile.ContentPane",[t,i],{baseClass:"mblContentPane"})});//# sourceMappingURL=ContentPane.js.map

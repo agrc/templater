@@ -1,0 +1,2 @@
+//>>built
+define("dojox/charting/themes/PlotKit/cyan",["./base","../../Theme"],function(e,t){return e.cyan=e.base.clone(),e.cyan.chart.fill=e.cyan.plotarea.fill="#e6f1f5",e.cyan.colors=t.defineColors({hue:194,saturation:60,low:40,high:88}),e.cyan});//# sourceMappingURL=cyan.js.map

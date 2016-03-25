@@ -1,0 +1,1 @@
+{"version":3,"sources":["isSafeInteger.js.uncompressed.js"],"names":["define","isInteger","isSafeInteger","value","MAX_SAFE_INTEGER"],"mappings":";AAAAA,OAAO,wBAAyB,eAAgB,SAASC,GA8BvD,QAASC,GAAcC,GACrB,MAAOF,GAAUE,IAAUA,IAAUC,GAA6BA,GAATD,EA5B3D,GAAIC,GAAmB,gBA+BvB,OAAOF","file":"isSafeInteger.js.uncompressed.js"}

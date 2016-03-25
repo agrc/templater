@@ -1,0 +1,1 @@
+{"version":3,"sources":["startCase.js.uncompressed.js"],"names":["define","capitalize","createCompounder","startCase","result","word","index"],"mappings":";AAAAA,OAAO,oBAAqB,eAAgB,uBAAwB,SAASC,EAAYC,GAqBvF,GAAIC,GAAYD,EAAiB,SAASE,EAAQC,EAAMC,GACtD,MAAOF,IAAUE,EAAQ,IAAM,IAAML,EAAWI,IAGlD,OAAOF","file":"startCase.js.uncompressed.js"}

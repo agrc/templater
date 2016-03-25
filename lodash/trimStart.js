@@ -1,0 +1,2 @@
+//>>built
+define("lodash/trimStart",["./_charsStartIndex","./_stringToArray","./toString"],function(e,t,i){function a(a,r,s){if(a=i(a),!a)return a;if(s||r===o)return a.replace(n,"");if(r+="",!r)return a;var d=t(a);return d.slice(e(d,t(r))).join("")}var o,n=/^\s+/;return a});//# sourceMappingURL=trimStart.js.map

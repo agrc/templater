@@ -1,0 +1,2 @@
+//>>built
+define("dojox/lang/aspect/memoizerGuard",["dojo","dijit","dojox"],function(e,t,i){e.provide("dojox.lang.aspect.memoizerGuard"),function(){var t=i.lang.aspect,a=function(i){var a,n=t.getContext().instance;(a=n.__memoizerCache)&&(0==arguments.length?delete n.__memoizerCache:e.isArray(i)?e.forEach(i,function(e){delete a[e]}):delete a[i])};t.memoizerGuard=function(e){return{after:function(){a(e)}}}}()});//# sourceMappingURL=memoizerGuard.js.map

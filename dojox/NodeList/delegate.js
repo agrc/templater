@@ -1,0 +1,2 @@
+//>>built
+define("dojox/NodeList/delegate",["dojo/_base/lang","dojo/query","dojo/_base/NodeList","dojo/NodeList-traverse"],function(e,t){var a=t.NodeList;return e.extend(a,{delegate:function(e,a,i){return this.connect(a,function(a){var r=t(a.target).closest(e,this);r.length&&i.call(r[0],a)})}}),a});//# sourceMappingURL=delegate.js.map

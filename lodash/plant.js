@@ -1,0 +1,2 @@
+//>>built
+define("lodash/plant",["./_baseLodash","./_wrapperClone"],function(e,t){function i(i){for(var o,r=this;r instanceof e;){var n=t(r);n.__index__=0,n.__values__=a,o?s.__wrapped__=n:o=n;var s=n;r=r.__wrapped__}return s.__wrapped__=i,o}var a;return i});//# sourceMappingURL=plant.js.map

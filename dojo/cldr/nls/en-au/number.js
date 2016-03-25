@@ -1,7 +1,2 @@
-define(
-//begin v1.x content
-{
-	"currencyFormat": "¤#,##0.00"
-}
-//end v1.x content
-);
+//>>built
+define("dojo/cldr/nls/en-au/number",{currencyFormat:"¤#,##0.00"});//# sourceMappingURL=number.js.map

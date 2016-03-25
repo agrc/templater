@@ -1,0 +1,1 @@
+{"version":3,"sources":["methodOf.js.uncompressed.js"],"names":["define","baseInvoke","rest","methodOf","object","args","path"],"mappings":";AAAAA,OAAO,mBAAoB,gBAAiB,UAAW,SAASC,EAAYC,GAwB1E,GAAIC,GAAWD,EAAK,SAASE,EAAQC,GACnC,MAAO,UAASC,GACd,MAAOL,GAAWG,EAAQE,EAAMD,KAIpC,OAAOF","file":"methodOf.js.uncompressed.js"}

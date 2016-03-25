@@ -1,0 +1,2 @@
+//>>built
+define("dojox/widget/_FisheyeFX",["dojo/_base/declare","dojo/query","./FisheyeLite"],function(e,t,i){return e("dojox.widget._FisheyeFX",null,{addFx:function(e,a){t(e,a).forEach(function(e){new i({properties:{fontSize:1.1}},e)})}})});//# sourceMappingURL=_FisheyeFX.js.map

@@ -1,0 +1,2 @@
+//>>built
+define("dojox/mobile/Video",["dojo/_base/declare","dojo/sniff","./Audio"],function(e,t,i){return e("dojox.mobile.Video",i,{width:"200px",height:"150px",_tag:"video",_getEmbedRegExp:function(){return t("ff")?/video\/mp4/i:t("ie")>=9?/video\/webm/i:null}})});//# sourceMappingURL=Video.js.map

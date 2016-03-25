@@ -1,0 +1,1 @@
+{"version":3,"sources":["isInteger.js.uncompressed.js"],"names":["define","toInteger","isInteger","value"],"mappings":";AAAAA,OAAO,oBAAqB,eAAgB,SAASC,GA0BnD,QAASC,GAAUC,GACjB,MAAuB,gBAATA,IAAqBA,GAASF,EAAUE,GAGxD,MAAOD","file":"isInteger.js.uncompressed.js"}

@@ -1,0 +1,2 @@
+//>>built
+define("dojox/dtl/render/html",["dojo/_base/lang","../render/dom","../_base"],function(e,t,a){var i=e.getObject("render.html",!0,a);return i.Render=t.Render,i});//# sourceMappingURL=html.js.map

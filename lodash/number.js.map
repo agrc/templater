@@ -1,0 +1,1 @@
+{"version":3,"sources":["number.js.uncompressed.js"],"names":["define","clamp","inRange","random"],"mappings":";AAAAA,OAAO,iBAAkB,UAAW,YAAa,YAAa,SAASC,EAAOC,EAASC,GACrF,OACEF,MAASA,EACTC,QAAWA,EACXC,OAAUA","file":"number.js.uncompressed.js"}

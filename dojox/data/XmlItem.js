@@ -1,0 +1,2 @@
+//>>built
+define("dojox/data/XmlItem",["dojo/_base/declare"],function(e){return e("dojox.data.XmlItem",null,{constructor:function(e,t,i){this.element=e,this.store=t,this.q=i},toString:function(){var e="";if(this.element)for(var t=0;t<this.element.childNodes.length;t++){var i=this.element.childNodes[t];3!==i.nodeType&&4!==i.nodeType||(e+=i.nodeValue)}return e}})});//# sourceMappingURL=XmlItem.js.map

@@ -1,0 +1,2 @@
+//>>built
+define("lodash/before",["./toInteger"],function(e){function t(t,a){var r;if("function"!=typeof a)throw new TypeError(o);return t=e(t),function(){return--t>0&&(r=a.apply(this,arguments)),1>=t&&(a=i),r}}var i,o="Expected a function";return t});//# sourceMappingURL=before.js.map

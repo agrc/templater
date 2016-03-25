@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_createCaseFirst",["./_stringToArray","./toString"],function(e,t){function i(i){return function(o){o=t(o);var n=d.test(o)?e(o):a,r=n?n[0]:o.charAt(0),s=n?n.slice(1).join(""):o.slice(1);return r[i]()+s}}var a,o="\\ud800-\\udfff",n="\\u0300-\\u036f\\ufe20-\\ufe23",r="\\u20d0-\\u20f0",s="\\ufe0e\\ufe0f",l="\\u200d",d=RegExp("["+l+o+n+r+s+"]");return i});//# sourceMappingURL=_createCaseFirst.js.map

@@ -1,0 +1,2 @@
+//>>built
+define("dojox/lang/async/timeout",["dojo","dijit","dojox"],function(e,t,i){e.provide("dojox.lang.async.timeout"),function(){var t=e,a=i.lang.async.timeout;a.from=function(e){return function(){var i,a=function(){i&&(clearTimeout(i),i=null)},n=new t.Deferred(a);return i=setTimeout(function(){a(),n.callback(e)},e),n}},a.failOn=function(e){return function(){var i,a=function(){i&&(clearTimeout(i),i=null)},n=new t.Deferred(a);return i=setTimeout(function(){a(),n.errback(e)},e),n}}}()});//# sourceMappingURL=timeout.js.map

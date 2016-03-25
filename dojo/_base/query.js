@@ -1,13 +1,2 @@
-define(["../query", "./NodeList"], function(query){
-	// module:
-	//		dojo/_base/query
-
-	/*=====
-	return {
-		// summary:
-		//		Deprecated.   Use dojo/query instead.
-	};
-	=====*/
-
-	return query;
-});
+//>>built
+define("dojo/_base/query",["../query","./NodeList"],function(e){return e});//# sourceMappingURL=query.js.map

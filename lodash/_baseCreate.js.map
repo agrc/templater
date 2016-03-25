@@ -1,0 +1,1 @@
+{"version":3,"sources":["_baseCreate.js.uncompressed.js"],"names":["define","isObject","baseCreate","proto","objectCreate","Object","create"],"mappings":";AAAAA,OAAO,sBAAuB,cAAe,SAASC,GAapD,QAASC,GAAWC,GAClB,MAAOF,GAASE,GAASC,EAAaD,MAXxC,GAAIC,GAAeC,OAAOC,MAc1B,OAAOJ","file":"_baseCreate.js.uncompressed.js"}

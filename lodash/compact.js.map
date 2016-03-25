@@ -1,0 +1,1 @@
+{"version":3,"sources":["compact.js.uncompressed.js"],"names":["define","compact","array","index","length","resIndex","result","value"],"mappings":";AAAAA,OAAO,oBAAsB,WAgB3B,QAASC,GAAQC,GAMf,IALA,GAAIC,GAAQ,GACRC,EAASF,EAAQA,EAAME,OAAS,EAChCC,EAAW,EACXC,OAEKH,EAAQC,GAAQ,CACvB,GAAIG,GAAQL,EAAMC,EACdI,KACFD,EAAOD,KAAcE,GAGzB,MAAOD,GAGT,MAAOL","file":"compact.js.uncompressed.js"}

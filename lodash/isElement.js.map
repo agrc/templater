@@ -1,0 +1,1 @@
+{"version":3,"sources":["isElement.js.uncompressed.js"],"names":["define","isObjectLike","isPlainObject","isElement","value","nodeType"],"mappings":";AAAAA,OAAO,oBAAqB,iBAAkB,mBAAoB,SAASC,EAAcC,GAkBvF,QAASC,GAAUC,GACjB,QAASA,GAA4B,IAAnBA,EAAMC,UAAkBJ,EAAaG,KAAWF,EAAcE,GAGlF,MAAOD","file":"isElement.js.uncompressed.js"}

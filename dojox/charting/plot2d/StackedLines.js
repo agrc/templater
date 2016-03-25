@@ -1,0 +1,2 @@
+//>>built
+define("dojox/charting/plot2d/StackedLines",["dojo/_base/declare","./Stacked"],function(e,t){return e("dojox.charting.plot2d.StackedLines",t,{constructor:function(){this.opt.lines=!0}})});//# sourceMappingURL=StackedLines.js.map

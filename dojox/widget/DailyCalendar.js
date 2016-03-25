@@ -1,0 +1,2 @@
+//>>built
+define("dojox/widget/DailyCalendar",["dojo/_base/declare","./_CalendarBase","./_CalendarDay"],function(e,t,i){return e("dojox.widget.DailyCalendar",[t,i],{_makeDate:function(e){var t=new Date;return t.setDate(e),t}})});//# sourceMappingURL=DailyCalendar.js.map

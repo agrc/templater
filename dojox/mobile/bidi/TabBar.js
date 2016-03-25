@@ -1,0 +1,2 @@
+//>>built
+define("dojox/mobile/bidi/TabBar",["dojo/_base/declare","./common"],function(e,t){return e(null,{_setTextDirAttr:function(e){this._created&&this.textDir===e||(this._set("textDir",e),t.setTextDirForButtons(this))}})});//# sourceMappingURL=TabBar.js.map

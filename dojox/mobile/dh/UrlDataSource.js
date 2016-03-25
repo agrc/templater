@@ -1,0 +1,2 @@
+//>>built
+define("dojox/mobile/dh/UrlDataSource",["dojo/_base/declare","dojo/_base/lang","dojo/_base/xhr"],function(e,t,i){return e("dojox.mobile.dh.UrlDataSource",null,{text:"",_url:"",constructor:function(e){this._url=e},getData:function(){var e=i.get({url:this._url,handleAs:"text"});return e.addCallback(t.hitch(this,function(e,t){this.text=e})),e.addErrback(function(e){}),e}})});//# sourceMappingURL=UrlDataSource.js.map

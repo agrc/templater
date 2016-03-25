@@ -1,0 +1,2 @@
+//>>built
+define("lodash/concat",["./_arrayConcat","./_baseFlatten","./isArray","./rest"],function(e,t,i,a){var n=a(function(a,n){return i(a)||(a=null==a?[]:[Object(a)]),n=t(n,1),e(a,n)});return n});//# sourceMappingURL=concat.js.map

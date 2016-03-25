@@ -1,0 +1,2 @@
+//>>built
+define("dojox/widget/rotator/Fade",["dojo/_base/lang","dojo/_base/fx","dojo/dom-style","dojo/fx"],function(e,t,i,o){function n(n,a){var r=n.next.node;return i.set(r,{display:"",opacity:0}),n.node=n.current.node,o[a]([t.fadeOut(n),t.fadeIn(e.mixin(n,{node:r}))])}var a={fade:function(e){return n(e,"chain")},crossFade:function(e){return n(e,"combine")}};return e.mixin(e.getObject("dojox.widget.rotator"),a),a});//# sourceMappingURL=Fade.js.map

@@ -1,0 +1,2 @@
+//>>built
+define("dojox/lang/aspect/timer",["dojo","dijit","dojox"],function(e,t,i){e.provide("dojox.lang.aspect.timer"),function(){var t=i.lang.aspect,a=0,r=function(e){this.name=e||"DojoAopTimer #"+ ++a,this.inCall=0};e.extend(r,{before:function(){!this.inCall++},after:function(){!--this.inCall}}),t.timer=function(e){return new r(e)}}()});//# sourceMappingURL=timer.js.map

@@ -1,0 +1,2 @@
+//>>built
+define("lodash/startsWith",["./_baseClamp","./toInteger","./toString"],function(e,t,i){function a(a,r,n){return a=i(a),n=e(t(n),0,a.length),a.lastIndexOf(r,n)==n}return a});//# sourceMappingURL=startsWith.js.map

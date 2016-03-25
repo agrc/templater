@@ -1,0 +1,2 @@
+//>>built
+define("dojox/widget/gauge/_Gauge",["dojo","dijit","dojox","dojo/require!dojox/gauges/_Gauge"],function(e,t,i){e.provide("dojox.widget.gauge._Gauge"),e.require("dojox.gauges._Gauge"),i.widget.gauge._Gauge=i.gauges._Gauge,i.widget.gauge.Range=i.gauges.Range,i.widget.gauge._indicator=i.gauges._indicator});//# sourceMappingURL=_Gauge.js.map

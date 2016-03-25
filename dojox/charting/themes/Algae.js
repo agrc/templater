@@ -1,0 +1,2 @@
+//>>built
+define("dojox/charting/themes/Algae",["../SimpleTheme","./common"],function(e,t){return t.Algae=new e({colors:["#57808f","#506885","#4f7878","#558f7f","#508567"]}),t.Algae});//# sourceMappingURL=Algae.js.map

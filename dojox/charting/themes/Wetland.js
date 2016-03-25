@@ -1,0 +1,2 @@
+//>>built
+define("dojox/charting/themes/Wetland",["../SimpleTheme","./common"],function(e,t){return t.Wetland=new e({colors:["#bfbc64","#737130","#73373b","#7dafca","#8d3c42"]}),t.Wetland});//# sourceMappingURL=Wetland.js.map

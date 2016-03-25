@@ -1,0 +1,2 @@
+//>>built
+define("dojox/charting/themes/IndigoNation",["../SimpleTheme","./common"],function(e,t){return t.IndigoNation=new e({colors:["#93a4d0","#3b4152","#687291","#9faed9","#8290b8"]}),t.IndigoNation});//# sourceMappingURL=IndigoNation.js.map

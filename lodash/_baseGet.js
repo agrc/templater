@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_baseGet",["./_baseCastPath","./_isKey"],function(e,t){function i(i,r){r=t(r,i)?[r+""]:e(r);for(var n=0,o=r.length;null!=i&&o>n;)i=i[r[n++]];return n&&n==o?i:a}var a;return i});//# sourceMappingURL=_baseGet.js.map

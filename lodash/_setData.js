@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_setData",["./_baseSetData","./now"],function(e,t){var i=150,a=16,n=function(){var n=0,o=0;return function(r,s){var l=t(),d=a-(l-o);if(o=l,d>0){if(++n>=i)return r}else n=0;return e(r,s)}}();return n});//# sourceMappingURL=_setData.js.map

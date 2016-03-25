@@ -1,7 +1,2 @@
-define(["./_base/loader"], function(loader){
-	return {
-		dynamic:0,
-		normalize:function(id){return id;},
-		load:loader.loadInit
-	};
-});
+//>>built
+define("dojo/loadInit",["./_base/loader"],function(e){return{dynamic:0,normalize:function(e){return e},load:e.loadInit}});//# sourceMappingURL=loadInit.js.map

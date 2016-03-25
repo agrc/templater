@@ -1,0 +1,2 @@
+//>>built
+define("lodash/flattenDepth",["./_baseFlatten","./toInteger"],function(e,t){function i(i,o){var n=i?i.length:0;return n?(o=o===a?1:t(o),e(i,o)):[]}var a;return i});//# sourceMappingURL=flattenDepth.js.map

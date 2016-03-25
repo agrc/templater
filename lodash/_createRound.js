@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_createRound",["./toInteger","./toNumber","./toString"],function(e,t,i){function o(o){var a=Math[o];return function(o,r){if(o=t(o),r=e(r)){var n=(i(o)+"e").split("e"),s=a(n[0]+"e"+(+n[1]+r));return n=(i(s)+"e").split("e"),+(n[0]+"e"+(+n[1]-r))}return a(o)}}return o});//# sourceMappingURL=_createRound.js.map

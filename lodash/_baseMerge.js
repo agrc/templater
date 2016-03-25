@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_baseMerge",["./_Stack","./_arrayEach","./_assignMergeValue","./_baseMergeDeep","./isArray","./isObject","./isTypedArray","./keysIn"],function(e,t,i,o,n,a,r,s){function d(u,c,h,f,m){if(u!==c){var p=n(c)||r(c)?l:s(c);t(p||c,function(t,n){if(p&&(n=t,t=c[n]),a(t))m||(m=new e),o(u,c,n,h,d,f,m);else{var r=f?f(u[n],t,n+"",u,c,m):l;r===l&&(r=t),i(u,n,r)}})}}var l;return d});//# sourceMappingURL=_baseMerge.js.map

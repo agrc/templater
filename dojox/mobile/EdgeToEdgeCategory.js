@@ -1,0 +1,2 @@
+//>>built
+define("dojox/mobile/EdgeToEdgeCategory",["dojo/_base/declare","./RoundRectCategory"],function(e,t){return e("dojox.mobile.EdgeToEdgeCategory",t,{buildRendering:function(){this.inherited(arguments),this.domNode.className="mblEdgeToEdgeCategory",this.type&&"long"==this.type&&(this.domNode.className+=" mblEdgeToEdgeCategoryLong")}})});//# sourceMappingURL=EdgeToEdgeCategory.js.map

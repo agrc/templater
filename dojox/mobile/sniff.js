@@ -1,0 +1,2 @@
+//>>built
+define("dojox/mobile/sniff",["dojo/_base/kernel","dojo/sniff"],function(e,t){return e.deprecated("dojox/mobile/sniff","Use dojo/sniff instead","2.0"),t.add("iphone",t("ios")),t});//# sourceMappingURL=sniff.js.map

@@ -1,0 +1,2 @@
+//>>built
+define("lodash/chunk",["./_baseSlice","./toInteger"],function(e,t){function i(i,a){a=n(t(a),0);var r=i?i.length:0;if(!r||1>a)return[];for(var s=0,d=0,l=Array(o(r/a));r>s;)l[d++]=e(i,s,s+=a);return l}var o=Math.ceil,n=Math.max;return i});//# sourceMappingURL=chunk.js.map

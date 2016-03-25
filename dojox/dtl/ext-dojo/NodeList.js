@@ -1,0 +1,2 @@
+//>>built
+define("dojox/dtl/ext-dojo/NodeList",["dojo/_base/lang","dojo/query","../_base"],function(e,t,a){var i=(e.getObject("dojox.dtl.ext-dojo.NodeList",!0),t.NodeList);return e.extend(i,{dtl:function(e,t){var i=a,r=this,o=function(e,t){var a=e.render(new i._Context(t));r.forEach(function(e){e.innerHTML=a})};return i.text._resolveTemplateArg(e).addCallback(function(a){e=new i.Template(a),i.text._resolveContextArg(t).addCallback(function(t){o(e,t)})}),this}}),i});//# sourceMappingURL=NodeList.js.map

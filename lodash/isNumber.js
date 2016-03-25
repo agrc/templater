@@ -1,0 +1,2 @@
+//>>built
+define("lodash/isNumber",["./isObjectLike"],function(e){function t(t){return"number"==typeof t||e(t)&&r.call(t)==i}var i="[object Number]",a=Object.prototype,r=a.toString;return t});//# sourceMappingURL=isNumber.js.map

@@ -1,0 +1,2 @@
+//>>built
+define("dojox/mobile/ToggleButton",["dojo/_base/declare","dojo/dom-class","dijit/form/_ToggleButtonMixin","./Button"],function(e,t,i,a){return e("dojox.mobile.ToggleButton",[a,i],{baseClass:"mblToggleButton",_setCheckedAttr:function(){this.inherited(arguments);var e=(this.baseClass+" "+this["class"]).replace(/(\S+)\s*/g,"$1Checked ").split(" ");t[this.checked?"add":"remove"](this.focusNode||this.domNode,e)}})});//# sourceMappingURL=ToggleButton.js.map

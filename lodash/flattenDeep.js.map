@@ -1,0 +1,1 @@
+{"version":3,"sources":["flattenDeep.js.uncompressed.js"],"names":["define","baseFlatten","flattenDeep","array","length","INFINITY"],"mappings":";AAAAA,OAAO,sBAAuB,kBAAmB,SAASC,GAkBxD,QAASC,GAAYC,GACnB,GAAIC,GAASD,EAAQA,EAAMC,OAAS,CACpC,OAAOA,GAASH,EAAYE,EAAOE,MAjBrC,GAAIA,GAAW,EAAI,CAoBnB,OAAOH","file":"flattenDeep.js.uncompressed.js"}

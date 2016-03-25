@@ -1,0 +1,2 @@
+//>>built
+define("dojox/charting/themes/PlotKit/blue",["./base","../../Theme"],function(e,t){return e.blue=e.base.clone(),e.blue.chart.fill=e.blue.plotarea.fill="#e7eef6",e.blue.colors=t.defineColors({hue:217,saturation:60,low:40,high:88}),e.blue});//# sourceMappingURL=blue.js.map

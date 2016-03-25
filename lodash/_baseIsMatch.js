@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_baseIsMatch",["./_Stack","./_baseIsEqual"],function(e,t){function i(i,r,s,d){var l=s.length,u=l,c=!d;if(null==i)return!u;for(i=Object(i);l--;){var h=s[l];if(c&&h[2]?h[1]!==i[h[0]]:!(h[0]in i))return!1}for(;++l<u;){h=s[l];var f=h[0],m=i[f],p=h[1];if(c&&h[2]){if(m===o&&!(f in i))return!1}else{var g=new e,v=d?d(m,p,f,i,r,g):o;if(!(v===o?t(p,m,d,n|a,g):v))return!1}}return!0}var o,n=1,a=2;return i});//# sourceMappingURL=_baseIsMatch.js.map

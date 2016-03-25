@@ -1,0 +1,2 @@
+//>>built
+define("dojox/mobile/bidi/SwapView",["dojo/_base/declare"],function(e){return e(null,{_callParentFunction:!1,nextView:function(e){return this.isLeftToRight()||this._callParentFunction?(this._callParentFunction=!1,this.inherited(arguments)):(this._callParentFunction=!0,this.previousView(e))},previousView:function(e){return this.isLeftToRight()||this._callParentFunction?(this._callParentFunction=!1,this.inherited(arguments)):(this._callParentFunction=!0,this.nextView(e))}})});//# sourceMappingURL=SwapView.js.map
