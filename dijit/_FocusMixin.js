@@ -1,2 +1,2 @@
 //>>built
-define("dijit/_FocusMixin",["./focus","./_WidgetBase","dojo/_base/declare","dojo/_base/lang"],function(t,e,i,a){return a.extend(e,{focused:!1,onFocus:function(){},onBlur:function(){},_onFocus:function(){this.onFocus()},_onBlur:function(){this.onBlur()}}),i("dijit._FocusMixin",null,{_focusManager:t})});//# sourceMappingURL=_FocusMixin.js.map
+define("dijit/_FocusMixin",["./focus","./_WidgetBase","dojo/_base/declare","dojo/_base/lang"],function(t,e,i,o){return o.extend(e,{focused:!1,onFocus:function(){},onBlur:function(){},_onFocus:function(){this.onFocus()},_onBlur:function(){this.onBlur()}}),i("dijit._FocusMixin",null,{_focusManager:t})});//# sourceMappingURL=_FocusMixin.js.map

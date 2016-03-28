@@ -1,2 +1,2 @@
 //>>built
-define("lodash/escape",["./_escapeHtmlChar","./toString"],function(e,t){function i(i){return i=t(i),i&&o.test(i)?i.replace(a,e):i}var a=/[&<>"'`]/g,o=RegExp(a.source);return i});//# sourceMappingURL=escape.js.map
+define("lodash/escape",["./_escapeHtmlChar","./toString"],function(e,t){function i(i){return i=t(i),i&&r.test(i)?i.replace(a,e):i}var a=/[&<>"'`]/g,r=RegExp(a.source);return i});//# sourceMappingURL=escape.js.map

@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_Stack",["./_stackClear","./_stackDelete","./_stackGet","./_stackHas","./_stackSet"],function(e,t,i,o,a){function n(e){var t=-1,i=e?e.length:0;for(this.clear();++t<i;){var o=e[t];this.set(o[0],o[1])}}return n.prototype.clear=e,n.prototype["delete"]=t,n.prototype.get=i,n.prototype.has=o,n.prototype.set=a,n});//# sourceMappingURL=_Stack.js.map
+define("lodash/_Stack",["./_stackClear","./_stackDelete","./_stackGet","./_stackHas","./_stackSet"],function(e,t,i,a,o){function n(e){var t=-1,i=e?e.length:0;for(this.clear();++t<i;){var a=e[t];this.set(a[0],a[1])}}return n.prototype.clear=e,n.prototype["delete"]=t,n.prototype.get=i,n.prototype.has=a,n.prototype.set=o,n});//# sourceMappingURL=_Stack.js.map

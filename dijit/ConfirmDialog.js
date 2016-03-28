@@ -1,2 +1,2 @@
 //>>built
-define("dijit/ConfirmDialog",["dojo/_base/declare","./Dialog","./_ConfirmDialogMixin"],function(t,e,a){return t("dijit.ConfirmDialog",[e,a],{})});//# sourceMappingURL=ConfirmDialog.js.map
+define("dijit/ConfirmDialog",["dojo/_base/declare","./Dialog","./_ConfirmDialogMixin"],function(o,i,n){return o("dijit.ConfirmDialog",[i,n],{})});//# sourceMappingURL=ConfirmDialog.js.map

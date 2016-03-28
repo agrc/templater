@@ -1,2 +1,2 @@
 //>>built
-define("lodash/sampleSize",["./_baseClamp","./_baseRandom","./toArray","./toInteger"],function(e,t,i,r){function n(n,o){var a=-1,s=i(n),l=s.length,d=l-1;for(o=e(r(o),0,l);++a<o;){var u=t(a,d),c=s[u];s[u]=s[a],s[a]=c}return s.length=o,s}return n});//# sourceMappingURL=sampleSize.js.map
+define("lodash/sampleSize",["./_baseClamp","./_baseRandom","./toArray","./toInteger"],function(e,t,i,o){function n(n,r){var a=-1,s=i(n),d=s.length,l=d-1;for(r=e(o(r),0,d);++a<r;){var c=t(a,l),u=s[c];s[c]=s[a],s[a]=u}return s.length=r,s}return n});//# sourceMappingURL=sampleSize.js.map

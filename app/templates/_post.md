@@ -2,7 +2,7 @@
 layout: post
 status: publish
 published: true
-title: {title}
+title: '{title}'
 author:
   display_name: {display_name}
   email: {email}
