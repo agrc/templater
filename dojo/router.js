@@ -1,2 +1,2 @@
 //>>built
-define("dojo/router",["./router/RouterBase"],function(e){return new e({})});//# sourceMappingURL=router.js.map
+define("dojo/router",["./router/RouterBase"],function(t){return new t({})});//# sourceMappingURL=router.js.map

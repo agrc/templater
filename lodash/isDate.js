@@ -1,2 +1,2 @@
 //>>built
-define("lodash/isDate",["./isObjectLike"],function(e){function t(t){return e(t)&&r.call(t)==i}var i="[object Date]",a=Object.prototype,r=a.toString;return t});//# sourceMappingURL=isDate.js.map
+define("lodash/isDate",["./isObjectLike"],function(e){function t(t){return e(t)&&o.call(t)==i}var i="[object Date]",a=Object.prototype,o=a.toString;return t});//# sourceMappingURL=isDate.js.map

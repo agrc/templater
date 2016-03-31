@@ -1,4 +1,4 @@
-Build started: Mon Mar 28 2016 14:24:09 GMT-0600 (MDT)
+Build started: Thu Mar 31 2016 14:17:23 GMT-0600 (MDT)
 Build application version: 1.10.5 (ec427ec)
 Messages:
 info(100) Assumed module uses legacy loader API.
@@ -1392,6 +1392,8 @@ dojo/dojo:
 	dijit/Destroyable
 	dijit/registry
 	dijit/main
+	dojo/query
+	dojo/selector/acme
 	app/templates/App.html
 	app/templates/_post.md
 	lodash/kebabCase
@@ -1412,4 +1414,4 @@ dojo/dojo:
 Process finished normally
 	errors: 0
 	warnings: 65
-	build time: 43.217 seconds
+	build time: 27.262 seconds

@@ -1,2 +1,2 @@
 //>>built
-define("dojox/mobile/_base",["./common","./View","./Heading","./RoundRect","./RoundRectCategory","./EdgeToEdgeCategory","./RoundRectList","./EdgeToEdgeList","./ListItem","./Container","./Pane","./Switch","./ToolBarButton","./ProgressIndicator"],function(e,t,i,a,n,o,r,s,d,l,u,h){return e});//# sourceMappingURL=_base.js.map
+define("dojox/mobile/_base",["./common","./View","./Heading","./RoundRect","./RoundRectCategory","./EdgeToEdgeCategory","./RoundRectList","./EdgeToEdgeList","./ListItem","./Container","./Pane","./Switch","./ToolBarButton","./ProgressIndicator"],function(e,t,a,i,r,n,o,s,l,d,u,c){return e});//# sourceMappingURL=_base.js.map

@@ -1,2 +1,2 @@
 //>>built
-define("dojox/mvc/Bind",["dojo/_base/lang","dojo/_base/array"],function(e,t){var i=e.getObject("dojox.mvc",!0);return e.mixin(i,{bind:function(t,i,o,n,r,a){var s;return t.watch(i,function(t,i,d){s=e.isFunction(r)?r(d):d,a&&s==o.get(n)||o.set(n,s)})},bindInputs:function(e,i){var o=[];return t.forEach(e,function(e){o.push(e.watch("value",i))}),o}})});//# sourceMappingURL=Bind.js.map
+define("dojox/mvc/Bind",["dojo/_base/lang","dojo/_base/array"],function(e,t){var i=e.getObject("dojox.mvc",!0);return e.mixin(i,{bind:function(t,i,a,o,n,r){var s;return t.watch(i,function(t,i,l){s=e.isFunction(n)?n(l):l,r&&s==a.get(o)||a.set(o,s)})},bindInputs:function(e,i){var a=[];return t.forEach(e,function(e){a.push(e.watch("value",i))}),a}})});//# sourceMappingURL=Bind.js.map

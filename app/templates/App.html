@@ -1,36 +1,51 @@
 <div>
     <div class="container-fluid">
-        <h1>Generate New Post</h1>
+        <h1>Generate New Post
+            <a href='Changelog.html' class='version'>${version}</a>
+        </h1>
         <div class="row">
             <div class="col-md-4 input">
                 <div class="form-group">
                     <label>Title</label>
-                    <input type="text" class='form-control' data-dojo-attach-point='title'>
+                    <input type="text" class='form-control required' data-dojo-attach-point='title'>
+                </div>
+                <div class="form-group">
+                    <label>Type</label>
+                    <select class="form-control" data-dojo-attach-point='type'>
+                        <option value="post">Post</option>
+                        <option value="page">Page</option>
+                    </select>
                 </div>
                 <div class="panel panel-default">
                     <div class='panel-heading'>Author</div>
                     <div class="panel-body">
                         <div class="form-group">
                             <label>Display Name</label>
-                            <input type="text" class='form-control' data-dojo-attach-point='display_name'>
+                            <input type="text" class='form-control required' data-dojo-attach-point='display_name'>
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" class='form-control' data-dojo-attach-point='email'>
+                            <input type="email" class='form-control required' data-dojo-attach-point='email'>
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-primary btn-lg btn-block"
+                <button class="btn btn-primary btn-lg btn-block" disabled
+                    data-dojo-attach-point='submitBtn'
                     data-dojo-attach-event='click: generate'>Generate</button>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 hidden"
+                data-dojo-attach-point='outputContainer'>
                 <div class="form-group">
-                    <label>File name</label>
-                    <input type="text" class="form-control" data-dojo-attach-point='fileName'>
+                    <label>File Path</label>
+                    <input type="text" class="form-control"
+                        data-dojo-attach-point='fileName'>
                 </div>
-                <textarea id="" rows="15" class='form-control'
-                    data-dojo-attach-point='output'
-                ></textarea>
+                <div class="form-group">
+                    <label>Contents</label>
+                    <textarea id="" rows="20" class='form-control'
+                        data-dojo-attach-point='output'
+                    ></textarea>
+                </div>
             </div>
         </div>
     </div>

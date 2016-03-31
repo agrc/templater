@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_baseAt",["./get"],function(e){function t(t,a){for(var r=-1,o=null==t,n=a.length,s=Array(n);++r<n;)s[r]=o?i:e(t,a[r]);return s}var i;return t});//# sourceMappingURL=_baseAt.js.map
+define("lodash/_baseAt",["./get"],function(e){function t(t,a){for(var o=-1,r=null==t,n=a.length,s=Array(n);++o<n;)s[o]=r?i:e(t,a[o]);return s}var i;return t});//# sourceMappingURL=_baseAt.js.map
