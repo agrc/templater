@@ -1,7 +1,16 @@
 module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
+    var bumpFiles = ['src/app/App.js', 'package.json'];
+
     grunt.initConfig({
+        bump: {
+            options: {
+                files: bumpFiles,
+                commitFiles: bumpFiles.concat('src/ChangeLog.html'),
+                push: false
+            }
+        },
         clean: {
             main: { src: 'dist/' }
         },
