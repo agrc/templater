@@ -2,6 +2,8 @@ define([
     'dijit/_TemplatedMixin',
     'dijit/_WidgetBase',
 
+    'dojo/dom-class',
+    'dojo/query',
     'dojo/text!app/templates/App.html',
     'dojo/text!app/templates/_post.md',
     'dojo/_base/declare',
@@ -12,6 +14,8 @@ define([
     _TemplatedMixin,
     _WidgetBase,
 
+    domClass,
+    query,
     template,
     postTemplate,
     declare,
@@ -25,6 +29,9 @@ define([
     return declare([_WidgetBase, _TemplatedMixin], {
         templateString: template,
 
+        // requiredFields: domNode[]
+        requiredFields: null,
+
         postCreate: function () {
             console.log('app.App:postCreate', arguments);
 
@@ -32,6 +39,19 @@ define([
             if (existingData) {
                 this.deserialize(JSON.parse(existingData));
             }
+
+            this.requiredFields = query('.required', this.domNode);
+            this.requiredFields.on('change, keyup', lang.hitch(this, 'validate'));
+        },
+        validate: function () {
+            // summary:
+            //      checks for required fields and updates the disabled state of the
+            //      generate button accordingly
+            console.log('app.App:validate', arguments);
+
+            this.submitBtn.disabled = !this.requiredFields.every(function (node) {
+                return node.value.trim().length > 0;
+            });
         },
         generate: function () {
             // summary:
@@ -41,9 +61,14 @@ define([
             var data = this.serialize();
 
             this.output.value = lang.replace(postTemplate, data);
-            this.fileName.value = this.getFileNameString(new Date(), this.title.value);
+            this.fileName.value = this.getFileNameString(
+                new Date(),
+                this.title.value,
+                this.type.value
+            );
 
             window.localStorage[storageToken] = JSON.stringify(data);
+            domClass.remove(this.outputContainer, 'hidden');
         },
         serialize: function () {
             // summary:
@@ -79,15 +104,20 @@ define([
                 }
             }, this);
         },
-        getFileNameString: function (date, title) {
+        getFileNameString: function (date, title, type) {
             // summary:
             //      formats file name from date and title
             // date: Date
             // title: string
+            // type: string (page || post)
             console.log('app.App:getFileNameString', arguments);
 
-            var dateString = date.toISOString().split('T')[0];
-            return dateString + '-' + kebabCase(title) + '.md';
+            if (type === 'post') {
+                var dateString = date.toISOString().split('T')[0];
+                return dateString + '-' + kebabCase(title) + '.md';
+            } else {
+                return kebabCase(title) + '/index.md';
+            }
         }
     });
 });
