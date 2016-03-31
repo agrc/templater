@@ -30,9 +30,16 @@ module.exports = function (grunt) {
                     'dist/index.html': ['src/index.html']
                 }
             }
+        },
+        watch: {
+            main: {
+                files: ['src/app/**/*.*'],
+                options: { livereload: true }
+            }
         }
     });
 
+    grunt.registerTask('default', ['watch']);
     grunt.registerTask('build', ['clean', 'dojo', 'processhtml']);
-    grunt.registerTask('default', ['build', 'gh-pages']);
+    grunt.registerTask('deploy', ['build', 'gh-pages']);
 };
