@@ -14,6 +14,9 @@ module.exports = function (grunt) {
         clean: {
             main: { src: 'dist/' }
         },
+        connect: {
+            uses_defaults: {}
+        },
         dojo: {
             main: {
                 options: {
@@ -32,6 +35,24 @@ module.exports = function (grunt) {
             },
             src: ['**', '.nojekyll']
         },
+        jasmine: {
+            main: {
+                options: {
+                    specs: ['src/app/**/Spec*.js'],
+                    vendor: [
+                        'src/jasmine-favicon-reporter/vendor/favico.js',
+                        'src/jasmine-favicon-reporter/jasmine-favicon-reporter.js',
+                        'src/jasmine-jsreporter/jasmine-jsreporter.js',
+                        'src/app/tests/jasmineTestBootstrap.js',
+                        'src/dojo/dojo.js',
+                        'src/app/packages.js',
+                        'src/app/tests/jsReporterSanitizer.js',
+                        'src/app/tests/jasmineAMDErrorChecking.js'
+                    ],
+                    host: 'http://localhost:8000'
+                }
+            }
+        },
         processhtml: {
             options: {},
             main: {
@@ -43,12 +64,13 @@ module.exports = function (grunt) {
         watch: {
             main: {
                 files: ['src/app/**/*.*'],
-                options: { livereload: true }
+                options: { livereload: true },
+                tasks: ['jasmine:main:build']
             }
         }
     });
 
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['connect', 'jasmine:main:build', 'watch']);
     grunt.registerTask('build', ['clean', 'dojo', 'processhtml']);
     grunt.registerTask('deploy', ['build', 'gh-pages']);
 };

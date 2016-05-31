@@ -15,5 +15,9 @@
     "dojox": "1.11",
     "util": "dojo-util#1.11",
     "bootstrap-css-only": "~3.3.6"
+  },
+  "devDependencies": {
+    "jasmine-favicon-reporter": "*",
+    "jasmine-jsreporter": "~0.1.2"
   }
 }

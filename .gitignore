@@ -1,10 +1,15 @@
+_SpecRunner.html
 .grunt/
 dist/
 node_modules/
 src/bootstrap-css-only/
+src/components-jasmine/
 src/dijit/
 src/dojo/
 src/dojox/
+src/favico.js/
+src/jasmine-favicon-reporter/
+src/jasmine-jsreporter/
 src/jquery/
 src/lodash/
 src/util/
