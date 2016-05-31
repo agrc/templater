@@ -22,5 +22,13 @@ function (
         it('creates a valid object', function () {
             expect(testWidget).toEqual(jasmine.any(App));
         });
+
+        describe('serialize', function () {
+            it('escapes single quotes in title', function () {
+                testWidget.title.value = 'i have \'single quotes\'';
+
+                expect(testWidget.serialize().title).toBe('i have &#039;single quotes&#039;');
+            });
+        });
     });
 });

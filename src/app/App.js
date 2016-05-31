@@ -78,7 +78,7 @@ define([
             console.log('app.App:serialize', arguments);
 
             return {
-                title: this.title.value,
+                title: this.title.value.replace(/'/g, '&#039;'),
                 display_name: this.display_name.value,
                 email: this.email.value,
                 date: this.getDateString(new Date())
