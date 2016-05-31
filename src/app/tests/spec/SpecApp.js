@@ -30,5 +30,18 @@ function (
                 expect(testWidget.serialize().title).toBe('i have &#039;single quotes&#039;');
             });
         });
+
+        describe('getFileNameString', function () {
+            it('posts', function () {
+                var result = testWidget.getFileNameString(new Date(1464717929433), 'test title', 'post');
+
+                expect(result).toBe('_posts/2016-05-31-test-title.md');
+            });
+            it('pages', function () {
+                var result = testWidget.getFileNameString(new Date(1464717929433), 'test title', 'page');
+
+                expect(result).toBe('test-title/index.md');
+            });
+        });
     });
 });

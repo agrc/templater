@@ -116,7 +116,7 @@ define([
 
             if (type === 'post') {
                 var dateString = date.toISOString().split('T')[0];
-                return dateString + '-' + kebabCase(title) + '.md';
+                return '_posts/' + dateString + '-' + kebabCase(title) + '.md';
             } else {
                 return kebabCase(title) + '/index.md';
             }
