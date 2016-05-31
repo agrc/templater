@@ -1,2 +1,2 @@
 //>>built
-define("dojox/dtl/contrib/objects",["dojo/_base/lang","../_base"],function(e,t){var i=e.getObject("contrib.objects",!0,t);return e.mixin(i,{key:function(e,t){return e[t]}}),t.register.filters("dojox.dtl.contrib",{objects:["key"]}),i});//# sourceMappingURL=objects.js.map
+define("dojox/dtl/contrib/objects",["dojo/_base/lang","../_base"],function(e,t){var a=e.getObject("contrib.objects",!0,t);return e.mixin(a,{key:function(e,t){return e[t]}}),t.register.filters("dojox.dtl.contrib",{objects:["key"]}),a});//# sourceMappingURL=objects.js.map

@@ -1,2 +1,2 @@
 //>>built
-define("dojo/on/throttle",["../throttle","../on"],function(e,t){return function(a,i){return function(r,d){return t(r,a,e(d,i))}}});//# sourceMappingURL=throttle.js.map
+define("dojo/on/throttle",["../throttle","../on"],function(e,t){return function(i,r){return function(a,n){return t(a,i,e(n,r))}}});//# sourceMappingURL=throttle.js.map

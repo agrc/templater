@@ -1,2 +1,2 @@
 //>>built
-define("lodash/throttle",["./debounce","./isObject"],function(e,t){function i(i,o,r){var n=!0,s=!0;if("function"!=typeof i)throw new TypeError(a);return t(r)&&(n="leading"in r?!!r.leading:n,s="trailing"in r?!!r.trailing:s),e(i,o,{leading:n,maxWait:o,trailing:s})}var a="Expected a function";return i});//# sourceMappingURL=throttle.js.map
+define("lodash/throttle",["./debounce","./isObject"],function(e,t){function i(i,n,o){var r=!0,s=!0;if("function"!=typeof i)throw new TypeError(a);return t(o)&&(r="leading"in o?!!o.leading:r,s="trailing"in o?!!o.trailing:s),e(i,n,{leading:r,maxWait:n,trailing:s})}var a="Expected a function";return i});//# sourceMappingURL=throttle.js.map

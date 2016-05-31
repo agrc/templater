@@ -1,2 +1,2 @@
 //>>built
-define("dijit/_OnDijitClickMixin",["dojo/on","dojo/_base/array","dojo/keys","dojo/_base/declare","dojo/has","./a11yclick"],function(t,e,i,n,s,o){var a=n("dijit._OnDijitClickMixin",null,{connect:function(t,e,i){return this.inherited(arguments,[t,"ondijitclick"==e?o:e,i])}});return a.a11yclick=o,a});//# sourceMappingURL=_OnDijitClickMixin.js.map
+define("dijit/_OnDijitClickMixin",["dojo/on","dojo/_base/array","dojo/keys","dojo/_base/declare","dojo/has","./a11yclick"],function(t,e,i,n,o,s){var a=n("dijit._OnDijitClickMixin",null,{connect:function(t,e,i){return this.inherited(arguments,[t,"ondijitclick"==e?s:e,i])}});return a.a11yclick=s,a});//# sourceMappingURL=_OnDijitClickMixin.js.map

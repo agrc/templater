@@ -1,2 +1,2 @@
 //>>built
-define("lodash/orderBy",["./_baseOrderBy","./isArray"],function(e,t){function i(i,o,n,r){return null==i?[]:(t(o)||(o=null==o?[]:[o]),n=r?a:n,t(n)||(n=null==n?[]:[n]),e(i,o,n))}var a;return i});//# sourceMappingURL=orderBy.js.map
+define("lodash/orderBy",["./_baseOrderBy","./isArray"],function(e,t){function i(i,o,r,n){return null==i?[]:(t(o)||(o=null==o?[]:[o]),r=n?a:r,t(r)||(r=null==r?[]:[r]),e(i,o,r))}var a;return i});//# sourceMappingURL=orderBy.js.map
