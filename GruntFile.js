@@ -57,7 +57,8 @@ module.exports = function (grunt) {
             options: {},
             main: {
                 files: {
-                    'dist/index.html': ['src/index.html']
+                    'dist/index.html': ['src/index.html'],
+                    'dist/ChangeLog.html': ['src/ChangeLog.html']
                 }
             }
         },
