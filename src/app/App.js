@@ -29,7 +29,7 @@ define([
     return declare([_WidgetBase, _TemplatedMixin], {
         templateString: template,
 
-        version: '1.1.0',
+        version: '1.1.1',
 
         // requiredFields: domNode[]
         requiredFields: null,
