@@ -1,2 +1,2 @@
 //>>built
-define("lodash/trimEnd",["./_charsEndIndex","./_stringToArray","./toString"],function(e,t,i){function a(a,o,s){if(a=i(a),!a)return a;if(s||o===r)return a.replace(n,"");if(o+="",!o)return a;var l=t(a);return l.slice(0,e(l,t(o))+1).join("")}var r,n=/\s+$/;return a});//# sourceMappingURL=trimEnd.js.map
+define("lodash/trimEnd",["./_charsEndIndex","./_stringToArray","./toString"],function(e,t,i){function a(a,o,s){if(a=i(a),!a)return a;if(s||o===n)return a.replace(r,"");if(o+="",!o)return a;var l=t(a);return l.slice(0,e(l,t(o))+1).join("")}var n,r=/\s+$/;return a});//# sourceMappingURL=trimEnd.js.map

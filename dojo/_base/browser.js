@@ -1,2 +1,2 @@
 //>>built
-require.has&&require.has.add("config-selectorEngine","acme"),define("dojo/_base/browser",["../ready","./kernel","./connect","./unload","./window","./event","./html","./NodeList","../query","./xhr","./fx"],function(e){return e});//# sourceMappingURL=browser.js.map
+require.has&&require.has.add("config-selectorEngine","acme"),define("dojo/_base/browser",["../ready","./kernel","./connect","./unload","./window","./event","./html","./NodeList","../query","./xhr","./fx"],function(t){return t});//# sourceMappingURL=browser.js.map

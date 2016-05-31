@@ -1,2 +1,2 @@
 //>>built
-define("lodash/attempt",["./_apply","./isError","./rest"],function(e,t,i){var o,a=i(function(i,a){try{return e(i,o,a)}catch(n){return t(n)?n:new Error(n)}});return a});//# sourceMappingURL=attempt.js.map
+define("lodash/attempt",["./_apply","./isError","./rest"],function(e,t,i){var a,n=i(function(i,n){try{return e(i,a,n)}catch(o){return t(o)?o:new Error(o)}});return n});//# sourceMappingURL=attempt.js.map

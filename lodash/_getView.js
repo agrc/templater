@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_getView",[],function(){function e(e,r,o){for(var a=-1,n=o.length;++a<n;){var s=o[a],l=s.size;switch(s.type){case"drop":e+=l;break;case"dropRight":r-=l;break;case"take":r=i(r,e+l);break;case"takeRight":e=t(e,r-l)}}return{start:e,end:r}}var t=Math.max,i=Math.min;return e});//# sourceMappingURL=_getView.js.map
+define("lodash/_getView",[],function(){function e(e,o,r){for(var n=-1,a=r.length;++n<a;){var s=r[n],d=s.size;switch(s.type){case"drop":e+=d;break;case"dropRight":o-=d;break;case"take":o=i(o,e+d);break;case"takeRight":e=t(e,o-d)}}return{start:e,end:o}}var t=Math.max,i=Math.min;return e});//# sourceMappingURL=_getView.js.map

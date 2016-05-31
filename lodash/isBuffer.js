@@ -1,2 +1,2 @@
 //>>built
-define("lodash/isBuffer",["./constant","./_root"],function(e,t){var i,a={"function":!0,object:!0},o=a[typeof exports]&&exports&&!exports.nodeType?exports:i,n=a[typeof module]&&module&&!module.nodeType?module:i,r=n&&n.exports===o?o:i,s=r?t.Buffer:i,l=s?function(e){return e instanceof s}:e(!1);return l});//# sourceMappingURL=isBuffer.js.map
+define("lodash/isBuffer",["./constant","./_root"],function(e,t){var i,a={"function":!0,object:!0},o=a[typeof exports]&&exports&&!exports.nodeType?exports:i,r=a[typeof module]&&module&&!module.nodeType?module:i,n=r&&r.exports===o?o:i,s=n?t.Buffer:i,l=s?function(e){return e instanceof s}:e(!1);return l});//# sourceMappingURL=isBuffer.js.map

@@ -1,2 +1,2 @@
 //>>built
-define("lodash/clamp",["./_baseClamp","./toNumber"],function(e,t){function i(i,o,r){return r===a&&(r=o,o=a),r!==a&&(r=t(r),r=r===r?r:0),o!==a&&(o=t(o),o=o===o?o:0),e(t(i),o,r)}var a;return i});//# sourceMappingURL=clamp.js.map
+define("lodash/clamp",["./_baseClamp","./toNumber"],function(e,t){function i(i,n,r){return r===a&&(r=n,n=a),r!==a&&(r=t(r),r=r===r?r:0),n!==a&&(n=t(n),n=n===n?n:0),e(t(i),n,r)}var a;return i});//# sourceMappingURL=clamp.js.map

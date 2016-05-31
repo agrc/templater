@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_baseGet",["./_baseCastPath","./_isKey"],function(e,t){function i(i,r){r=t(r,i)?[r+""]:e(r);for(var n=0,o=r.length;null!=i&&o>n;)i=i[r[n++]];return n&&n==o?i:a}var a;return i});//# sourceMappingURL=_baseGet.js.map
+define("lodash/_baseGet",["./_baseCastPath","./_isKey"],function(e,t){function i(i,n){n=t(n,i)?[n+""]:e(n);for(var r=0,o=n.length;null!=i&&o>r;)i=i[n[r++]];return r&&r==o?i:a}var a;return i});//# sourceMappingURL=_baseGet.js.map
