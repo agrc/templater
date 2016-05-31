@@ -1,9 +1,10 @@
-Build started: Thu Mar 31 2016 14:17:23 GMT-0600 (MDT)
+Build started: Tue May 31 2016 15:49:28 GMT-0600 (MDT)
 Build application version: 1.10.5 (ec427ec)
 Messages:
 info(100) Assumed module uses legacy loader API.
 	module: app/packages
 	module: app/run
+	module: app/tests/jasmineTestBootstrap
 	module: dojox/jq
 	module: dojox/rails
 	module: dojox/data/ItemExplorer
@@ -1258,6 +1259,9 @@ info(107) Package Version:
 	package: bootstrap-css-only; version: 3.3.6
 warn(205) Module not tagged as pure AMD yet it contains AMD API applications.
 	module: app/App
+	module: app/tests/jasmineAMDErrorChecking
+	module: app/tests/jsReporterSanitizer
+	module: app/tests/spec/SpecApp
 warn(209) Missing or empty package.json.
 	filename: /Users/stdavis/Documents/Projects/templater/src/app/package.json
 warn(216) dojo/has plugin resource could not be resolved during build-time.
@@ -1413,5 +1417,5 @@ dojo/dojo:
 
 Process finished normally
 	errors: 0
-	warnings: 65
-	build time: 27.262 seconds
+	warnings: 68
+	build time: 118.641 seconds

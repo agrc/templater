@@ -1,0 +1,2 @@
+//>>built
+define("app/tests/jasmineTestBootstrap",["dojo","dijit","dojox"],function(e,n,t){jasmine.getEnv().addReporter(new JasmineFaviconReporter),jasmine.getEnv().addReporter(new jasmineRequire.JSReporter2)});//# sourceMappingURL=jasmineTestBootstrap.js.map

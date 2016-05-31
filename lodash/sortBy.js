@@ -1,2 +1,2 @@
 //>>built
-define("lodash/sortBy",["./_baseFlatten","./_baseOrderBy","./_isIterateeCall","./rest"],function(e,t,i,n){var a=n(function(n,a){if(null==n)return[];var r=a.length;return r>1&&i(n,a[0],a[1])?a=[]:r>2&&i(a[0],a[1],a[2])&&(a.length=1),t(n,e(a,1),[])});return a});//# sourceMappingURL=sortBy.js.map
+define("lodash/sortBy",["./_baseFlatten","./_baseOrderBy","./_isIterateeCall","./rest"],function(e,t,i,a){var n=a(function(a,n){if(null==a)return[];var o=n.length;return o>1&&i(a,n[0],n[1])?n=[]:o>2&&i(n[0],n[1],n[2])&&(n.length=1),t(a,e(n,1),[])});return n});//# sourceMappingURL=sortBy.js.map

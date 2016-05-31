@@ -32,7 +32,7 @@ define("app/App", [
     return declare([_WidgetBase, _TemplatedMixin], {
         templateString: template,
 
-        version: '1.1.0',
+        version: '1.1.1',
 
         // requiredFields: domNode[]
         requiredFields: null,
@@ -81,7 +81,7 @@ define("app/App", [
             console.log('app.App:serialize', arguments);
 
             return {
-                title: this.title.value,
+                title: this.title.value.replace(/'/g, '&#039;'),
                 display_name: this.display_name.value,
                 email: this.email.value,
                 date: this.getDateString(new Date())
@@ -119,7 +119,7 @@ define("app/App", [
 
             if (type === 'post') {
                 var dateString = date.toISOString().split('T')[0];
-                return dateString + '-' + kebabCase(title) + '.md';
+                return '_posts/' + dateString + '-' + kebabCase(title) + '.md';
             } else {
                 return kebabCase(title) + '/index.md';
             }

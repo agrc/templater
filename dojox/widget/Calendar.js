@@ -1,2 +1,2 @@
 //>>built
-define("dojox/widget/Calendar",["dojo/_base/kernel","dojo/_base/declare","./_CalendarBase","./_CalendarDay","./_CalendarMonthYear"],function(e,t,i,a,n){return e.experimental("dojox/widget/Calendar"),t("dojox.widget.Calendar",[i,a,n],{})});//# sourceMappingURL=Calendar.js.map
+define("dojox/widget/Calendar",["dojo/_base/kernel","dojo/_base/declare","./_CalendarBase","./_CalendarDay","./_CalendarMonthYear"],function(e,t,i,r,o){return e.experimental("dojox/widget/Calendar"),t("dojox.widget.Calendar",[i,r,o],{})});//# sourceMappingURL=Calendar.js.map
