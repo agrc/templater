@@ -1,4 +1,4 @@
-Build started: Tue May 31 2016 16:01:34 GMT-0600 (MDT)
+Build started: Thu Jun 30 2016 09:36:41 GMT-0600 (MDT)
 Build application version: 1.10.5 (ec427ec)
 Messages:
 info(100) Assumed module uses legacy loader API.
@@ -1418,4 +1418,4 @@ dojo/dojo:
 Process finished normally
 	errors: 0
 	warnings: 68
-	build time: 47.811 seconds
+	build time: 40.092 seconds

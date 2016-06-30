@@ -1,2 +1,2 @@
 //>>built
-define("lodash/takeRight",["./_baseSlice","./toInteger"],function(e,t){function i(i,a,n){var r=i?i.length:0;return r?(a=n||a===o?1:t(a),a=r-a,e(i,0>a?0:a,r)):[]}var o;return i});//# sourceMappingURL=takeRight.js.map
+define("lodash/takeRight",["./_baseSlice","./toInteger"],function(e,t){function i(i,o,n){var r=i?i.length:0;return r?(o=n||o===a?1:t(o),o=r-o,e(i,0>o?0:o,r)):[]}var a;return i});//# sourceMappingURL=takeRight.js.map

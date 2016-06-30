@@ -1,2 +1,2 @@
 //>>built
-define("dojo/_base/config",["../has","require"],function(e,t){var i,o={},n=t.rawConfig;for(i in n)o[i]=n[i];if(!o.locale&&"undefined"!=typeof navigator){var r=navigator.languages?navigator.languages[0]:navigator.language||navigator.userLanguage;r&&(o.locale=r.toLowerCase())}return o});//# sourceMappingURL=config.js.map
+define("dojo/_base/config",["../has","require"],function(e,t){var i,n={},o=t.rawConfig;for(i in o)n[i]=o[i];if(!n.locale&&"undefined"!=typeof navigator){var r=navigator.languages?navigator.languages[0]:navigator.language||navigator.userLanguage;r&&(n.locale=r.toLowerCase())}return n});//# sourceMappingURL=config.js.map

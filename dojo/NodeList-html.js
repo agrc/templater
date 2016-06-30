@@ -1,2 +1,2 @@
 //>>built
-define("dojo/NodeList-html",["./query","./_base/lang","./html"],function(e,t,i){var o=e.NodeList;return t.extend(o,{html:function(e,t){var o=new i._ContentSetter(t||{});return this.forEach(function(t){o.node=t,o.set(e),o.tearDown()}),this}}),o});//# sourceMappingURL=NodeList-html.js.map
+define("dojo/NodeList-html",["./query","./_base/lang","./html"],function(e,t,i){var n=e.NodeList;return t.extend(n,{html:function(e,t){var n=new i._ContentSetter(t||{});return this.forEach(function(t){n.node=t,n.set(e),n.tearDown()}),this}}),n});//# sourceMappingURL=NodeList-html.js.map

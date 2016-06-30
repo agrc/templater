@@ -1,2 +1,2 @@
 //>>built
-define("dojox/gfx/silverlight_attach",["dojo/_base/kernel","dojo/_base/lang","./_base","./silverlight"],function(e,t,i,a){return t.getObject("dojox.gfx.silverlight_attach",!0),e.experimental("dojox.gfx.silverlight_attach"),a.attachNode=function(e){return null},a.attachSurface=function(e){return null},a});//# sourceMappingURL=silverlight_attach.js.map
+define("dojox/gfx/silverlight_attach",["dojo/_base/kernel","dojo/_base/lang","./_base","./silverlight"],function(e,t,a,i){return t.getObject("dojox.gfx.silverlight_attach",!0),e.experimental("dojox.gfx.silverlight_attach"),i.attachNode=function(e){return null},i.attachSurface=function(e){return null},i});//# sourceMappingURL=silverlight_attach.js.map

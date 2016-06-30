@@ -1,2 +1,2 @@
 //>>built
-define("lodash/isFunction",["./isObject"],function(e){function t(t){var o=e(t)?r.call(t):"";return o==i||o==a}var i="[object Function]",a="[object GeneratorFunction]",o=Object.prototype,r=o.toString;return t});//# sourceMappingURL=isFunction.js.map
+define("lodash/isFunction",["./isObject"],function(e){function t(t){var o=e(t)?n.call(t):"";return o==i||o==a}var i="[object Function]",a="[object GeneratorFunction]",o=Object.prototype,n=o.toString;return t});//# sourceMappingURL=isFunction.js.map

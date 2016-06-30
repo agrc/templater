@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: {type}
 status: publish
 published: true
 title: '{title}'

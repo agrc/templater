@@ -1,2 +1,2 @@
 //>>built
-define("lodash/sample",["./_baseRandom","./isArrayLike","./values"],function(e,t,i){function a(a){var n=t(a)?a:i(a),o=n.length;return o>0?n[e(0,o-1)]:r}var r;return a});//# sourceMappingURL=sample.js.map
+define("lodash/sample",["./_baseRandom","./isArrayLike","./values"],function(e,t,i){function a(a){var r=t(a)?a:i(a),n=r.length;return n>0?r[e(0,n-1)]:o}var o;return a});//# sourceMappingURL=sample.js.map

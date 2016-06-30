@@ -1,2 +1,2 @@
 //>>built
-define("dojox/mvc/resolve",["dojo/_base/lang","dijit/registry","dojo/Stateful"],function(e,t){var i=function(i,o){if("string"==typeof i){var r=i.match(/^(expr|rel|widget):(.*)$/)||[];try{i="rel"==r[1]?e.getObject(r[2]||"",!1,o):"widget"==r[1]?t.byId(r[2]):e.getObject(r[2]||i,!1,o)}catch(n){}}return i};return e.setObject("dojox.mvc.resolve",i)});//# sourceMappingURL=resolve.js.map
+define("dojox/mvc/resolve",["dojo/_base/lang","dijit/registry","dojo/Stateful"],function(e,t){var i=function(i,o){if("string"==typeof i){var n=i.match(/^(expr|rel|widget):(.*)$/)||[];try{i="rel"==n[1]?e.getObject(n[2]||"",!1,o):"widget"==n[1]?t.byId(n[2]):e.getObject(n[2]||i,!1,o)}catch(r){}}return i};return e.setObject("dojox.mvc.resolve",i)});//# sourceMappingURL=resolve.js.map

@@ -1,2 +1,2 @@
 //>>built
-define("lodash/isString",["./isArray","./isObjectLike"],function(e,t){function i(i){return"string"==typeof i||!e(i)&&t(i)&&n.call(i)==o}var o="[object String]",a=Object.prototype,n=a.toString;return i});//# sourceMappingURL=isString.js.map
+define("lodash/isString",["./isArray","./isObjectLike"],function(e,t){function i(i){return"string"==typeof i||!e(i)&&t(i)&&o.call(i)==a}var a="[object String]",r=Object.prototype,o=r.toString;return i});//# sourceMappingURL=isString.js.map
