@@ -33,6 +33,12 @@ var profile = {
     packages: [
         'bootstrap-css-only',
         {
+            name: 'handlebars',
+            location: './handlebars',
+            trees: [
+                ['.', '.', /(\/\.)|(~$)|(runtime|amd)/]
+            ]
+        }, {
             name: 'lodash',
             location: '../node_modules/lodash-amd',
             resourceTags: {

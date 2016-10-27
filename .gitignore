@@ -8,6 +8,7 @@ src/dijit/
 src/dojo/
 src/dojox/
 src/favico.js/
+src/handlebars/
 src/jasmine-favicon-reporter/
 src/jasmine-jsreporter/
 src/jquery/

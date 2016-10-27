@@ -3,28 +3,38 @@
         <h1>Generate New Post
             <a href='ChangeLog.html' class='version'>${version}</a>
         </h1>
+        <h6>*Required</h6>
         <div class="row">
             <div class="col-md-4 input">
                 <div class="form-group">
-                    <label>Title</label>
+                    <label>*Title</label>
                     <input type="text" class='form-control required' data-dojo-attach-point='title'>
                 </div>
                 <div class="form-group">
-                    <label>Type</label>
+                    <label>*Type</label>
                     <select class="form-control" data-dojo-attach-point='type'>
                         <option value="post">Post</option>
                         <option value="page">Page</option>
                     </select>
                 </div>
+                <div class="checkbox">
+                    <label>
+                        <input data-dojo-attach-point='featured' type="checkbox"> Featured
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>Tags (comma-separated)</label>
+                    <input class='form-control' data-dojo-attach-point='tags'>
+                </div>
                 <div class="panel panel-default">
                     <div class='panel-heading'>Author</div>
                     <div class="panel-body">
                         <div class="form-group">
-                            <label>Display Name</label>
+                            <label>*Display Name</label>
                             <input type="text" class='form-control required' data-dojo-attach-point='display_name'>
                         </div>
                         <div class="form-group">
-                            <label>Email</label>
+                            <label>*Email</label>
                             <input type="email" class='form-control required' data-dojo-attach-point='email'>
                         </div>
                     </div>

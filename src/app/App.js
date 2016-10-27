@@ -9,6 +9,8 @@ define([
     'dojo/_base/declare',
     'dojo/_base/lang',
 
+    'handlebars/handlebars',
+
     'lodash/kebabCase'
 ], function (
     _TemplatedMixin,
@@ -20,6 +22,8 @@ define([
     postTemplate,
     declare,
     lang,
+
+    handlebars,
 
     kebabCase
 ) {
@@ -62,7 +66,9 @@ define([
 
             var data = this.serialize();
 
-            this.output.value = lang.replace(postTemplate, data);
+            var template = handlebars.compile(postTemplate);
+
+            this.output.value = template(data);
             this.fileName.value = this.getFileNameString(
                 new Date(),
                 this.title.value,
@@ -77,12 +83,23 @@ define([
             //      returns relavent data as an object for local storage
             console.log('app.App:serialize', arguments);
 
+            var tags
+            if (this.tags.value.trim().length === 0) {
+                tags = [];
+            } else {
+                tags = this.tags.value.split(',').map(function (value) {
+                    return value.trim();
+                });
+            }
+
             return {
                 title: this.title.value.replace(/'/g, '&#039;'),
                 display_name: this.display_name.value,
                 email: this.email.value,
                 date: this.getDateString(new Date()),
-                type: this.type.value
+                type: this.type.value,
+                featured: this.featured.checked,
+                tags: tags
             };
         },
         getDateString: function (date) {

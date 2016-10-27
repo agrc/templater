@@ -29,6 +29,30 @@ function (
 
                 expect(testWidget.serialize().title).toBe('i have &#039;single quotes&#039;');
             });
+            it('returns data', function () {
+                var title = 'title';
+                var display_name = 'display_name';
+                var email = 'email';
+                var type = 'post';
+
+                testWidget.title.value = title;
+                testWidget.display_name.value = display_name;
+                testWidget.email.value = email;
+                testWidget.type.value = type;
+                testWidget.featured.checked = true;
+                testWidget.tags.value = 'one two, three';
+
+                var data = testWidget.serialize();
+                expect(data.title).toEqual(title);
+                expect(data.display_name).toEqual(display_name);
+                expect(data.email).toEqual(email);
+                expect(data.type).toEqual(type);
+                expect(data.featured).toEqual(true);
+                expect(data.tags).toEqual(['one two', 'three']);
+            });
+            it('returns an empty string for empty tags box', function () {
+                expect(testWidget.serialize().tags).toEqual([]);
+            });
         });
 
         describe('getFileNameString', function () {
