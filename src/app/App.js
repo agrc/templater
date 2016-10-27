@@ -33,7 +33,7 @@ define([
     return declare([_WidgetBase, _TemplatedMixin], {
         templateString: template,
 
-        version: '1.1.3',
+        version: '1.2.0',
 
         // requiredFields: domNode[]
         requiredFields: null,
