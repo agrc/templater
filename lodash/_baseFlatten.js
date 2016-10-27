@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_baseFlatten",["./_arrayPush","./isArguments","./isArray","./isArrayLikeObject"],function(e,t,i,a){function o(n,r,s,d){d||(d=[]);for(var l=-1,h=n.length;++l<h;){var c=n[l];r>0&&a(c)&&(s||i(c)||t(c))?r>1?o(c,r-1,s,d):e(d,c):s||(d[d.length]=c)}return d}return o});//# sourceMappingURL=_baseFlatten.js.map
+define("lodash/_baseFlatten",["./_arrayPush","./isArguments","./isArray","./isArrayLikeObject"],function(e,t,i,o){function r(n,a,s,l){l||(l=[]);for(var d=-1,u=n.length;++d<u;){var c=n[d];a>0&&o(c)&&(s||i(c)||t(c))?a>1?r(c,a-1,s,l):e(l,c):s||(l[l.length]=c)}return l}return r});//# sourceMappingURL=_baseFlatten.js.map

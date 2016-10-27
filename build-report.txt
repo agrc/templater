@@ -1,4 +1,4 @@
-Build started: Thu Jun 30 2016 09:36:41 GMT-0600 (MDT)
+Build started: Thu Oct 27 2016 10:09:28 GMT-0600 (MDT)
 Build application version: 1.10.5 (ec427ec)
 Messages:
 info(100) Assumed module uses legacy loader API.
@@ -129,6 +129,7 @@ info(100) Assumed module uses legacy loader API.
 	module: dojox/xmpp/util
 	module: dojox/xmpp/xmppSession
 	module: dojox/xmpp/widget/ChatSession
+	module: handlebars/handlebars.min
 info(106) Optimizing CSS.
 	file: /Users/stdavis/Documents/Projects/templater/src/app/resources/App.css
 	file: /Users/stdavis/Documents/Projects/templater/src/dijit/icons/commonIcons.css
@@ -1262,6 +1263,7 @@ warn(205) Module not tagged as pure AMD yet it contains AMD API applications.
 	module: app/tests/jasmineAMDErrorChecking
 	module: app/tests/jsReporterSanitizer
 	module: app/tests/spec/SpecApp
+	module: handlebars/handlebars
 warn(209) Missing or empty package.json.
 	filename: /Users/stdavis/Documents/Projects/templater/src/app/package.json
 warn(216) dojo/has plugin resource could not be resolved during build-time.
@@ -1328,6 +1330,7 @@ warn(224) A plugin dependency was encountered but there was no build-time plugin
 	module: dojox/mobile/TimePicker; plugin: dojox/mobile/_PickerChooser
 	module: dojox/store/LocalDB; plugin: dojox/store/db/has
 warn(226) A package without a profile could throw errors or warnings.
+	package: undefined
 	package: lodash-amd
 	package: bootstrap-css-only
 Layer Contents:
@@ -1400,6 +1403,7 @@ dojo/dojo:
 	dojo/selector/acme
 	app/templates/App.html
 	app/templates/_post.md
+	handlebars/handlebars
 	lodash/kebabCase
 	lodash/_createCompounder
 	lodash/_arrayReduce
@@ -1417,5 +1421,5 @@ dojo/dojo:
 
 Process finished normally
 	errors: 0
-	warnings: 68
-	build time: 40.092 seconds
+	warnings: 70
+	build time: 41.056 seconds

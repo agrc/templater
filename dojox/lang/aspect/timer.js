@@ -1,2 +1,2 @@
 //>>built
-define("dojox/lang/aspect/timer",["dojo","dijit","dojox"],function(e,t,i){e.provide("dojox.lang.aspect.timer"),function(){var t=i.lang.aspect,a=0,n=function(e){this.name=e||"DojoAopTimer #"+ ++a,this.inCall=0};e.extend(n,{before:function(){!this.inCall++},after:function(){!--this.inCall}}),t.timer=function(e){return new n(e)}}()});//# sourceMappingURL=timer.js.map
+define("dojox/lang/aspect/timer",["dojo","dijit","dojox"],function(e,t,i){e.provide("dojox.lang.aspect.timer"),function(){var t=i.lang.aspect,a=0,o=function(e){this.name=e||"DojoAopTimer #"+ ++a,this.inCall=0};e.extend(o,{before:function(){!this.inCall++},after:function(){!--this.inCall}}),t.timer=function(e){return new o(e)}}()});//# sourceMappingURL=timer.js.map

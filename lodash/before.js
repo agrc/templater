@@ -1,2 +1,2 @@
 //>>built
-define("lodash/before",["./toInteger"],function(e){function t(t,r){var n;if("function"!=typeof r)throw new TypeError(o);return t=e(t),function(){return--t>0&&(n=r.apply(this,arguments)),1>=t&&(r=i),n}}var i,o="Expected a function";return t});//# sourceMappingURL=before.js.map
+define("lodash/before",["./toInteger"],function(e){function t(t,n){var o;if("function"!=typeof n)throw new TypeError(a);return t=e(t),function(){return--t>0&&(o=n.apply(this,arguments)),1>=t&&(n=i),o}}var i,a="Expected a function";return t});//# sourceMappingURL=before.js.map

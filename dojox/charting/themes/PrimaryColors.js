@@ -1,2 +1,2 @@
 //>>built
-define("dojox/charting/themes/PrimaryColors",["../Theme","./gradientGenerator","./common"],function(e,t,i){var a=["#f00","#0f0","#00f","#ff0","#0ff","#f0f","./common"],r={type:"linear",space:"plot",x1:0,y1:0,x2:0,y2:100};return i.PrimaryColors=new e({seriesThemes:t.generateMiniTheme(a,r,90,40,25)}),i.PrimaryColors});//# sourceMappingURL=PrimaryColors.js.map
+define("dojox/charting/themes/PrimaryColors",["../Theme","./gradientGenerator","./common"],function(e,t,a){var i=["#f00","#0f0","#00f","#ff0","#0ff","#f0f","./common"],r={type:"linear",space:"plot",x1:0,y1:0,x2:0,y2:100};return a.PrimaryColors=new e({seriesThemes:t.generateMiniTheme(i,r,90,40,25)}),a.PrimaryColors});//# sourceMappingURL=PrimaryColors.js.map

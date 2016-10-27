@@ -1,2 +1,2 @@
 //>>built
-define("dijit/ConfirmTooltipDialog",["dojo/_base/declare","./TooltipDialog","./_ConfirmDialogMixin"],function(e,t,i){return e("dijit.ConfirmTooltipDialog",[t,i],{})});//# sourceMappingURL=ConfirmTooltipDialog.js.map
+define("dijit/ConfirmTooltipDialog",["dojo/_base/declare","./TooltipDialog","./_ConfirmDialogMixin"],function(i,t,e){return i("dijit.ConfirmTooltipDialog",[t,e],{})});//# sourceMappingURL=ConfirmTooltipDialog.js.map

@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_compareMultiple",["./_compareAscending"],function(e){function t(t,i,a){for(var o=-1,n=t.criteria,r=i.criteria,s=n.length,l=a.length;++o<s;){var d=e(n[o],r[o]);if(d){if(o>=l)return d;var h=a[o];return d*("desc"==h?-1:1)}}return t.index-i.index}return t});//# sourceMappingURL=_compareMultiple.js.map
+define("lodash/_compareMultiple",["./_compareAscending"],function(e){function t(t,i,o){for(var r=-1,n=t.criteria,a=i.criteria,s=n.length,l=o.length;++r<s;){var d=e(n[r],a[r]);if(d){if(r>=l)return d;var u=o[r];return d*("desc"==u?-1:1)}}return t.index-i.index}return t});//# sourceMappingURL=_compareMultiple.js.map

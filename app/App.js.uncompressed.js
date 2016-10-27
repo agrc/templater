@@ -1,6 +1,6 @@
 require({cache:{
-'url:app/templates/App.html':"<div>\n    <div class=\"container-fluid\">\n        <h1>Generate New Post\n            <a href='ChangeLog.html' class='version'>${version}</a>\n        </h1>\n        <div class=\"row\">\n            <div class=\"col-md-4 input\">\n                <div class=\"form-group\">\n                    <label>Title</label>\n                    <input type=\"text\" class='form-control required' data-dojo-attach-point='title'>\n                </div>\n                <div class=\"form-group\">\n                    <label>Type</label>\n                    <select class=\"form-control\" data-dojo-attach-point='type'>\n                        <option value=\"post\">Post</option>\n                        <option value=\"page\">Page</option>\n                    </select>\n                </div>\n                <div class=\"panel panel-default\">\n                    <div class='panel-heading'>Author</div>\n                    <div class=\"panel-body\">\n                        <div class=\"form-group\">\n                            <label>Display Name</label>\n                            <input type=\"text\" class='form-control required' data-dojo-attach-point='display_name'>\n                        </div>\n                        <div class=\"form-group\">\n                            <label>Email</label>\n                            <input type=\"email\" class='form-control required' data-dojo-attach-point='email'>\n                        </div>\n                    </div>\n                </div>\n                <button class=\"btn btn-primary btn-lg btn-block\" disabled\n                    data-dojo-attach-point='submitBtn'\n                    data-dojo-attach-event='click: generate'>Generate</button>\n            </div>\n            <div class=\"col-md-8 hidden\"\n                data-dojo-attach-point='outputContainer'>\n                <div class=\"form-group\">\n                    <label>File Path</label>\n                    <input type=\"text\" class=\"form-control\"\n                        data-dojo-attach-point='fileName'>\n                </div>\n                <div class=\"form-group\">\n                    <label>Contents</label>\n                    <textarea id=\"\" rows=\"20\" class='form-control'\n                        data-dojo-attach-point='output'\n                    ></textarea>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n",
-'url:app/templates/_post.md':"---\nlayout: {type}\nstatus: publish\npublished: true\ntitle: '{title}'\nauthor:\n  display_name: {display_name}\n  email: {email}\ndate: {date}\ncategories:\n\ntags:\n\n---\n\n[post body goes here]\n"}});
+'url:app/templates/App.html':"<div>\n    <div class=\"container-fluid\">\n        <h1>Generate New Post\n            <a href='ChangeLog.html' class='version'>${version}</a>\n        </h1>\n        <h6>*Required</h6>\n        <div class=\"row\">\n            <div class=\"col-md-4 input\">\n                <div class=\"form-group\">\n                    <label>*Title</label>\n                    <input type=\"text\" class='form-control required' data-dojo-attach-point='title'>\n                </div>\n                <div class=\"form-group\">\n                    <label>*Type</label>\n                    <select class=\"form-control\" data-dojo-attach-point='type'>\n                        <option value=\"post\">Post</option>\n                        <option value=\"page\">Page</option>\n                    </select>\n                </div>\n                <div class=\"checkbox\">\n                    <label>\n                        <input data-dojo-attach-point='featured' type=\"checkbox\"> Featured\n                    </label>\n                </div>\n                <div class=\"form-group\">\n                    <label>Tags (comma-separated)</label>\n                    <input class='form-control' data-dojo-attach-point='tags'>\n                </div>\n                <div class=\"panel panel-default\">\n                    <div class='panel-heading'>Author</div>\n                    <div class=\"panel-body\">\n                        <div class=\"form-group\">\n                            <label>*Display Name</label>\n                            <input type=\"text\" class='form-control required' data-dojo-attach-point='display_name'>\n                        </div>\n                        <div class=\"form-group\">\n                            <label>*Email</label>\n                            <input type=\"email\" class='form-control required' data-dojo-attach-point='email'>\n                        </div>\n                    </div>\n                </div>\n                <button class=\"btn btn-primary btn-lg btn-block\" disabled\n                    data-dojo-attach-point='submitBtn'\n                    data-dojo-attach-event='click: generate'>Generate</button>\n            </div>\n            <div class=\"col-md-8 hidden\"\n                data-dojo-attach-point='outputContainer'>\n                <div class=\"form-group\">\n                    <label>File Path</label>\n                    <input type=\"text\" class=\"form-control\"\n                        data-dojo-attach-point='fileName'>\n                </div>\n                <div class=\"form-group\">\n                    <label>Contents</label>\n                    <textarea id=\"\" rows=\"20\" class='form-control'\n                        data-dojo-attach-point='output'\n                    ></textarea>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n",
+'url:app/templates/_post.md':"---\nlayout: {{type}}\nstatus: publish\npublished: true\ntitle: '{{title}}'\nauthor:\n  display_name: {{display_name}}\n  email: {{email}}\ndate: {{date}}\ncategories:\n{{#if featured}}\n- Featured\n{{else}}\n\n{{/if}}\ntags:\n{{#each tags}}\n- {{this}}\n{{/each}}\n\n---\n\n[post body goes here]\n"}});
 define("app/App", [
     'dijit/_TemplatedMixin',
     'dijit/_WidgetBase',
@@ -11,6 +11,8 @@ define("app/App", [
     'dojo/text!app/templates/_post.md',
     'dojo/_base/declare',
     'dojo/_base/lang',
+
+    'handlebars/handlebars',
 
     'lodash/kebabCase'
 ], function (
@@ -24,6 +26,8 @@ define("app/App", [
     declare,
     lang,
 
+    handlebars,
+
     kebabCase
 ) {
     var storageToken = 'templater_token';
@@ -32,7 +36,7 @@ define("app/App", [
     return declare([_WidgetBase, _TemplatedMixin], {
         templateString: template,
 
-        version: '1.1.3',
+        version: '1.2.0',
 
         // requiredFields: domNode[]
         requiredFields: null,
@@ -65,7 +69,9 @@ define("app/App", [
 
             var data = this.serialize();
 
-            this.output.value = lang.replace(postTemplate, data);
+            var template = handlebars.compile(postTemplate);
+
+            this.output.value = template(data);
             this.fileName.value = this.getFileNameString(
                 new Date(),
                 this.title.value,
@@ -80,12 +86,23 @@ define("app/App", [
             //      returns relavent data as an object for local storage
             console.log('app.App:serialize', arguments);
 
+            var tags
+            if (this.tags.value.trim().length === 0) {
+                tags = [];
+            } else {
+                tags = this.tags.value.split(',').map(function (value) {
+                    return value.trim();
+                });
+            }
+
             return {
                 title: this.title.value.replace(/'/g, '&#039;'),
                 display_name: this.display_name.value,
                 email: this.email.value,
                 date: this.getDateString(new Date()),
-                type: this.type.value
+                type: this.type.value,
+                featured: this.featured.checked,
+                tags: tags
             };
         },
         getDateString: function (date) {
