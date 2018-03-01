@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_isFlattenable",["./_Symbol","./isArguments","./isArray"],function(e,t,i){function a(e){return i(e)||t(e)||!!(o&&e&&e[o])}var r,o=e?e.isConcatSpreadable:r;return a});//# sourceMappingURL=_isFlattenable.js.map
+define("lodash/_isFlattenable",["./_Symbol","./isArguments","./isArray"],function(e,t,i){function a(e){return i(e)||t(e)||!!(r&&e&&e[r])}var o,r=e?e.isConcatSpreadable:o;return a});//# sourceMappingURL=_isFlattenable.js.map

@@ -1,2 +1,2 @@
 //>>built
-define("dijit/_Calendar",["dojo/_base/kernel","./Calendar","./main"],function(t,e,a){t.deprecated("dijit._Calendar is deprecated","dijit._Calendar moved to dijit.Calendar",2),a._Calendar=e});//# sourceMappingURL=_Calendar.js.map
+define("dijit/_Calendar",["dojo/_base/kernel","./Calendar","./main"],function(t,e,i){t.deprecated("dijit._Calendar is deprecated","dijit._Calendar moved to dijit.Calendar",2),i._Calendar=e});//# sourceMappingURL=_Calendar.js.map

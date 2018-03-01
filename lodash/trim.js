@@ -1,2 +1,2 @@
 //>>built
-define("lodash/trim",["./_baseToString","./_castSlice","./_charsEndIndex","./_charsStartIndex","./_stringToArray","./toString"],function(e,t,i,a,r,o){function n(n,d,c){if((n=o(n))&&(c||d===s))return n.replace(l,"");if(!n||!(d=e(d)))return n;var h=r(n),u=r(d),m=a(h,u),f=i(h,u)+1;return t(h,m,f).join("")}var s,l=/^\s+|\s+$/g;return n});//# sourceMappingURL=trim.js.map
+define("lodash/trim",["./_baseToString","./_castSlice","./_charsEndIndex","./_charsStartIndex","./_stringToArray","./toString"],function(e,t,i,a,o,r){function n(n,l,h){if((n=r(n))&&(h||l===s))return n.replace(d,"");if(!n||!(l=e(l)))return n;var c=o(n),u=o(l),m=a(c,u),f=i(c,u)+1;return t(c,m,f).join("")}var s,d=/^\s+|\s+$/g;return n});//# sourceMappingURL=trim.js.map

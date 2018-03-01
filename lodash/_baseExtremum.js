@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_baseExtremum",["./isSymbol"],function(e){function t(t,a,r){for(var n=-1,o=t.length;++n<o;){var s=t[n],l=a(s);if(null!=l&&(d===i?l===l&&!e(l):r(l,d)))var d=l,h=s}return h}var i;return t});//# sourceMappingURL=_baseExtremum.js.map
+define("lodash/_baseExtremum",["./isSymbol"],function(e){function t(t,a,o){for(var r=-1,n=t.length;++r<n;){var s=t[r],d=a(s);if(null!=d&&(l===i?d===d&&!e(d):o(d,l)))var l=d,h=s}return h}var i;return t});//# sourceMappingURL=_baseExtremum.js.map

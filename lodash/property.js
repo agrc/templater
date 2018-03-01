@@ -1,2 +1,2 @@
 //>>built
-define("lodash/property",["./_baseProperty","./_basePropertyDeep","./_isKey","./_toKey"],function(e,t,i,a){function r(r){return i(r)?e(a(r)):t(r)}return r});//# sourceMappingURL=property.js.map
+define("lodash/property",["./_baseProperty","./_basePropertyDeep","./_isKey","./_toKey"],function(e,t,i,a){function o(o){return i(o)?e(a(o)):t(o)}return o});//# sourceMappingURL=property.js.map
