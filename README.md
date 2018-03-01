@@ -1,2 +1,2 @@
-# templater - [gis.utah.gov/templater](http://gis.utah.gov/templater/)
+# templater [:link:](http://agrc.github.io/templater)
 A web app for quickly templating out new posts or pages for gis.utah.gov.
