@@ -83,12 +83,17 @@ define([
             //      returns relavent data as an object for local storage
             console.log('app.App:serialize', arguments);
 
-            var tags
-            if (this.tags.value.trim().length === 0) {
-                tags = [];
-            } else {
+            var tags = []
+            if (this.tags.value.trim().length > 0) {
                 tags = this.tags.value.split(',').map(function (value) {
                     return value.trim();
+                });
+            }
+
+            var categories = [];
+            if (this.categories.selectedOptions.length > 0) {
+                categories = Array.from(this.categories.selectedOptions).map(function (option) {
+                    return option.value;
                 });
             }
 
@@ -97,8 +102,7 @@ define([
                 display_name: this.display_name.value,
                 email: this.email.value,
                 date: this.getDateString(new Date()),
-                type: this.type.value,
-                featured: this.featured.checked,
+                categories: categories,
                 tags: tags
             };
         },
