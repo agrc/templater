@@ -34,20 +34,20 @@ function (
                 var display_name = 'display_name';
                 var email = 'email';
                 var type = 'post';
+                var developer = 'Developer';
 
                 testWidget.title.value = title;
                 testWidget.display_name.value = display_name;
                 testWidget.email.value = email;
                 testWidget.type.value = type;
-                testWidget.featured.checked = true;
+                testWidget.categories.selectedIndex = 1;
                 testWidget.tags.value = 'one two, three';
 
                 var data = testWidget.serialize();
                 expect(data.title).toEqual(title);
                 expect(data.display_name).toEqual(display_name);
                 expect(data.email).toEqual(email);
-                expect(data.type).toEqual(type);
-                expect(data.featured).toEqual(true);
+                expect(data.categories).toEqual([developer]);
                 expect(data.tags).toEqual(['one two', 'three']);
             });
             it('returns an empty string for empty tags box', function () {
