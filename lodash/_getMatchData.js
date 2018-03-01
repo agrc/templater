@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_getMatchData",["./_isStrictComparable","./toPairs"],function(e,t){function i(i){for(var a=t(i),r=a.length;r--;)a[r][2]=e(a[r][1]);return a}return i});//# sourceMappingURL=_getMatchData.js.map
+define("lodash/_getMatchData",["./_isStrictComparable","./keys"],function(e,t){function i(i){for(var a=t(i),r=a.length;r--;){var n=a[r],o=i[n];a[r]=[n,o,e(o)]}return a}return i});//# sourceMappingURL=_getMatchData.js.map

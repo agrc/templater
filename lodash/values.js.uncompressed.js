@@ -1,11 +1,12 @@
 define("lodash/values", ['./_baseValues', './keys'], function(baseValues, keys) {
 
   /**
-   * Creates an array of the own enumerable property values of `object`.
+   * Creates an array of the own enumerable string keyed property values of `object`.
    *
    * **Note:** Non-object values are coerced to objects.
    *
    * @static
+   * @since 0.1.0
    * @memberOf _
    * @category Object
    * @param {Object} object The object to query.
@@ -26,7 +27,7 @@ define("lodash/values", ['./_baseValues', './keys'], function(baseValues, keys) 
    * // => ['h', 'i']
    */
   function values(object) {
-    return object ? baseValues(object, keys(object)) : [];
+    return object == null ? [] : baseValues(object, keys(object));
   }
 
   return values;

@@ -8,12 +8,13 @@ define("lodash/toArray", ['./_Symbol', './_copyArray', './_getTag', './isArrayLi
       setTag = '[object Set]';
 
   /** Built-in value references. */
-  var iteratorSymbol = typeof (iteratorSymbol = Symbol && Symbol.iterator) == 'symbol' ? iteratorSymbol : undefined;
+  var symIterator = Symbol ? Symbol.iterator : undefined;
 
   /**
    * Converts `value` to an array.
    *
    * @static
+   * @since 0.1.0
    * @memberOf _
    * @category Lang
    * @param {*} value The value to convert.
@@ -39,8 +40,8 @@ define("lodash/toArray", ['./_Symbol', './_copyArray', './_getTag', './isArrayLi
     if (isArrayLike(value)) {
       return isString(value) ? stringToArray(value) : copyArray(value);
     }
-    if (iteratorSymbol && value[iteratorSymbol]) {
-      return iteratorToArray(value[iteratorSymbol]());
+    if (symIterator && value[symIterator]) {
+      return iteratorToArray(value[symIterator]());
     }
     var tag = getTag(value),
         func = tag == mapTag ? mapToArray : (tag == setTag ? setToArray : values);

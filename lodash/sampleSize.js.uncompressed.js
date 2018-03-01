@@ -1,4 +1,7 @@
-define("lodash/sampleSize", ['./_baseClamp', './_baseRandom', './toArray', './toInteger'], function(baseClamp, baseRandom, toArray, toInteger) {
+define("lodash/sampleSize", ['./_arraySampleSize', './_baseSampleSize', './isArray', './_isIterateeCall', './toInteger'], function(arraySampleSize, baseSampleSize, isArray, isIterateeCall, toInteger) {
+
+  /** Used as a safe reference for `undefined` in pre-ES5 environments. */
+  var undefined;
 
   /**
    * Gets `n` random elements at unique keys from `collection` up to the
@@ -6,9 +9,11 @@ define("lodash/sampleSize", ['./_baseClamp', './_baseRandom', './toArray', './to
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Collection
    * @param {Array|Object} collection The collection to sample.
-   * @param {number} [n=0] The number of elements to sample.
+   * @param {number} [n=1] The number of elements to sample.
+   * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
    * @returns {Array} Returns the random elements.
    * @example
    *
@@ -18,22 +23,14 @@ define("lodash/sampleSize", ['./_baseClamp', './_baseRandom', './toArray', './to
    * _.sampleSize([1, 2, 3], 4);
    * // => [2, 3, 1]
    */
-  function sampleSize(collection, n) {
-    var index = -1,
-        result = toArray(collection),
-        length = result.length,
-        lastIndex = length - 1;
-
-    n = baseClamp(toInteger(n), 0, length);
-    while (++index < n) {
-      var rand = baseRandom(index, lastIndex),
-          value = result[rand];
-
-      result[rand] = result[index];
-      result[index] = value;
+  function sampleSize(collection, n, guard) {
+    if ((guard ? isIterateeCall(collection, n, guard) : n === undefined)) {
+      n = 1;
+    } else {
+      n = toInteger(n);
     }
-    result.length = n;
-    return result;
+    var func = isArray(collection) ? arraySampleSize : baseSampleSize;
+    return func(collection, n);
   }
 
   return sampleSize;

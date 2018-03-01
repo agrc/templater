@@ -5,7 +5,8 @@ define("lodash/_isLaziable", ['./_LazyWrapper', './_getData', './_getFuncName', 
    *
    * @private
    * @param {Function} func The function to check.
-   * @returns {boolean} Returns `true` if `func` has a lazy counterpart, else `false`.
+   * @returns {boolean} Returns `true` if `func` has a lazy counterpart,
+   *  else `false`.
    */
   function isLaziable(func) {
     var funcName = getFuncName(func),

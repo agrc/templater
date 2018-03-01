@@ -1,27 +1,23 @@
-define("lodash/_getTag", ['./_Map', './_Set', './_WeakMap'], function(Map, Set, WeakMap) {
+define("lodash/_getTag", ['./_DataView', './_Map', './_Promise', './_Set', './_WeakMap', './_baseGetTag', './_toSource'], function(DataView, Map, Promise, Set, WeakMap, baseGetTag, toSource) {
+
+  /** Used as a safe reference for `undefined` in pre-ES5 environments. */
+  var undefined;
 
   /** `Object#toString` result references. */
   var mapTag = '[object Map]',
       objectTag = '[object Object]',
+      promiseTag = '[object Promise]',
       setTag = '[object Set]',
       weakMapTag = '[object WeakMap]';
 
-  /** Used for built-in method references. */
-  var objectProto = Object.prototype;
-
-  /** Used to resolve the decompiled source of functions. */
-  var funcToString = Function.prototype.toString;
-
-  /**
-   * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
-   * of values.
-   */
-  var objectToString = objectProto.toString;
+  var dataViewTag = '[object DataView]';
 
   /** Used to detect maps, sets, and weakmaps. */
-  var mapCtorString = Map ? funcToString.call(Map) : '',
-      setCtorString = Set ? funcToString.call(Set) : '',
-      weakMapCtorString = WeakMap ? funcToString.call(WeakMap) : '';
+  var dataViewCtorString = toSource(DataView),
+      mapCtorString = toSource(Map),
+      promiseCtorString = toSource(Promise),
+      setCtorString = toSource(Set),
+      weakMapCtorString = toSource(WeakMap);
 
   /**
    * Gets the `toStringTag` of `value`.
@@ -30,22 +26,24 @@ define("lodash/_getTag", ['./_Map', './_Set', './_WeakMap'], function(Map, Set, 
    * @param {*} value The value to query.
    * @returns {string} Returns the `toStringTag`.
    */
-  function getTag(value) {
-    return objectToString.call(value);
-  }
+  var getTag = baseGetTag;
 
-  // Fallback for IE 11 providing `toStringTag` values for maps, sets, and weakmaps.
-  if ((Map && getTag(new Map) != mapTag) ||
+  // Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
+  if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
+      (Map && getTag(new Map) != mapTag) ||
+      (Promise && getTag(Promise.resolve()) != promiseTag) ||
       (Set && getTag(new Set) != setTag) ||
       (WeakMap && getTag(new WeakMap) != weakMapTag)) {
     getTag = function(value) {
-      var result = objectToString.call(value),
-          Ctor = result == objectTag ? value.constructor : null,
-          ctorString = typeof Ctor == 'function' ? funcToString.call(Ctor) : '';
+      var result = baseGetTag(value),
+          Ctor = result == objectTag ? value.constructor : undefined,
+          ctorString = Ctor ? toSource(Ctor) : '';
 
       if (ctorString) {
         switch (ctorString) {
+          case dataViewCtorString: return dataViewTag;
           case mapCtorString: return mapTag;
+          case promiseCtorString: return promiseTag;
           case setCtorString: return setTag;
           case weakMapCtorString: return weakMapTag;
         }

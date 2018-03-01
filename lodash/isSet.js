@@ -1,2 +1,2 @@
 //>>built
-define("lodash/isSet",["./_getTag","./isObjectLike"],function(e,t){function i(i){return t(i)&&e(i)==a}var a="[object Set]";return i});//# sourceMappingURL=isSet.js.map
+define("lodash/isSet",["./_baseIsSet","./_baseUnary","./_nodeUtil"],function(e,t,i){var a=i&&i.isSet;return a?t(a):e});//# sourceMappingURL=isSet.js.map

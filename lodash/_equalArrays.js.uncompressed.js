@@ -1,11 +1,11 @@
-define("lodash/_equalArrays", ['./_arraySome'], function(arraySome) {
+define("lodash/_equalArrays", ['./_SetCache', './_arraySome', './_cacheHas'], function(SetCache, arraySome, cacheHas) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
 
-  /** Used to compose bitmasks for comparison styles. */
-  var UNORDERED_COMPARE_FLAG = 1,
-      PARTIAL_COMPARE_FLAG = 2;
+  /** Used to compose bitmasks for value comparisons. */
+  var COMPARE_PARTIAL_FLAG = 1,
+      COMPARE_UNORDERED_FLAG = 2;
 
   /**
    * A specialized version of `baseIsEqualDeep` for arrays with support for
@@ -14,16 +14,14 @@ define("lodash/_equalArrays", ['./_arraySome'], function(arraySome) {
    * @private
    * @param {Array} array The array to compare.
    * @param {Array} other The other array to compare.
-   * @param {Function} equalFunc The function to determine equivalents of values.
+   * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
    * @param {Function} customizer The function to customize comparisons.
-   * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual` for more details.
+   * @param {Function} equalFunc The function to determine equivalents of values.
    * @param {Object} stack Tracks traversed `array` and `other` objects.
    * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
    */
-  function equalArrays(array, other, equalFunc, customizer, bitmask, stack) {
-    var index = -1,
-        isPartial = bitmask & PARTIAL_COMPARE_FLAG,
-        isUnordered = bitmask & UNORDERED_COMPARE_FLAG,
+  function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
+    var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
         arrLength = array.length,
         othLength = other.length;
 
@@ -32,11 +30,15 @@ define("lodash/_equalArrays", ['./_arraySome'], function(arraySome) {
     }
     // Assume cyclic values are equal.
     var stacked = stack.get(array);
-    if (stacked) {
+    if (stacked && stack.get(other)) {
       return stacked == other;
     }
-    var result = true;
+    var index = -1,
+        result = true,
+        seen = (bitmask & COMPARE_UNORDERED_FLAG) ? new SetCache : undefined;
+
     stack.set(array, other);
+    stack.set(other, array);
 
     // Ignore non-index properties.
     while (++index < arrLength) {
@@ -56,19 +58,26 @@ define("lodash/_equalArrays", ['./_arraySome'], function(arraySome) {
         break;
       }
       // Recursively compare arrays (susceptible to call stack limits).
-      if (isUnordered) {
-        if (!arraySome(other, function(othValue) {
-              return arrValue === othValue || equalFunc(arrValue, othValue, customizer, bitmask, stack);
+      if (seen) {
+        if (!arraySome(other, function(othValue, othIndex) {
+              if (!cacheHas(seen, othIndex) &&
+                  (arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) {
+                return seen.push(othIndex);
+              }
             })) {
           result = false;
           break;
         }
-      } else if (!(arrValue === othValue || equalFunc(arrValue, othValue, customizer, bitmask, stack))) {
+      } else if (!(
+            arrValue === othValue ||
+              equalFunc(arrValue, othValue, bitmask, customizer, stack)
+          )) {
         result = false;
         break;
       }
     }
     stack['delete'](array);
+    stack['delete'](other);
     return result;
   }
 

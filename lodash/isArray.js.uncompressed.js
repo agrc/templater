@@ -5,10 +5,10 @@ define("lodash/isArray", [], function() {
    *
    * @static
    * @memberOf _
-   * @type {Function}
+   * @since 0.1.0
    * @category Lang
    * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
+   * @returns {boolean} Returns `true` if `value` is an array, else `false`.
    * @example
    *
    * _.isArray([1, 2, 3]);

@@ -69,7 +69,7 @@ return declare("dojo.store.JsonRest", base, {
 		//		The identity of the requested target
 		var target = this.target;
 		if(typeof id != "undefined"){
-			if((target.charAt(target.length-1) == '/') || (target.charAt(target.length-1) == '=')){
+			if( (target.charAt(target.length-1) == '/') || (target.charAt(target.length-1) == '=')){
 				target += id;
 			}else{
 				target += '/' + id;
@@ -180,6 +180,7 @@ return declare("dojo.store.JsonRest", base, {
 		var headers = lang.mixin({ Accept: this.accepts }, this.headers, options.headers);
 
 		var hasQuestionMark = this.target.indexOf("?") > -1;
+		query = query || ""; // https://bugs.dojotoolkit.org/ticket/17628
 		if(query && typeof query == "object"){
 			query = xhr.objectToQuery(query);
 			query = query ? (hasQuestionMark ? "&" : "?") + query: "";

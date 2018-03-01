@@ -13,7 +13,7 @@ define("lodash/_createAggregator", ['./_arrayAggregator', './_baseAggregator', '
       var func = isArray(collection) ? arrayAggregator : baseAggregator,
           accumulator = initializer ? initializer() : {};
 
-      return func(collection, setter, baseIteratee(iteratee), accumulator);
+      return func(collection, setter, baseIteratee(iteratee, 2), accumulator);
     };
   }
 

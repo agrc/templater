@@ -1,4 +1,4 @@
-define("lodash/pullAt", ['./_arrayMap', './_baseAt', './_baseFlatten', './_basePullAt', './_compareAscending', './rest'], function(arrayMap, baseAt, baseFlatten, basePullAt, compareAscending, rest) {
+define("lodash/pullAt", ['./_arrayMap', './_baseAt', './_basePullAt', './_compareAscending', './_flatRest', './_isIndex'], function(arrayMap, baseAt, basePullAt, compareAscending, flatRest, isIndex) {
 
   /**
    * Removes elements from `array` corresponding to `indexes` and returns an
@@ -8,27 +8,30 @@ define("lodash/pullAt", ['./_arrayMap', './_baseAt', './_baseFlatten', './_baseP
    *
    * @static
    * @memberOf _
+   * @since 3.0.0
    * @category Array
    * @param {Array} array The array to modify.
-   * @param {...(number|number[])} [indexes] The indexes of elements to remove,
-   *  specified individually or in arrays.
+   * @param {...(number|number[])} [indexes] The indexes of elements to remove.
    * @returns {Array} Returns the new array of removed elements.
    * @example
    *
-   * var array = [5, 10, 15, 20];
-   * var evens = _.pullAt(array, 1, 3);
+   * var array = ['a', 'b', 'c', 'd'];
+   * var pulled = _.pullAt(array, [1, 3]);
    *
    * console.log(array);
-   * // => [5, 15]
+   * // => ['a', 'c']
    *
-   * console.log(evens);
-   * // => [10, 20]
+   * console.log(pulled);
+   * // => ['b', 'd']
    */
-  var pullAt = rest(function(array, indexes) {
-    indexes = arrayMap(baseFlatten(indexes, 1), String);
+  var pullAt = flatRest(function(array, indexes) {
+    var length = array == null ? 0 : array.length,
+        result = baseAt(array, indexes);
 
-    var result = baseAt(array, indexes);
-    basePullAt(array, indexes.sort(compareAscending));
+    basePullAt(array, arrayMap(indexes, function(index) {
+      return isIndex(index, length) ? +index : index;
+    }).sort(compareAscending));
+
     return result;
   });
 

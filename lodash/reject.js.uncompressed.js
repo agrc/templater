@@ -1,4 +1,4 @@
-define("lodash/reject", ['./_arrayFilter', './_baseFilter', './_baseIteratee', './isArray'], function(arrayFilter, baseFilter, baseIteratee, isArray) {
+define("lodash/reject", ['./_arrayFilter', './_baseFilter', './_baseIteratee', './isArray', './negate'], function(arrayFilter, baseFilter, baseIteratee, isArray, negate) {
 
   /**
    * The opposite of `_.filter`; this method returns the elements of `collection`
@@ -6,10 +6,12 @@ define("lodash/reject", ['./_arrayFilter', './_baseFilter', './_baseIteratee', '
    *
    * @static
    * @memberOf _
+   * @since 0.1.0
    * @category Collection
    * @param {Array|Object} collection The collection to iterate over.
-   * @param {Function|Object|string} [predicate=_.identity] The function invoked per iteration.
+   * @param {Function} [predicate=_.identity] The function invoked per iteration.
    * @returns {Array} Returns the new filtered array.
+   * @see _.filter
    * @example
    *
    * var users = [
@@ -34,10 +36,7 @@ define("lodash/reject", ['./_arrayFilter', './_baseFilter', './_baseIteratee', '
    */
   function reject(collection, predicate) {
     var func = isArray(collection) ? arrayFilter : baseFilter;
-    predicate = baseIteratee(predicate, 3);
-    return func(collection, function(value, index, collection) {
-      return !predicate(value, index, collection);
-    });
+    return func(collection, negate(baseIteratee(predicate, 3)));
   }
 
   return reject;

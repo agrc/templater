@@ -1,22 +1,22 @@
-define("lodash/bind", ['./_createWrapper', './_getPlaceholder', './_replaceHolders', './rest'], function(createWrapper, getPlaceholder, replaceHolders, rest) {
+define("lodash/bind", ['./_baseRest', './_createWrap', './_getHolder', './_replaceHolders'], function(baseRest, createWrap, getHolder, replaceHolders) {
 
-  /** Used to compose bitmasks for wrapper metadata. */
-  var BIND_FLAG = 1,
-      PARTIAL_FLAG = 32;
+  /** Used to compose bitmasks for function metadata. */
+  var WRAP_BIND_FLAG = 1,
+      WRAP_PARTIAL_FLAG = 32;
 
   /**
    * Creates a function that invokes `func` with the `this` binding of `thisArg`
-   * and prepends any additional `_.bind` arguments to those provided to the
-   * bound function.
+   * and `partials` prepended to the arguments it receives.
    *
    * The `_.bind.placeholder` value, which defaults to `_` in monolithic builds,
    * may be used as a placeholder for partially applied arguments.
    *
-   * **Note:** Unlike native `Function#bind` this method doesn't set the "length"
+   * **Note:** Unlike native `Function#bind`, this method doesn't set the "length"
    * property of bound functions.
    *
    * @static
    * @memberOf _
+   * @since 0.1.0
    * @category Function
    * @param {Function} func The function to bind.
    * @param {*} thisArg The `this` binding of `func`.
@@ -24,9 +24,9 @@ define("lodash/bind", ['./_createWrapper', './_getPlaceholder', './_replaceHolde
    * @returns {Function} Returns the new bound function.
    * @example
    *
-   * var greet = function(greeting, punctuation) {
+   * function greet(greeting, punctuation) {
    *   return greeting + ' ' + this.user + punctuation;
-   * };
+   * }
    *
    * var object = { 'user': 'fred' };
    *
@@ -39,13 +39,13 @@ define("lodash/bind", ['./_createWrapper', './_getPlaceholder', './_replaceHolde
    * bound('hi');
    * // => 'hi fred!'
    */
-  var bind = rest(function(func, thisArg, partials) {
-    var bitmask = BIND_FLAG;
+  var bind = baseRest(function(func, thisArg, partials) {
+    var bitmask = WRAP_BIND_FLAG;
     if (partials.length) {
-      var holders = replaceHolders(partials, getPlaceholder(bind));
-      bitmask |= PARTIAL_FLAG;
+      var holders = replaceHolders(partials, getHolder(bind));
+      bitmask |= WRAP_PARTIAL_FLAG;
     }
-    return createWrapper(func, bitmask, thisArg, partials, holders);
+    return createWrap(func, bitmask, thisArg, partials, holders);
   });
 
   // Assign default placeholders.

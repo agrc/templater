@@ -3,7 +3,7 @@ define("lodash/before", ['./toInteger'], function(toInteger) {
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
 
-  /** Used as the `TypeError` message for "Functions" methods. */
+  /** Error message constants. */
   var FUNC_ERROR_TEXT = 'Expected a function';
 
   /**
@@ -13,6 +13,7 @@ define("lodash/before", ['./toInteger'], function(toInteger) {
    *
    * @static
    * @memberOf _
+   * @since 3.0.0
    * @category Function
    * @param {number} n The number of calls at which `func` is no longer invoked.
    * @param {Function} func The function to restrict.
@@ -20,7 +21,7 @@ define("lodash/before", ['./toInteger'], function(toInteger) {
    * @example
    *
    * jQuery(element).on('click', _.before(5, addContactToList));
-   * // => allows adding up to 4 contacts to the list
+   * // => Allows adding up to 4 contacts to the list.
    */
   function before(n, func) {
     var result;

@@ -1,2 +1,2 @@
 //>>built
-define("dojox/jsonPath",["./jsonPath/query"],function(){});//# sourceMappingURL=jsonPath.js.map
+define("dojox/jsonPath",["dojo/_base/kernel","./jsonPath/query"],function(e,t){return e.deprecated("dojox/jsonPath: The dojox/jsonPath root module is deprecated, use dojox/jsonPath/query","","2.0"),{query:t}});//# sourceMappingURL=jsonPath.js.map

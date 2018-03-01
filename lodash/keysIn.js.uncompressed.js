@@ -1,10 +1,4 @@
-define("lodash/keysIn", ['./_baseKeysIn', './_indexKeys', './_isIndex', './_isPrototype'], function(baseKeysIn, indexKeys, isIndex, isPrototype) {
-
-  /** Used for built-in method references. */
-  var objectProto = Object.prototype;
-
-  /** Used to check objects for own properties. */
-  var hasOwnProperty = objectProto.hasOwnProperty;
+define("lodash/keysIn", ['./_arrayLikeKeys', './_baseKeysIn', './isArrayLike'], function(arrayLikeKeys, baseKeysIn, isArrayLike) {
 
   /**
    * Creates an array of the own and inherited enumerable property names of `object`.
@@ -13,6 +7,7 @@ define("lodash/keysIn", ['./_baseKeysIn', './_indexKeys', './_isIndex', './_isPr
    *
    * @static
    * @memberOf _
+   * @since 3.0.0
    * @category Object
    * @param {Object} object The object to query.
    * @returns {Array} Returns the array of property names.
@@ -29,23 +24,7 @@ define("lodash/keysIn", ['./_baseKeysIn', './_indexKeys', './_isIndex', './_isPr
    * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
    */
   function keysIn(object) {
-    var index = -1,
-        isProto = isPrototype(object),
-        props = baseKeysIn(object),
-        propsLength = props.length,
-        indexes = indexKeys(object),
-        skipIndexes = !!indexes,
-        result = indexes || [],
-        length = result.length;
-
-    while (++index < propsLength) {
-      var key = props[index];
-      if (!(skipIndexes && (key == 'length' || isIndex(key, length))) &&
-          !(key == 'constructor' && (isProto || !hasOwnProperty.call(object, key)))) {
-        result.push(key);
-      }
-    }
-    return result;
+    return isArrayLike(object) ? arrayLikeKeys(object, true) : baseKeysIn(object);
   }
 
   return keysIn;

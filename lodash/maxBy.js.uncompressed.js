@@ -1,4 +1,4 @@
-define("lodash/maxBy", ['./_baseExtremum', './_baseIteratee', './gt'], function(baseExtremum, baseIteratee, gt) {
+define("lodash/maxBy", ['./_baseExtremum', './_baseGt', './_baseIteratee'], function(baseExtremum, baseGt, baseIteratee) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -10,9 +10,10 @@ define("lodash/maxBy", ['./_baseExtremum', './_baseIteratee', './gt'], function(
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Math
    * @param {Array} array The array to iterate over.
-   * @param {Function|Object|string} [iteratee=_.identity] The iteratee invoked per element.
+   * @param {Function} [iteratee=_.identity] The iteratee invoked per element.
    * @returns {*} Returns the maximum value.
    * @example
    *
@@ -27,7 +28,7 @@ define("lodash/maxBy", ['./_baseExtremum', './_baseIteratee', './gt'], function(
    */
   function maxBy(array, iteratee) {
     return (array && array.length)
-      ? baseExtremum(array, baseIteratee(iteratee), gt)
+      ? baseExtremum(array, baseIteratee(iteratee, 2), baseGt)
       : undefined;
   }
 

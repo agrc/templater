@@ -5,13 +5,13 @@ define("lodash/_arrayMap", [], function() {
    * shorthands.
    *
    * @private
-   * @param {Array} array The array to iterate over.
+   * @param {Array} [array] The array to iterate over.
    * @param {Function} iteratee The function invoked per iteration.
    * @returns {Array} Returns the new mapped array.
    */
   function arrayMap(array, iteratee) {
     var index = -1,
-        length = array.length,
+        length = array == null ? 0 : array.length,
         result = Array(length);
 
     while (++index < length) {

@@ -1,4 +1,4 @@
-define("lodash/lastIndexOf", ['./_indexOfNaN', './toInteger'], function(indexOfNaN, toInteger) {
+define("lodash/lastIndexOf", ['./_baseFindIndex', './_baseIsNaN', './_strictLastIndexOf', './toInteger'], function(baseFindIndex, baseIsNaN, strictLastIndexOf, toInteger) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -13,8 +13,9 @@ define("lodash/lastIndexOf", ['./_indexOfNaN', './toInteger'], function(indexOfN
    *
    * @static
    * @memberOf _
+   * @since 0.1.0
    * @category Array
-   * @param {Array} array The array to search.
+   * @param {Array} array The array to inspect.
    * @param {*} value The value to search for.
    * @param {number} [fromIndex=array.length-1] The index to search from.
    * @returns {number} Returns the index of the matched value, else `-1`.
@@ -28,24 +29,18 @@ define("lodash/lastIndexOf", ['./_indexOfNaN', './toInteger'], function(indexOfN
    * // => 1
    */
   function lastIndexOf(array, value, fromIndex) {
-    var length = array ? array.length : 0;
+    var length = array == null ? 0 : array.length;
     if (!length) {
       return -1;
     }
     var index = length;
     if (fromIndex !== undefined) {
       index = toInteger(fromIndex);
-      index = (index < 0 ? nativeMax(length + index, 0) : nativeMin(index, length - 1)) + 1;
+      index = index < 0 ? nativeMax(length + index, 0) : nativeMin(index, length - 1);
     }
-    if (value !== value) {
-      return indexOfNaN(array, index, true);
-    }
-    while (index--) {
-      if (array[index] === value) {
-        return index;
-      }
-    }
-    return -1;
+    return value === value
+      ? strictLastIndexOf(array, value, index)
+      : baseFindIndex(array, baseIsNaN, index, true);
   }
 
   return lastIndexOf;

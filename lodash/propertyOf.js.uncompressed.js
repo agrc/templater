@@ -9,9 +9,10 @@ define("lodash/propertyOf", ['./_baseGet'], function(baseGet) {
    *
    * @static
    * @memberOf _
+   * @since 3.0.0
    * @category Util
    * @param {Object} object The object to query.
-   * @returns {Function} Returns the new function.
+   * @returns {Function} Returns the new accessor function.
    * @example
    *
    * var array = [0, 1, 2],

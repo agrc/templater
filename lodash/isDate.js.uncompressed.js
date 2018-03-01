@@ -1,25 +1,17 @@
-define("lodash/isDate", ['./isObjectLike'], function(isObjectLike) {
+define("lodash/isDate", ['./_baseIsDate', './_baseUnary', './_nodeUtil'], function(baseIsDate, baseUnary, nodeUtil) {
 
-  /** `Object#toString` result references. */
-  var dateTag = '[object Date]';
-
-  /** Used for built-in method references. */
-  var objectProto = Object.prototype;
-
-  /**
-   * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
-   * of values.
-   */
-  var objectToString = objectProto.toString;
+  /* Node.js helper references. */
+  var nodeIsDate = nodeUtil && nodeUtil.isDate;
 
   /**
    * Checks if `value` is classified as a `Date` object.
    *
    * @static
    * @memberOf _
+   * @since 0.1.0
    * @category Lang
    * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
+   * @returns {boolean} Returns `true` if `value` is a date object, else `false`.
    * @example
    *
    * _.isDate(new Date);
@@ -28,9 +20,7 @@ define("lodash/isDate", ['./isObjectLike'], function(isObjectLike) {
    * _.isDate('Mon April 23 2012');
    * // => false
    */
-  function isDate(value) {
-    return isObjectLike(value) && objectToString.call(value) == dateTag;
-  }
+  var isDate = nodeIsDate ? baseUnary(nodeIsDate) : baseIsDate;
 
   return isDate;
 });

@@ -1,2 +1,2 @@
 //>>built
-define("lodash/dropRight",["./_baseSlice","./toInteger"],function(e,t){function i(i,n,o){var r=i?i.length:0;return r?(n=o||n===a?1:t(n),n=r-n,e(i,0,0>n?0:n)):[]}var a;return i});//# sourceMappingURL=dropRight.js.map
+define("lodash/dropRight",["./_baseSlice","./toInteger"],function(e,t){function i(i,o,n){var r=null==i?0:i.length;return r?(o=n||o===a?1:t(o),o=r-o,e(i,0,o<0?0:o)):[]}var a;return i});//# sourceMappingURL=dropRight.js.map

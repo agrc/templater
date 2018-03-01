@@ -1,1 +1,1 @@
-{"version":3,"sources":["CancelError.js.uncompressed.js"],"names":["define","create","dojoType"],"mappings":";AAAAA,OAAO,2BAA4B,YAAa,SAASC,GAWxD,MAAOA,GAAO,cAAe,KAAM,MAAQC,SAAU","file":"CancelError.js.uncompressed.js"}
+{"version":3,"sources":["CancelError.js.uncompressed.js"],"names":["define","create","dojoType","log"],"mappings":";AAAAA,OAAO,2BAA4B,YAAa,SAASC,GAWxD,MAAOA,GAAO,cAAe,KAAM,MAAQC,SAAU,SAAUC,KAAK","file":"CancelError.js.uncompressed.js"}

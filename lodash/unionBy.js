@@ -1,2 +1,2 @@
 //>>built
-define("lodash/unionBy",["./_baseFlatten","./_baseIteratee","./_baseUniq","./isArrayLikeObject","./last","./rest"],function(e,t,i,a,r,n){var o,s=n(function(n){var s=r(n);return a(s)&&(s=o),i(e(n,1,!0),t(s))});return s});//# sourceMappingURL=unionBy.js.map
+define("lodash/unionBy",["./_baseFlatten","./_baseIteratee","./_baseRest","./_baseUniq","./isArrayLikeObject","./last"],function(e,t,i,a,o,n){var r;return i(function(i){var s=n(i);return o(s)&&(s=r),a(e(i,1,o,!0),t(s,2))})});//# sourceMappingURL=unionBy.js.map

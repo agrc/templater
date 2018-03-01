@@ -335,7 +335,9 @@ define("dojox/mobile/common", [
 	// Set the background style using dojo/domReady, not dojo/ready, to ensure it is already
 	// set at widget initialization time. (#17418) 
 	domReady(function(){
-		domClass.add(win.body(), "mblBackground");
+		if(config.mblApplyPageStyles !== false){
+			domClass.add(win.body(), "mblBackground");
+		}
 	});
 
 	ready(function(){

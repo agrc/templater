@@ -1,2 +1,2 @@
 //>>built
-define("dojox/encoding/digests/SHA224",["./_sha-32","./_sha2"],function(e,t){var a=[3238371032,914150663,812702999,4144912697,4290775857,1750603025,1694076839,3204075428];return t(e,224,512,a)});//# sourceMappingURL=SHA224.js.map
+define("dojox/encoding/digests/SHA224",["./_sha-32","./_sha2"],function(e,t){return t(e,224,512,[3238371032,914150663,812702999,4144912697,4290775857,1750603025,1694076839,3204075428])});//# sourceMappingURL=SHA224.js.map

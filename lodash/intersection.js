@@ -1,2 +1,2 @@
 //>>built
-define("lodash/intersection",["./_arrayMap","./_baseCastArrayLikeObject","./_baseIntersection","./rest"],function(e,t,i,r){var o=r(function(r){var o=e(r,t);return o.length&&o[0]===r[0]?i(o):[]});return o});//# sourceMappingURL=intersection.js.map
+define("lodash/intersection",["./_arrayMap","./_baseIntersection","./_baseRest","./_castArrayLikeObject"],function(e,t,i,a){return i(function(i){var r=e(i,a);return r.length&&r[0]===i[0]?t(r):[]})});//# sourceMappingURL=intersection.js.map

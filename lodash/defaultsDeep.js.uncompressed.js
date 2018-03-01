@@ -1,4 +1,4 @@
-define("lodash/defaultsDeep", ['./_apply', './_mergeDefaults', './mergeWith', './rest'], function(apply, mergeDefaults, mergeWith, rest) {
+define("lodash/defaultsDeep", ['./_apply', './_baseRest', './_customDefaultsMerge', './mergeWith'], function(apply, baseRest, customDefaultsMerge, mergeWith) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -11,18 +11,19 @@ define("lodash/defaultsDeep", ['./_apply', './_mergeDefaults', './mergeWith', '.
    *
    * @static
    * @memberOf _
+   * @since 3.10.0
    * @category Object
    * @param {Object} object The destination object.
    * @param {...Object} [sources] The source objects.
    * @returns {Object} Returns `object`.
+   * @see _.defaults
    * @example
    *
-   * _.defaultsDeep({ 'user': { 'name': 'barney' } }, { 'user': { 'name': 'fred', 'age': 36 } });
-   * // => { 'user': { 'name': 'barney', 'age': 36 } }
-   *
+   * _.defaultsDeep({ 'a': { 'b': 2 } }, { 'a': { 'b': 1, 'c': 3 } });
+   * // => { 'a': { 'b': 2, 'c': 3 } }
    */
-  var defaultsDeep = rest(function(args) {
-    args.push(undefined, mergeDefaults);
+  var defaultsDeep = baseRest(function(args) {
+    args.push(undefined, customDefaultsMerge);
     return apply(mergeWith, undefined, args);
   });
 

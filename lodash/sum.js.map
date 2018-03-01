@@ -1,1 +1,1 @@
-{"version":3,"sources":["sum.js.uncompressed.js"],"names":["define","baseSum","identity","sum","array","length"],"mappings":";AAAAA,OAAO,cAAe,aAAc,cAAe,SAASC,EAASC,GAenE,QAASC,GAAIC,GACX,MAAQA,IAASA,EAAMC,OACnBJ,EAAQG,EAAOF,GACf,EAGN,MAAOC","file":"sum.js.uncompressed.js"}
+{"version":3,"sources":["sum.js.uncompressed.js"],"names":["define","baseSum","identity","sum","array","length"],"mappings":";AAAAA,OAAO,cAAe,aAAc,cAAe,SAASC,EAASC,GAgBnE,QAASC,GAAIC,GACX,MAAQA,IAASA,EAAMC,OACnBJ,EAAQG,EAAOF,GACf,EAGN,MAAOC","file":"sum.js.uncompressed.js"}

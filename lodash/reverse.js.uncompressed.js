@@ -15,7 +15,9 @@ define("lodash/reverse", [], function() {
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Array
+   * @param {Array} array The array to modify.
    * @returns {Array} Returns `array`.
    * @example
    *
@@ -28,7 +30,7 @@ define("lodash/reverse", [], function() {
    * // => [3, 2, 1]
    */
   function reverse(array) {
-    return array ? nativeReverse.call(array) : array;
+    return array == null ? array : nativeReverse.call(array);
   }
 
   return reverse;

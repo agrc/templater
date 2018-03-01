@@ -1,4 +1,4 @@
-define("lodash/findKey", ['./_baseFind', './_baseForOwn', './_baseIteratee'], function(baseFind, baseForOwn, baseIteratee) {
+define("lodash/findKey", ['./_baseFindKey', './_baseForOwn', './_baseIteratee'], function(baseFindKey, baseForOwn, baseIteratee) {
 
   /**
    * This method is like `_.find` except that it returns the key of the first
@@ -6,10 +6,12 @@ define("lodash/findKey", ['./_baseFind', './_baseForOwn', './_baseIteratee'], fu
    *
    * @static
    * @memberOf _
+   * @since 1.1.0
    * @category Object
-   * @param {Object} object The object to search.
-   * @param {Function|Object|string} [predicate=_.identity] The function invoked per iteration.
-   * @returns {string|undefined} Returns the key of the matched element, else `undefined`.
+   * @param {Object} object The object to inspect.
+   * @param {Function} [predicate=_.identity] The function invoked per iteration.
+   * @returns {string|undefined} Returns the key of the matched element,
+   *  else `undefined`.
    * @example
    *
    * var users = {
@@ -34,7 +36,7 @@ define("lodash/findKey", ['./_baseFind', './_baseForOwn', './_baseIteratee'], fu
    * // => 'barney'
    */
   function findKey(object, predicate) {
-    return baseFind(object, baseIteratee(predicate, 3), baseForOwn, true);
+    return baseFindKey(object, baseIteratee(predicate, 3), baseForOwn);
   }
 
   return findKey;

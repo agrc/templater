@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_baseConforms",["./keys"],function(e){function t(t){var a=e(t),o=a.length;return function(e){if(null==e)return!o;for(var r=o;r--;){var n=a[r],s=t[n],d=e[n];if(d===i&&!(n in Object(e))||!s(d))return!1}return!0}}var i;return t});//# sourceMappingURL=_baseConforms.js.map
+define("lodash/_baseConforms",["./_baseConformsTo","./keys"],function(e,t){function i(i){var a=t(i);return function(t){return e(t,i,a)}}return i});//# sourceMappingURL=_baseConforms.js.map

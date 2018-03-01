@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_createToPairs",["./_baseToPairs","./_getTag","./_mapToArray","./_setToPairs"],function(e,t,i,a){function o(o){return function(s){var l=t(s);return l==n?i(s):l==r?a(s):e(s,o(s))}}var n="[object Map]",r="[object Set]";return o});//# sourceMappingURL=_createToPairs.js.map

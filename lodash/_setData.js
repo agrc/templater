@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_setData",["./_baseSetData","./now"],function(e,t){var i=150,a=16,o=function(){var o=0,n=0;return function(r,s){var l=t(),d=a-(l-n);if(n=l,d>0){if(++o>=i)return r}else o=0;return e(r,s)}}();return o});//# sourceMappingURL=_setData.js.map
+define("lodash/_setData",["./_baseSetData","./_shortOut"],function(e,t){return t(e)});//# sourceMappingURL=_setData.js.map

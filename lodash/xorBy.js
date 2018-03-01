@@ -1,2 +1,2 @@
 //>>built
-define("lodash/xorBy",["./_arrayFilter","./_baseIteratee","./_baseXor","./isArrayLikeObject","./last","./rest"],function(e,t,i,a,n,r){var o,s=r(function(r){var s=n(r);return a(s)&&(s=o),i(e(r,a),t(s))});return s});//# sourceMappingURL=xorBy.js.map
+define("lodash/xorBy",["./_arrayFilter","./_baseIteratee","./_baseRest","./_baseXor","./isArrayLikeObject","./last"],function(e,t,i,a,n,r){var o;return i(function(i){var s=r(i);return n(s)&&(s=o),a(e(i,n),t(s,2))})});//# sourceMappingURL=xorBy.js.map

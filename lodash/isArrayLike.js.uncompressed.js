@@ -1,4 +1,4 @@
-define("lodash/isArrayLike", ['./_getLength', './isFunction', './isLength'], function(getLength, isFunction, isLength) {
+define("lodash/isArrayLike", ['./isFunction', './isLength'], function(isFunction, isLength) {
 
   /**
    * Checks if `value` is array-like. A value is considered array-like if it's
@@ -7,6 +7,7 @@ define("lodash/isArrayLike", ['./_getLength', './isFunction', './isLength'], fun
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Lang
    * @param {*} value The value to check.
    * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
@@ -25,7 +26,7 @@ define("lodash/isArrayLike", ['./_getLength', './isFunction', './isLength'], fun
    * // => false
    */
   function isArrayLike(value) {
-    return value != null && isLength(getLength(value)) && !isFunction(value);
+    return value != null && isLength(value.length) && !isFunction(value);
   }
 
   return isArrayLike;

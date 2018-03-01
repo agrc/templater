@@ -8,6 +8,7 @@ define("lodash/fill", ['./_baseFill', './_isIterateeCall'], function(baseFill, i
    *
    * @static
    * @memberOf _
+   * @since 3.2.0
    * @category Array
    * @param {Array} array The array to fill.
    * @param {*} value The value to fill `array` with.
@@ -29,7 +30,7 @@ define("lodash/fill", ['./_baseFill', './_isIterateeCall'], function(baseFill, i
    * // => [4, '*', '*', 10]
    */
   function fill(array, value, start, end) {
-    var length = array ? array.length : 0;
+    var length = array == null ? 0 : array.length;
     if (!length) {
       return [];
     }

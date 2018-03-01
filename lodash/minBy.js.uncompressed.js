@@ -1,4 +1,4 @@
-define("lodash/minBy", ['./_baseExtremum', './_baseIteratee', './lt'], function(baseExtremum, baseIteratee, lt) {
+define("lodash/minBy", ['./_baseExtremum', './_baseIteratee', './_baseLt'], function(baseExtremum, baseIteratee, baseLt) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -10,9 +10,10 @@ define("lodash/minBy", ['./_baseExtremum', './_baseIteratee', './lt'], function(
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Math
    * @param {Array} array The array to iterate over.
-   * @param {Function|Object|string} [iteratee=_.identity] The iteratee invoked per element.
+   * @param {Function} [iteratee=_.identity] The iteratee invoked per element.
    * @returns {*} Returns the minimum value.
    * @example
    *
@@ -27,7 +28,7 @@ define("lodash/minBy", ['./_baseExtremum', './_baseIteratee', './lt'], function(
    */
   function minBy(array, iteratee) {
     return (array && array.length)
-      ? baseExtremum(array, baseIteratee(iteratee), lt)
+      ? baseExtremum(array, baseIteratee(iteratee, 2), baseLt)
       : undefined;
   }
 

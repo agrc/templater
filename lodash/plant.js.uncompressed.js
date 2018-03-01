@@ -4,10 +4,11 @@ define("lodash/plant", ['./_baseLodash', './_wrapperClone'], function(baseLodash
   var undefined;
 
   /**
-   * Creates a clone of the chained sequence planting `value` as the wrapped value.
+   * Creates a clone of the chain sequence planting `value` as the wrapped value.
    *
    * @name plant
    * @memberOf _
+   * @since 3.2.0
    * @category Seq
    * @param {*} value The value to plant.
    * @returns {Object} Returns the new `lodash` wrapper instance.

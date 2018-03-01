@@ -5,6 +5,7 @@ define("lodash/toIterator", [], function() {
    *
    * @name Symbol.iterator
    * @memberOf _
+   * @since 4.0.0
    * @category Seq
    * @returns {Object} Returns the wrapper object.
    * @example

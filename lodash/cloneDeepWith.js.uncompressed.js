@@ -1,14 +1,23 @@
 define("lodash/cloneDeepWith", ['./_baseClone'], function(baseClone) {
 
+  /** Used as a safe reference for `undefined` in pre-ES5 environments. */
+  var undefined;
+
+  /** Used to compose bitmasks for cloning. */
+  var CLONE_DEEP_FLAG = 1,
+      CLONE_SYMBOLS_FLAG = 4;
+
   /**
    * This method is like `_.cloneWith` except that it recursively clones `value`.
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Lang
    * @param {*} value The value to recursively clone.
    * @param {Function} [customizer] The function to customize cloning.
    * @returns {*} Returns the deep cloned value.
+   * @see _.cloneWith
    * @example
    *
    * function customizer(value) {
@@ -27,7 +36,8 @@ define("lodash/cloneDeepWith", ['./_baseClone'], function(baseClone) {
    * // => 20
    */
   function cloneDeepWith(value, customizer) {
-    return baseClone(value, true, true, customizer);
+    customizer = typeof customizer == 'function' ? customizer : undefined;
+    return baseClone(value, CLONE_DEEP_FLAG | CLONE_SYMBOLS_FLAG, customizer);
   }
 
   return cloneDeepWith;

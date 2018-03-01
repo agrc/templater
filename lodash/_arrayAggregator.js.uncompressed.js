@@ -4,7 +4,7 @@ define("lodash/_arrayAggregator", [], function() {
    * A specialized version of `baseAggregator` for arrays.
    *
    * @private
-   * @param {Array} array The array to iterate over.
+   * @param {Array} [array] The array to iterate over.
    * @param {Function} setter The function to set `accumulator` values.
    * @param {Function} iteratee The iteratee to transform keys.
    * @param {Object} accumulator The initial aggregated object.
@@ -12,7 +12,7 @@ define("lodash/_arrayAggregator", [], function() {
    */
   function arrayAggregator(array, setter, iteratee, accumulator) {
     var index = -1,
-        length = array.length;
+        length = array == null ? 0 : array.length;
 
     while (++index < length) {
       var value = array[index];

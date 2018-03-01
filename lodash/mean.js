@@ -1,2 +1,2 @@
 //>>built
-define("lodash/mean",["./sum"],function(e){function t(t){return e(t)/(t?t.length:0)}return t});//# sourceMappingURL=mean.js.map
+define("lodash/mean",["./_baseMean","./identity"],function(e,t){function i(i){return e(i,t)}return i});//# sourceMappingURL=mean.js.map

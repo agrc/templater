@@ -1,1 +1,1 @@
-{"version":3,"sources":["wrap.js.uncompressed.js"],"names":["define","identity","partial","wrap","value","wrapper"],"mappings":";AAAAA,OAAO,eAAgB,aAAc,aAAc,SAASC,EAAUC,GAuBpE,QAASC,GAAKC,EAAOC,GAEnB,MADAA,GAAqB,MAAXA,EAAkBJ,EAAWI,EAChCH,EAAQG,EAASD,GAG1B,MAAOD","file":"wrap.js.uncompressed.js"}
+{"version":3,"sources":["wrap.js.uncompressed.js"],"names":["define","castFunction","partial","wrap","value","wrapper"],"mappings":";AAAAA,OAAO,eAAgB,kBAAmB,aAAc,SAASC,EAAcC,GAwB7E,QAASC,GAAKC,EAAOC,GACnB,MAAOH,GAAQD,EAAaI,GAAUD,GAGxC,MAAOD","file":"wrap.js.uncompressed.js"}

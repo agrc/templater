@@ -1,2 +1,2 @@
 //>>built
-define("lodash/shuffle",["./sampleSize"],function(e){function t(t){return e(t,i)}var i=4294967295;return t});//# sourceMappingURL=shuffle.js.map
+define("lodash/shuffle",["./_arrayShuffle","./_baseShuffle","./isArray"],function(e,t,i){function a(a){return(i(a)?e:t)(a)}return a});//# sourceMappingURL=shuffle.js.map

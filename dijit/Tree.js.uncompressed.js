@@ -417,10 +417,10 @@ define("dijit/Tree", [
 						}
 
 						// If we've orphaned the focused node then move focus to the root node
-						if(tree.lastFocusedChild && !dom.isDescendant(tree.lastFocusedChild, tree.domNode)){
+						if(tree.lastFocusedChild && !dom.isDescendant(tree.lastFocusedChild.domNode, tree.domNode)){
 							delete tree.lastFocusedChild;
 						}
-						if(focusedChild && !dom.isDescendant(focusedChild, tree.domNode)){
+						if(focusedChild && !dom.isDescendant(focusedChild.domNode, tree.domNode)){
 							tree.focus();	// could alternately focus this node (parent of the deleted node)
 						}
 
@@ -1044,7 +1044,7 @@ define("dijit/Tree", [
 				return all(array.map(paths, function(path){
 					// normalize path to use identity
 					path = array.map(path, function(item){
-						return lang.isString(item) ? item : tree.model.getIdentity(item);
+						return item && lang.isObject(item) ? tree.model.getIdentity(item) : item;
 					});
 
 					if(path.length){
@@ -1650,10 +1650,10 @@ define("dijit/Tree", [
 					}
 
 					// If we've orphaned the focused node then move focus to the root node
-					if(this.lastFocusedChild && !dom.isDescendant(this.lastFocusedChild, this.domNode)){
+					if(this.lastFocusedChild && !dom.isDescendant(this.lastFocusedChild.domNode, this.domNode)){
 						delete this.lastFocusedChild;
 					}
-					if(this.focusedChild && !dom.isDescendant(this.focusedChild, this.domNode)){
+					if(this.focusedChild && !dom.isDescendant(this.focusedChild.domNode, this.domNode)){
 						this.focus();
 					}
 

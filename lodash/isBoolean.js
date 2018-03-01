@@ -1,2 +1,2 @@
 //>>built
-define("lodash/isBoolean",["./isObjectLike"],function(e){function t(t){return t===!0||t===!1||e(t)&&o.call(t)==i}var i="[object Boolean]",a=Object.prototype,o=a.toString;return t});//# sourceMappingURL=isBoolean.js.map
+define("lodash/isBoolean",["./_baseGetTag","./isObjectLike"],function(e,t){function i(i){return!0===i||!1===i||t(i)&&e(i)==a}var a="[object Boolean]";return i});//# sourceMappingURL=isBoolean.js.map

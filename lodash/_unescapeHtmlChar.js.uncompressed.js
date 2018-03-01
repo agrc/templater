@@ -1,4 +1,4 @@
-define("lodash/_unescapeHtmlChar", [], function() {
+define("lodash/_unescapeHtmlChar", ['./_basePropertyOf'], function(basePropertyOf) {
 
   /** Used to map HTML entities to characters. */
   var htmlUnescapes = {
@@ -6,8 +6,7 @@ define("lodash/_unescapeHtmlChar", [], function() {
     '&lt;': '<',
     '&gt;': '>',
     '&quot;': '"',
-    '&#39;': "'",
-    '&#96;': '`'
+    '&#39;': "'"
   };
 
   /**
@@ -17,9 +16,7 @@ define("lodash/_unescapeHtmlChar", [], function() {
    * @param {string} chr The matched character to unescape.
    * @returns {string} Returns the unescaped character.
    */
-  function unescapeHtmlChar(chr) {
-    return htmlUnescapes[chr];
-  }
+  var unescapeHtmlChar = basePropertyOf(htmlUnescapes);
 
   return unescapeHtmlChar;
 });

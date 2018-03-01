@@ -1,2 +1,2 @@
 //>>built
-define("lodash/toInteger",["./toNumber"],function(e){function t(t){if(!t)return 0===t?t:0;if(t=e(t),t===i||t===-i){var o=0>t?-1:1;return o*r}var n=t%1;return t===t?n?t-n:t:0}var i=1/0,r=1.7976931348623157e308;return t});//# sourceMappingURL=toInteger.js.map
+define("lodash/toInteger",["./toFinite"],function(e){function t(t){var i=e(t),a=i%1;return i===i?a?i-a:i:0}return t});//# sourceMappingURL=toInteger.js.map

@@ -1,18 +1,17 @@
-define("lodash/find", ['./_baseEach', './_baseFind', './_baseFindIndex', './_baseIteratee', './isArray'], function(baseEach, baseFind, baseFindIndex, baseIteratee, isArray) {
-
-  /** Used as a safe reference for `undefined` in pre-ES5 environments. */
-  var undefined;
+define("lodash/find", ['./_createFind', './findIndex'], function(createFind, findIndex) {
 
   /**
    * Iterates over elements of `collection`, returning the first element
-   * `predicate` returns truthy for. The predicate is invoked with three arguments:
-   * (value, index|key, collection).
+   * `predicate` returns truthy for. The predicate is invoked with three
+   * arguments: (value, index|key, collection).
    *
    * @static
    * @memberOf _
+   * @since 0.1.0
    * @category Collection
-   * @param {Array|Object} collection The collection to search.
-   * @param {Function|Object|string} [predicate=_.identity] The function invoked per iteration.
+   * @param {Array|Object} collection The collection to inspect.
+   * @param {Function} [predicate=_.identity] The function invoked per iteration.
+   * @param {number} [fromIndex=0] The index to search from.
    * @returns {*} Returns the matched element, else `undefined`.
    * @example
    *
@@ -37,14 +36,7 @@ define("lodash/find", ['./_baseEach', './_baseFind', './_baseFindIndex', './_bas
    * _.find(users, 'active');
    * // => object for 'barney'
    */
-  function find(collection, predicate) {
-    predicate = baseIteratee(predicate, 3);
-    if (isArray(collection)) {
-      var index = baseFindIndex(collection, predicate);
-      return index > -1 ? collection[index] : undefined;
-    }
-    return baseFind(collection, predicate, baseEach);
-  }
+  var find = createFind(findIndex);
 
   return find;
 });

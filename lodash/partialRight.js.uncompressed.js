@@ -1,14 +1,14 @@
-define("lodash/partialRight", ['./_createWrapper', './_getPlaceholder', './_replaceHolders', './rest'], function(createWrapper, getPlaceholder, replaceHolders, rest) {
+define("lodash/partialRight", ['./_baseRest', './_createWrap', './_getHolder', './_replaceHolders'], function(baseRest, createWrap, getHolder, replaceHolders) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
 
-  /** Used to compose bitmasks for wrapper metadata. */
-  var PARTIAL_RIGHT_FLAG = 64;
+  /** Used to compose bitmasks for function metadata. */
+  var WRAP_PARTIAL_RIGHT_FLAG = 64;
 
   /**
    * This method is like `_.partial` except that partially applied arguments
-   * are appended to those provided to the new function.
+   * are appended to the arguments it receives.
    *
    * The `_.partialRight.placeholder` value, which defaults to `_` in monolithic
    * builds, may be used as a placeholder for partially applied arguments.
@@ -18,15 +18,16 @@ define("lodash/partialRight", ['./_createWrapper', './_getPlaceholder', './_repl
    *
    * @static
    * @memberOf _
+   * @since 1.0.0
    * @category Function
    * @param {Function} func The function to partially apply arguments to.
    * @param {...*} [partials] The arguments to be partially applied.
    * @returns {Function} Returns the new partially applied function.
    * @example
    *
-   * var greet = function(greeting, name) {
+   * function greet(greeting, name) {
    *   return greeting + ' ' + name;
-   * };
+   * }
    *
    * var greetFred = _.partialRight(greet, 'fred');
    * greetFred('hi');
@@ -37,9 +38,9 @@ define("lodash/partialRight", ['./_createWrapper', './_getPlaceholder', './_repl
    * sayHelloTo('fred');
    * // => 'hello fred'
    */
-  var partialRight = rest(function(func, partials) {
-    var holders = replaceHolders(partials, getPlaceholder(partialRight));
-    return createWrapper(func, PARTIAL_RIGHT_FLAG, undefined, partials, holders);
+  var partialRight = baseRest(function(func, partials) {
+    var holders = replaceHolders(partials, getHolder(partialRight));
+    return createWrap(func, WRAP_PARTIAL_RIGHT_FLAG, undefined, partials, holders);
   });
 
   // Assign default placeholders.

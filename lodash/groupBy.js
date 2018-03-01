@@ -1,2 +1,2 @@
 //>>built
-define("lodash/groupBy",["./_createAggregator"],function(e){var t=Object.prototype,i=t.hasOwnProperty,a=e(function(e,t,a){i.call(e,a)?e[a].push(t):e[a]=[t]});return a});//# sourceMappingURL=groupBy.js.map
+define("lodash/groupBy",["./_baseAssignValue","./_createAggregator"],function(e,t){var i=Object.prototype,a=i.hasOwnProperty;return t(function(t,i,o){a.call(t,o)?t[o].push(i):e(t,o,[i])})});//# sourceMappingURL=groupBy.js.map

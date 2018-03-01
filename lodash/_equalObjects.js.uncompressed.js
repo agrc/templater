@@ -1,10 +1,16 @@
-define("lodash/_equalObjects", ['./_baseHas', './keys'], function(baseHas, keys) {
+define("lodash/_equalObjects", ['./_getAllKeys'], function(getAllKeys) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
 
-  /** Used to compose bitmasks for comparison styles. */
-  var PARTIAL_COMPARE_FLAG = 2;
+  /** Used to compose bitmasks for value comparisons. */
+  var COMPARE_PARTIAL_FLAG = 1;
+
+  /** Used for built-in method references. */
+  var objectProto = Object.prototype;
+
+  /** Used to check objects for own properties. */
+  var hasOwnProperty = objectProto.hasOwnProperty;
 
   /**
    * A specialized version of `baseIsEqualDeep` for objects with support for
@@ -13,17 +19,17 @@ define("lodash/_equalObjects", ['./_baseHas', './keys'], function(baseHas, keys)
    * @private
    * @param {Object} object The object to compare.
    * @param {Object} other The other object to compare.
-   * @param {Function} equalFunc The function to determine equivalents of values.
+   * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
    * @param {Function} customizer The function to customize comparisons.
-   * @param {number} bitmask The bitmask of comparison flags. See `baseIsEqual` for more details.
+   * @param {Function} equalFunc The function to determine equivalents of values.
    * @param {Object} stack Tracks traversed `object` and `other` objects.
    * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
    */
-  function equalObjects(object, other, equalFunc, customizer, bitmask, stack) {
-    var isPartial = bitmask & PARTIAL_COMPARE_FLAG,
-        objProps = keys(object),
+  function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
+    var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
+        objProps = getAllKeys(object),
         objLength = objProps.length,
-        othProps = keys(other),
+        othProps = getAllKeys(other),
         othLength = othProps.length;
 
     if (objLength != othLength && !isPartial) {
@@ -32,17 +38,18 @@ define("lodash/_equalObjects", ['./_baseHas', './keys'], function(baseHas, keys)
     var index = objLength;
     while (index--) {
       var key = objProps[index];
-      if (!(isPartial ? key in other : baseHas(other, key))) {
+      if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) {
         return false;
       }
     }
     // Assume cyclic values are equal.
     var stacked = stack.get(object);
-    if (stacked) {
+    if (stacked && stack.get(other)) {
       return stacked == other;
     }
     var result = true;
     stack.set(object, other);
+    stack.set(other, object);
 
     var skipCtor = isPartial;
     while (++index < objLength) {
@@ -57,7 +64,7 @@ define("lodash/_equalObjects", ['./_baseHas', './keys'], function(baseHas, keys)
       }
       // Recursively compare objects (susceptible to call stack limits).
       if (!(compared === undefined
-            ? (objValue === othValue || equalFunc(objValue, othValue, customizer, bitmask, stack))
+            ? (objValue === othValue || equalFunc(objValue, othValue, bitmask, customizer, stack))
             : compared
           )) {
         result = false;
@@ -78,6 +85,7 @@ define("lodash/_equalObjects", ['./_baseHas', './keys'], function(baseHas, keys)
       }
     }
     stack['delete'](object);
+    stack['delete'](other);
     return result;
   }
 

@@ -6,9 +6,11 @@ define("lodash/functionsIn", ['./_baseFunctions', './keysIn'], function(baseFunc
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Object
    * @param {Object} object The object to inspect.
-   * @returns {Array} Returns the new array of property names.
+   * @returns {Array} Returns the function names.
+   * @see _.functions
    * @example
    *
    * function Foo() {

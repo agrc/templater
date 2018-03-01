@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_createFind",["./_baseIteratee","./isArrayLike","./keys"],function(e,t,i){function a(a){return function(n,o,s){var l=Object(n);if(!t(n)){var d=e(o,3);n=i(n),o=function(e){return d(l[e],e,l)}}var h=a(n,o,s);return h>-1?l[d?n[h]:h]:r}}var r;return a});//# sourceMappingURL=_createFind.js.map

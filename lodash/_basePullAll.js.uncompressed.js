@@ -1,4 +1,4 @@
-define("lodash/_basePullAll", ['./_arrayMap', './_baseIndexOf', './_baseIndexOfWith', './_baseUnary'], function(arrayMap, baseIndexOf, baseIndexOfWith, baseUnary) {
+define("lodash/_basePullAll", ['./_arrayMap', './_baseIndexOf', './_baseIndexOfWith', './_baseUnary', './_copyArray'], function(arrayMap, baseIndexOf, baseIndexOfWith, baseUnary, copyArray) {
 
   /** Used for built-in method references. */
   var arrayProto = Array.prototype;
@@ -23,6 +23,9 @@ define("lodash/_basePullAll", ['./_arrayMap', './_baseIndexOf', './_baseIndexOfW
         length = values.length,
         seen = array;
 
+    if (array === values) {
+      values = copyArray(values);
+    }
     if (iteratee) {
       seen = arrayMap(array, baseUnary(iteratee));
     }

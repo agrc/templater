@@ -1,4 +1,4 @@
-define("lodash/_stackDelete", ['./_assocDelete'], function(assocDelete) {
+define("lodash/_stackDelete", [], function() {
 
   /**
    * Removes `key` and its value from the stack.
@@ -11,9 +11,10 @@ define("lodash/_stackDelete", ['./_assocDelete'], function(assocDelete) {
    */
   function stackDelete(key) {
     var data = this.__data__,
-        array = data.array;
+        result = data['delete'](key);
 
-    return array ? assocDelete(array, key) : data.map['delete'](key);
+    this.size = data.size;
+    return result;
   }
 
   return stackDelete;

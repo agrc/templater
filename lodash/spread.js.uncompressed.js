@@ -1,22 +1,22 @@
-define("lodash/spread", ['./_apply', './_arrayPush', './rest', './toInteger'], function(apply, arrayPush, rest, toInteger) {
+define("lodash/spread", ['./_apply', './_arrayPush', './_baseRest', './_castSlice', './toInteger'], function(apply, arrayPush, baseRest, castSlice, toInteger) {
 
-  /** Used as a safe reference for `undefined` in pre-ES5 environments. */
-  var undefined;
-
-  /** Used as the `TypeError` message for "Functions" methods. */
+  /** Error message constants. */
   var FUNC_ERROR_TEXT = 'Expected a function';
 
   /* Built-in method references for those with the same name as other `lodash` methods. */
   var nativeMax = Math.max;
 
   /**
-   * Creates a function that invokes `func` with the `this` binding of the created
-   * function and an array of arguments much like [`Function#apply`](https://es5.github.io/#x15.3.4.3).
+   * Creates a function that invokes `func` with the `this` binding of the
+   * create function and an array of arguments much like
+   * [`Function#apply`](http://www.ecma-international.org/ecma-262/7.0/#sec-function.prototype.apply).
    *
-   * **Note:** This method is based on the [spread operator](https://mdn.io/spread_operator).
+   * **Note:** This method is based on the
+   * [spread operator](https://mdn.io/spread_operator).
    *
    * @static
    * @memberOf _
+   * @since 3.2.0
    * @category Function
    * @param {Function} func The function to spread arguments over.
    * @param {number} [start=0] The start position of the spread.
@@ -44,10 +44,10 @@ define("lodash/spread", ['./_apply', './_arrayPush', './rest', './toInteger'], f
     if (typeof func != 'function') {
       throw new TypeError(FUNC_ERROR_TEXT);
     }
-    start = start === undefined ? 0 : nativeMax(toInteger(start), 0);
-    return rest(function(args) {
+    start = start == null ? 0 : nativeMax(toInteger(start), 0);
+    return baseRest(function(args) {
       var array = args[start],
-          otherArgs = args.slice(0, start);
+          otherArgs = castSlice(args, 0, start);
 
       if (array) {
         arrayPush(otherArgs, array);

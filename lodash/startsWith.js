@@ -1,2 +1,2 @@
 //>>built
-define("lodash/startsWith",["./_baseClamp","./toInteger","./toString"],function(e,t,i){function a(a,o,r){return a=i(a),r=e(t(r),0,a.length),a.lastIndexOf(o,r)==r}return a});//# sourceMappingURL=startsWith.js.map
+define("lodash/startsWith",["./_baseClamp","./_baseToString","./toInteger","./toString"],function(e,t,i,a){function r(r,o,n){return r=a(r),n=null==n?0:e(i(n),0,r.length),o=t(o),r.slice(n,n+o.length)==o}return r});//# sourceMappingURL=startsWith.js.map

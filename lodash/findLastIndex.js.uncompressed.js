@@ -1,4 +1,11 @@
-define("lodash/findLastIndex", ['./_baseFindIndex', './_baseIteratee'], function(baseFindIndex, baseIteratee) {
+define("lodash/findLastIndex", ['./_baseFindIndex', './_baseIteratee', './toInteger'], function(baseFindIndex, baseIteratee, toInteger) {
+
+  /** Used as a safe reference for `undefined` in pre-ES5 environments. */
+  var undefined;
+
+  /* Built-in method references for those with the same name as other `lodash` methods. */
+  var nativeMax = Math.max,
+      nativeMin = Math.min;
 
   /**
    * This method is like `_.findIndex` except that it iterates over elements
@@ -6,9 +13,11 @@ define("lodash/findLastIndex", ['./_baseFindIndex', './_baseIteratee'], function
    *
    * @static
    * @memberOf _
+   * @since 2.0.0
    * @category Array
-   * @param {Array} array The array to search.
-   * @param {Function|Object|string} [predicate=_.identity] The function invoked per iteration.
+   * @param {Array} array The array to inspect.
+   * @param {Function} [predicate=_.identity] The function invoked per iteration.
+   * @param {number} [fromIndex=array.length-1] The index to search from.
    * @returns {number} Returns the index of the found element, else `-1`.
    * @example
    *
@@ -33,10 +42,19 @@ define("lodash/findLastIndex", ['./_baseFindIndex', './_baseIteratee'], function
    * _.findLastIndex(users, 'active');
    * // => 0
    */
-  function findLastIndex(array, predicate) {
-    return (array && array.length)
-      ? baseFindIndex(array, baseIteratee(predicate, 3), true)
-      : -1;
+  function findLastIndex(array, predicate, fromIndex) {
+    var length = array == null ? 0 : array.length;
+    if (!length) {
+      return -1;
+    }
+    var index = length - 1;
+    if (fromIndex !== undefined) {
+      index = toInteger(fromIndex);
+      index = fromIndex < 0
+        ? nativeMax(length + index, 0)
+        : nativeMin(index, length - 1);
+    }
+    return baseFindIndex(array, baseIteratee(predicate, 3), index, true);
   }
 
   return findLastIndex;

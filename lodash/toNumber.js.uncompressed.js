@@ -1,4 +1,4 @@
-define("lodash/toNumber", ['./isFunction', './isObject'], function(isFunction, isObject) {
+define("lodash/toNumber", ['./isObject', './isSymbol'], function(isObject, isSymbol) {
 
   /** Used as references for various `Number` constants. */
   var NAN = 0 / 0;
@@ -23,13 +23,14 @@ define("lodash/toNumber", ['./isFunction', './isObject'], function(isFunction, i
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Lang
    * @param {*} value The value to process.
    * @returns {number} Returns the number.
    * @example
    *
-   * _.toNumber(3);
-   * // => 3
+   * _.toNumber(3.2);
+   * // => 3.2
    *
    * _.toNumber(Number.MIN_VALUE);
    * // => 5e-324
@@ -37,12 +38,18 @@ define("lodash/toNumber", ['./isFunction', './isObject'], function(isFunction, i
    * _.toNumber(Infinity);
    * // => Infinity
    *
-   * _.toNumber('3');
-   * // => 3
+   * _.toNumber('3.2');
+   * // => 3.2
    */
   function toNumber(value) {
+    if (typeof value == 'number') {
+      return value;
+    }
+    if (isSymbol(value)) {
+      return NAN;
+    }
     if (isObject(value)) {
-      var other = isFunction(value.valueOf) ? value.valueOf() : value;
+      var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
       value = isObject(other) ? (other + '') : other;
     }
     if (typeof value != 'string') {

@@ -1,1 +1,1 @@
-{"version":3,"sources":["flowRight.js.uncompressed.js"],"names":["define","createFlow","flowRight"],"mappings":";AAAAA,OAAO,oBAAqB,iBAAkB,SAASC,GAqBrD,GAAIC,GAAYD,GAAW,EAE3B,OAAOC","file":"flowRight.js.uncompressed.js"}
+{"version":3,"sources":["flowRight.js.uncompressed.js"],"names":["define","createFlow"],"mappings":";AAAAA,OAAO,oBAAqB,iBAAkB,SAASC,GAyBrD,MAFgBA,IAAW","file":"flowRight.js.uncompressed.js"}

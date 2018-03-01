@@ -1,2 +1,2 @@
 //>>built
-define("lodash/floor",["./_createRound"],function(e){var t=e("floor");return t});//# sourceMappingURL=floor.js.map
+define("lodash/floor",["./_createRound"],function(e){return e("floor")});//# sourceMappingURL=floor.js.map

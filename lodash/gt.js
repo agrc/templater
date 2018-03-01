@@ -1,2 +1,2 @@
 //>>built
-define("lodash/gt",[],function(){function e(e,t){return e>t}return e});//# sourceMappingURL=gt.js.map
+define("lodash/gt",["./_baseGt","./_createRelationalOperation"],function(e,t){return t(e)});//# sourceMappingURL=gt.js.map

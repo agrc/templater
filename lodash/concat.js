@@ -1,2 +1,2 @@
 //>>built
-define("lodash/concat",["./_arrayConcat","./_baseFlatten","./isArray","./rest"],function(e,t,i,a){var o=a(function(a,o){return i(a)||(a=null==a?[]:[Object(a)]),o=t(o,1),e(a,o)});return o});//# sourceMappingURL=concat.js.map
+define("lodash/concat",["./_arrayPush","./_baseFlatten","./_copyArray","./isArray"],function(e,t,i,a){function r(){var r=arguments.length;if(!r)return[];for(var o=Array(r-1),n=arguments[0],s=r;s--;)o[s-1]=arguments[s];return e(a(n)?i(n):[n],t(o,1))}return r});//# sourceMappingURL=concat.js.map

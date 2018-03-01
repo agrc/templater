@@ -1,4 +1,4 @@
-define("lodash/sortedUniqBy", ['./_baseIteratee', './_baseSortedUniqBy'], function(baseIteratee, baseSortedUniqBy) {
+define("lodash/sortedUniqBy", ['./_baseIteratee', './_baseSortedUniq'], function(baseIteratee, baseSortedUniq) {
 
   /**
    * This method is like `_.uniqBy` except that it's designed and optimized
@@ -6,6 +6,7 @@ define("lodash/sortedUniqBy", ['./_baseIteratee', './_baseSortedUniqBy'], functi
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Array
    * @param {Array} array The array to inspect.
    * @param {Function} [iteratee] The iteratee invoked per element.
@@ -17,7 +18,7 @@ define("lodash/sortedUniqBy", ['./_baseIteratee', './_baseSortedUniqBy'], functi
    */
   function sortedUniqBy(array, iteratee) {
     return (array && array.length)
-      ? baseSortedUniqBy(array, baseIteratee(iteratee))
+      ? baseSortedUniq(array, baseIteratee(iteratee, 2))
       : [];
   }
 

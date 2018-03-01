@@ -1,4 +1,4 @@
-define("lodash/_baseSet", ['./_assignValue', './_baseCastPath', './_isIndex', './_isKey', './isObject'], function(assignValue, baseCastPath, isIndex, isKey, isObject) {
+define("lodash/_baseSet", ['./_assignValue', './_castPath', './_isIndex', './isObject', './_toKey'], function(assignValue, castPath, isIndex, isObject, toKey) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -7,14 +7,17 @@ define("lodash/_baseSet", ['./_assignValue', './_baseCastPath', './_isIndex', '.
    * The base implementation of `_.set`.
    *
    * @private
-   * @param {Object} object The object to query.
+   * @param {Object} object The object to modify.
    * @param {Array|string} path The path of the property to set.
    * @param {*} value The value to set.
    * @param {Function} [customizer] The function to customize path creation.
    * @returns {Object} Returns `object`.
    */
   function baseSet(object, path, value, customizer) {
-    path = isKey(path, object) ? [path + ''] : baseCastPath(path);
+    if (!isObject(object)) {
+      return object;
+    }
+    path = castPath(path, object);
 
     var index = -1,
         length = path.length,
@@ -22,20 +25,19 @@ define("lodash/_baseSet", ['./_assignValue', './_baseCastPath', './_isIndex', '.
         nested = object;
 
     while (nested != null && ++index < length) {
-      var key = path[index];
-      if (isObject(nested)) {
-        var newValue = value;
-        if (index != lastIndex) {
-          var objValue = nested[key];
-          newValue = customizer ? customizer(objValue, key, nested) : undefined;
-          if (newValue === undefined) {
-            newValue = objValue == null
-              ? (isIndex(path[index + 1]) ? [] : {})
-              : objValue;
-          }
+      var key = toKey(path[index]),
+          newValue = value;
+
+      if (index != lastIndex) {
+        var objValue = nested[key];
+        newValue = customizer ? customizer(objValue, key, nested) : undefined;
+        if (newValue === undefined) {
+          newValue = isObject(objValue)
+            ? objValue
+            : (isIndex(path[index + 1]) ? [] : {});
         }
-        assignValue(nested, key, newValue);
       }
+      assignValue(nested, key, newValue);
       nested = nested[key];
     }
     return object;

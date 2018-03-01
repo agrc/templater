@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_baseGetTag",["./_Symbol","./_getRawTag","./_objectToString"],function(e,t,i){function a(e){return null==e?e===o?r:n:s&&s in Object(e)?t(e):i(e)}var o,n="[object Null]",r="[object Undefined]",s=e?e.toStringTag:o;return a});//# sourceMappingURL=_baseGetTag.js.map

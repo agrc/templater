@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_isLaziable",["./_LazyWrapper","./_getData","./_getFuncName","./wrapperLodash"],function(e,t,i,a){function o(o){var r=i(o),n=a[r];if("function"!=typeof n||!(r in e.prototype))return!1;if(o===n)return!0;var s=t(n);return!!s&&o===s[0]}return o});//# sourceMappingURL=_isLaziable.js.map
+define("lodash/_isLaziable",["./_LazyWrapper","./_getData","./_getFuncName","./wrapperLodash"],function(e,t,i,a){function o(o){var n=i(o),r=a[n];if("function"!=typeof r||!(n in e.prototype))return!1;if(o===r)return!0;var s=t(r);return!!s&&o===s[0]}return o});//# sourceMappingURL=_isLaziable.js.map

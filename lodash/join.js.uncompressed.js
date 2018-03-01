@@ -11,6 +11,7 @@ define("lodash/join", [], function() {
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Array
    * @param {Array} array The array to convert.
    * @param {string} [separator=','] The element separator.
@@ -21,7 +22,7 @@ define("lodash/join", [], function() {
    * // => 'a~b~c'
    */
   function join(array, separator) {
-    return array ? nativeJoin.call(array, separator) : '';
+    return array == null ? '' : nativeJoin.call(array, separator);
   }
 
   return join;

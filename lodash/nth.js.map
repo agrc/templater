@@ -1,0 +1,1 @@
+{"version":3,"sources":["nth.js.uncompressed.js"],"names":["define","baseNth","toInteger","nth","array","n","length","undefined"],"mappings":";AAAAA,OAAO,cAAe,aAAc,eAAgB,SAASC,EAASC,GA0BpE,QAASC,GAAIC,EAAOC,GAClB,MAAQD,IAASA,EAAME,OAAUL,EAAQG,EAAOF,EAAUG,IAAME,EAxBlE,GAAIA,EA2BJ,OAAOJ","file":"nth.js.uncompressed.js"}

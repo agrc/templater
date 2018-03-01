@@ -1,4 +1,4 @@
-define("lodash/_assignValue", ['./eq'], function(eq) {
+define("lodash/_assignValue", ['./_baseAssignValue', './eq'], function(baseAssignValue, eq) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -11,7 +11,7 @@ define("lodash/_assignValue", ['./eq'], function(eq) {
 
   /**
    * Assigns `value` to `key` of `object` if the existing value is not equivalent
-   * using [`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)
+   * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
    * for equality comparisons.
    *
    * @private
@@ -23,7 +23,7 @@ define("lodash/_assignValue", ['./eq'], function(eq) {
     var objValue = object[key];
     if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) ||
         (value === undefined && !(key in object))) {
-      object[key] = value;
+      baseAssignValue(object, key, value);
     }
   }
 

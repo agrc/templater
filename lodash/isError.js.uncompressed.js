@@ -1,16 +1,8 @@
-define("lodash/isError", ['./isObjectLike'], function(isObjectLike) {
+define("lodash/isError", ['./_baseGetTag', './isObjectLike', './isPlainObject'], function(baseGetTag, isObjectLike, isPlainObject) {
 
   /** `Object#toString` result references. */
-  var errorTag = '[object Error]';
-
-  /** Used for built-in method references. */
-  var objectProto = Object.prototype;
-
-  /**
-   * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
-   * of values.
-   */
-  var objectToString = objectProto.toString;
+  var domExcTag = '[object DOMException]',
+      errorTag = '[object Error]';
 
   /**
    * Checks if `value` is an `Error`, `EvalError`, `RangeError`, `ReferenceError`,
@@ -18,6 +10,7 @@ define("lodash/isError", ['./isObjectLike'], function(isObjectLike) {
    *
    * @static
    * @memberOf _
+   * @since 3.0.0
    * @category Lang
    * @param {*} value The value to check.
    * @returns {boolean} Returns `true` if `value` is an error object, else `false`.
@@ -33,8 +26,9 @@ define("lodash/isError", ['./isObjectLike'], function(isObjectLike) {
     if (!isObjectLike(value)) {
       return false;
     }
-    return (objectToString.call(value) == errorTag) ||
-      (typeof value.message == 'string' && typeof value.name == 'string');
+    var tag = baseGetTag(value);
+    return tag == errorTag || tag == domExcTag ||
+      (typeof value.message == 'string' && typeof value.name == 'string' && !isPlainObject(value));
   }
 
   return isError;

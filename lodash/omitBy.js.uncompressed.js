@@ -1,16 +1,17 @@
-define("lodash/omitBy", ['./_baseIteratee', './_basePickBy'], function(baseIteratee, basePickBy) {
+define("lodash/omitBy", ['./_baseIteratee', './negate', './pickBy'], function(baseIteratee, negate, pickBy) {
 
   /**
    * The opposite of `_.pickBy`; this method creates an object composed of
-   * the own and inherited enumerable properties of `object` that `predicate`
-   * doesn't return truthy for. The predicate is invoked with two arguments:
-   * (value, key).
+   * the own and inherited enumerable string keyed properties of `object` that
+   * `predicate` doesn't return truthy for. The predicate is invoked with two
+   * arguments: (value, key).
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Object
    * @param {Object} object The source object.
-   * @param {Function|Object|string} [predicate=_.identity] The function invoked per property.
+   * @param {Function} [predicate=_.identity] The function invoked per property.
    * @returns {Object} Returns the new object.
    * @example
    *
@@ -20,10 +21,7 @@ define("lodash/omitBy", ['./_baseIteratee', './_basePickBy'], function(baseItera
    * // => { 'b': '2' }
    */
   function omitBy(object, predicate) {
-    predicate = baseIteratee(predicate);
-    return basePickBy(object, function(value, key) {
-      return !predicate(value, key);
-    });
+    return pickBy(object, negate(baseIteratee(predicate)));
   }
 
   return omitBy;

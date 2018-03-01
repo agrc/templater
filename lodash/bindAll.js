@@ -1,2 +1,2 @@
 //>>built
-define("lodash/bindAll",["./_arrayEach","./_baseFlatten","./bind","./rest"],function(e,t,i,a){var o=a(function(a,o){return e(t(o,1),function(e){a[e]=i(a[e],a)}),a});return o});//# sourceMappingURL=bindAll.js.map
+define("lodash/bindAll",["./_arrayEach","./_baseAssignValue","./bind","./_flatRest","./_toKey"],function(e,t,i,r,o){return r(function(r,n){return e(n,function(e){e=o(e),t(r,e,i(r[e],r))}),r})});//# sourceMappingURL=bindAll.js.map

@@ -1,4 +1,4 @@
-define("lodash/pickBy", ['./_baseIteratee', './_basePickBy'], function(baseIteratee, basePickBy) {
+define("lodash/pickBy", ['./_arrayMap', './_baseIteratee', './_basePickBy', './_getAllKeysIn'], function(arrayMap, baseIteratee, basePickBy, getAllKeysIn) {
 
   /**
    * Creates an object composed of the `object` properties `predicate` returns
@@ -6,9 +6,10 @@ define("lodash/pickBy", ['./_baseIteratee', './_basePickBy'], function(baseItera
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Object
    * @param {Object} object The source object.
-   * @param {Function|Object|string} [predicate=_.identity] The function invoked per property.
+   * @param {Function} [predicate=_.identity] The function invoked per property.
    * @returns {Object} Returns the new object.
    * @example
    *
@@ -18,7 +19,16 @@ define("lodash/pickBy", ['./_baseIteratee', './_basePickBy'], function(baseItera
    * // => { 'a': 1, 'c': 3 }
    */
   function pickBy(object, predicate) {
-    return object == null ? {} : basePickBy(object, baseIteratee(predicate));
+    if (object == null) {
+      return {};
+    }
+    var props = arrayMap(getAllKeysIn(object), function(prop) {
+      return [prop];
+    });
+    predicate = baseIteratee(predicate);
+    return basePickBy(object, props, function(value, path) {
+      return predicate(value, path[0]);
+    });
   }
 
   return pickBy;

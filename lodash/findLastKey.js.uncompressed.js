@@ -1,4 +1,4 @@
-define("lodash/findLastKey", ['./_baseFind', './_baseForOwnRight', './_baseIteratee'], function(baseFind, baseForOwnRight, baseIteratee) {
+define("lodash/findLastKey", ['./_baseFindKey', './_baseForOwnRight', './_baseIteratee'], function(baseFindKey, baseForOwnRight, baseIteratee) {
 
   /**
    * This method is like `_.findKey` except that it iterates over elements of
@@ -6,10 +6,12 @@ define("lodash/findLastKey", ['./_baseFind', './_baseForOwnRight', './_baseItera
    *
    * @static
    * @memberOf _
+   * @since 2.0.0
    * @category Object
-   * @param {Object} object The object to search.
-   * @param {Function|Object|string} [predicate=_.identity] The function invoked per iteration.
-   * @returns {string|undefined} Returns the key of the matched element, else `undefined`.
+   * @param {Object} object The object to inspect.
+   * @param {Function} [predicate=_.identity] The function invoked per iteration.
+   * @returns {string|undefined} Returns the key of the matched element,
+   *  else `undefined`.
    * @example
    *
    * var users = {
@@ -34,7 +36,7 @@ define("lodash/findLastKey", ['./_baseFind', './_baseForOwnRight', './_baseItera
    * // => 'pebbles'
    */
   function findLastKey(object, predicate) {
-    return baseFind(object, baseIteratee(predicate, 3), baseForOwnRight, true);
+    return baseFindKey(object, baseIteratee(predicate, 3), baseForOwnRight);
   }
 
   return findLastKey;

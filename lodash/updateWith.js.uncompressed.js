@@ -1,4 +1,4 @@
-define("lodash/updateWith", ['./_baseCastFunction', './_baseUpdate'], function(baseCastFunction, baseUpdate) {
+define("lodash/updateWith", ['./_baseUpdate', './_castFunction'], function(baseUpdate, castFunction) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -13,6 +13,7 @@ define("lodash/updateWith", ['./_baseCastFunction', './_baseUpdate'], function(b
    *
    * @static
    * @memberOf _
+   * @since 4.6.0
    * @category Object
    * @param {Object} object The object to modify.
    * @param {Array|string} path The path of the property to set.
@@ -28,7 +29,7 @@ define("lodash/updateWith", ['./_baseCastFunction', './_baseUpdate'], function(b
    */
   function updateWith(object, path, updater, customizer) {
     customizer = typeof customizer == 'function' ? customizer : undefined;
-    return object == null ? object : baseUpdate(object, path, baseCastFunction(updater), customizer);
+    return object == null ? object : baseUpdate(object, path, castFunction(updater), customizer);
   }
 
   return updateWith;

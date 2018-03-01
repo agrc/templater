@@ -1,6 +1,6 @@
 define("lodash/negate", [], function() {
 
-  /** Used as the `TypeError` message for "Functions" methods. */
+  /** Error message constants. */
   var FUNC_ERROR_TEXT = 'Expected a function';
 
   /**
@@ -10,9 +10,10 @@ define("lodash/negate", [], function() {
    *
    * @static
    * @memberOf _
+   * @since 3.0.0
    * @category Function
    * @param {Function} predicate The predicate to negate.
-   * @returns {Function} Returns the new function.
+   * @returns {Function} Returns the new negated function.
    * @example
    *
    * function isEven(n) {
@@ -27,7 +28,14 @@ define("lodash/negate", [], function() {
       throw new TypeError(FUNC_ERROR_TEXT);
     }
     return function() {
-      return !predicate.apply(this, arguments);
+      var args = arguments;
+      switch (args.length) {
+        case 0: return !predicate.call(this);
+        case 1: return !predicate.call(this, args[0]);
+        case 2: return !predicate.call(this, args[0], args[1]);
+        case 3: return !predicate.call(this, args[0], args[1], args[2]);
+      }
+      return !predicate.apply(this, args);
     };
   }
 

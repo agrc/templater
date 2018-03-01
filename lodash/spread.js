@@ -1,2 +1,2 @@
 //>>built
-define("lodash/spread",["./_apply","./_arrayPush","./rest","./toInteger"],function(e,t,i,a){function r(r,l){if("function"!=typeof r)throw new TypeError(o);return l=l===n?0:s(a(l),0),i(function(i){var a=i[l],n=i.slice(0,l);return a&&t(n,a),e(r,this,n)})}var n,o="Expected a function",s=Math.max;return r});//# sourceMappingURL=spread.js.map
+define("lodash/spread",["./_apply","./_arrayPush","./_baseRest","./_castSlice","./toInteger"],function(e,t,i,a,r){function n(n,l){if("function"!=typeof n)throw new TypeError(o);return l=null==l?0:s(r(l),0),i(function(i){var r=i[l],o=a(i,0,l);return r&&t(o,r),e(n,this,o)})}var o="Expected a function",s=Math.max;return n});//# sourceMappingURL=spread.js.map

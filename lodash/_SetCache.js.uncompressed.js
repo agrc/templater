@@ -1,8 +1,8 @@
-define("lodash/_SetCache", ['./_MapCache', './_cachePush'], function(MapCache, cachePush) {
+define("lodash/_SetCache", ['./_MapCache', './_setCacheAdd', './_setCacheHas'], function(MapCache, setCacheAdd, setCacheHas) {
 
   /**
    *
-   * Creates a set cache object to store unique values.
+   * Creates an array cache object to store unique values.
    *
    * @private
    * @constructor
@@ -10,16 +10,17 @@ define("lodash/_SetCache", ['./_MapCache', './_cachePush'], function(MapCache, c
    */
   function SetCache(values) {
     var index = -1,
-        length = values ? values.length : 0;
+        length = values == null ? 0 : values.length;
 
     this.__data__ = new MapCache;
     while (++index < length) {
-      this.push(values[index]);
+      this.add(values[index]);
     }
   }
 
-  // Add functions to the `SetCache`.
-  SetCache.prototype.push = cachePush;
+  // Add methods to `SetCache`.
+  SetCache.prototype.add = SetCache.prototype.push = setCacheAdd;
+  SetCache.prototype.has = setCacheHas;
 
   return SetCache;
 });

@@ -1,2 +1,2 @@
 //>>built
-define("lodash/isError",["./isObjectLike"],function(e){function t(t){return e(t)?o.call(t)==i||"string"==typeof t.message&&"string"==typeof t.name:!1}var i="[object Error]",a=Object.prototype,o=a.toString;return t});//# sourceMappingURL=isError.js.map
+define("lodash/isError",["./_baseGetTag","./isObjectLike","./isPlainObject"],function(e,t,i){function r(r){if(!t(r))return!1;var a=e(r);return a==n||a==o||"string"==typeof r.message&&"string"==typeof r.name&&!i(r)}var o="[object DOMException]",n="[object Error]";return r});//# sourceMappingURL=isError.js.map

@@ -1,2 +1,2 @@
 //>>built
-define("lodash/reject",["./_arrayFilter","./_baseFilter","./_baseIteratee","./isArray"],function(e,t,i,a){function n(n,r){var o=a(n)?e:t;return r=i(r,3),o(n,function(e,t,i){return!r(e,t,i)})}return n});//# sourceMappingURL=reject.js.map
+define("lodash/reject",["./_arrayFilter","./_baseFilter","./_baseIteratee","./isArray","./negate"],function(e,t,i,a,o){function n(n,r){return(a(n)?e:t)(n,o(i(r,3)))}return n});//# sourceMappingURL=reject.js.map

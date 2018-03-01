@@ -1,4 +1,4 @@
-define("lodash/_assignMergeValue", ['./eq'], function(eq) {
+define("lodash/_assignMergeValue", ['./_baseAssignValue', './eq'], function(baseAssignValue, eq) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -14,8 +14,8 @@ define("lodash/_assignMergeValue", ['./eq'], function(eq) {
    */
   function assignMergeValue(object, key, value) {
     if ((value !== undefined && !eq(object[key], value)) ||
-        (typeof key == 'number' && value === undefined && !(key in object))) {
-      object[key] = value;
+        (value === undefined && !(key in object))) {
+      baseAssignValue(object, key, value);
     }
   }
 

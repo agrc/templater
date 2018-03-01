@@ -1,15 +1,22 @@
-define("lodash/omit", ['./_arrayMap', './_baseDifference', './_baseFlatten', './_basePick', './keysIn', './rest'], function(arrayMap, baseDifference, baseFlatten, basePick, keysIn, rest) {
+define("lodash/omit", ['./_arrayMap', './_baseClone', './_baseUnset', './_castPath', './_copyObject', './_customOmitClone', './_flatRest', './_getAllKeysIn'], function(arrayMap, baseClone, baseUnset, castPath, copyObject, customOmitClone, flatRest, getAllKeysIn) {
+
+  /** Used to compose bitmasks for cloning. */
+  var CLONE_DEEP_FLAG = 1,
+      CLONE_FLAT_FLAG = 2,
+      CLONE_SYMBOLS_FLAG = 4;
 
   /**
    * The opposite of `_.pick`; this method creates an object composed of the
-   * own and inherited enumerable properties of `object` that are not omitted.
+   * own and inherited enumerable property paths of `object` that are not omitted.
+   *
+   * **Note:** This method is considerably slower than `_.pick`.
    *
    * @static
+   * @since 0.1.0
    * @memberOf _
    * @category Object
    * @param {Object} object The source object.
-   * @param {...(string|string[])} [props] The property names to omit, specified
-   *  individually or in arrays.
+   * @param {...(string|string[])} [paths] The property paths to omit.
    * @returns {Object} Returns the new object.
    * @example
    *
@@ -18,12 +25,26 @@ define("lodash/omit", ['./_arrayMap', './_baseDifference', './_baseFlatten', './
    * _.omit(object, ['a', 'c']);
    * // => { 'b': '2' }
    */
-  var omit = rest(function(object, props) {
+  var omit = flatRest(function(object, paths) {
+    var result = {};
     if (object == null) {
-      return {};
+      return result;
     }
-    props = arrayMap(baseFlatten(props, 1), String);
-    return basePick(object, baseDifference(keysIn(object), props));
+    var isDeep = false;
+    paths = arrayMap(paths, function(path) {
+      path = castPath(path, object);
+      isDeep || (isDeep = path.length > 1);
+      return path;
+    });
+    copyObject(object, getAllKeysIn(object), result);
+    if (isDeep) {
+      result = baseClone(result, CLONE_DEEP_FLAG | CLONE_FLAT_FLAG | CLONE_SYMBOLS_FLAG, customOmitClone);
+    }
+    var length = paths.length;
+    while (length--) {
+      baseUnset(result, paths[length]);
+    }
+    return result;
   });
 
   return omit;

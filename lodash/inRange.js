@@ -1,2 +1,2 @@
 //>>built
-define("lodash/inRange",["./_baseInRange","./toNumber"],function(e,t){function i(i,o,n){return o=t(o)||0,n===a?(n=o,o=0):n=t(n)||0,i=t(i),e(i,o,n)}var a;return i});//# sourceMappingURL=inRange.js.map
+define("lodash/inRange",["./_baseInRange","./toFinite","./toNumber"],function(e,t,i){function a(a,n,r){return n=t(n),r===o?(r=n,n=0):r=t(r),a=i(a),e(a,n,r)}var o;return a});//# sourceMappingURL=inRange.js.map

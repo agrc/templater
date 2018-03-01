@@ -1,4 +1,4 @@
-define("lodash/truncate", ['./isObject', './isRegExp', './_stringSize', './_stringToArray', './toInteger', './toString'], function(isObject, isRegExp, stringSize, stringToArray, toInteger, toString) {
+define("lodash/truncate", ['./_baseToString', './_castSlice', './_hasUnicode', './isObject', './isRegExp', './_stringSize', './_stringToArray', './toInteger', './toString'], function(baseToString, castSlice, hasUnicode, isObject, isRegExp, stringSize, stringToArray, toInteger, toString) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -10,18 +10,6 @@ define("lodash/truncate", ['./isObject', './isRegExp', './_stringSize', './_stri
   /** Used to match `RegExp` flags from their coerced string values. */
   var reFlags = /\w*$/;
 
-  /** Used to compose unicode character classes. */
-  var rsAstralRange = '\\ud800-\\udfff',
-      rsComboMarksRange = '\\u0300-\\u036f\\ufe20-\\ufe23',
-      rsComboSymbolsRange = '\\u20d0-\\u20f0',
-      rsVarRange = '\\ufe0e\\ufe0f';
-
-  /** Used to compose unicode capture groups. */
-  var rsZWJ = '\\u200d';
-
-  /** Used to detect strings with [zero-width joiners or code points from the astral planes](http://eev.ee/blog/2015/09/12/dark-corners-of-unicode/). */
-  var reHasComplexSymbol = RegExp('[' + rsZWJ + rsAstralRange  + rsComboMarksRange + rsComboSymbolsRange + rsVarRange + ']');
-
   /**
    * Truncates `string` if it's longer than the given maximum string length.
    * The last characters of the truncated string are replaced with the omission
@@ -29,9 +17,10 @@ define("lodash/truncate", ['./isObject', './isRegExp', './_stringSize', './_stri
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category String
    * @param {string} [string=''] The string to truncate.
-   * @param {Object} [options=({})] The options object.
+   * @param {Object} [options={}] The options object.
    * @param {number} [options.length=30] The maximum string length.
    * @param {string} [options.omission='...'] The string to indicate text is omitted.
    * @param {RegExp|string} [options.separator] The separator pattern to truncate to.
@@ -65,12 +54,12 @@ define("lodash/truncate", ['./isObject', './isRegExp', './_stringSize', './_stri
     if (isObject(options)) {
       var separator = 'separator' in options ? options.separator : separator;
       length = 'length' in options ? toInteger(options.length) : length;
-      omission = 'omission' in options ? toString(options.omission) : omission;
+      omission = 'omission' in options ? baseToString(options.omission) : omission;
     }
     string = toString(string);
 
     var strLength = string.length;
-    if (reHasComplexSymbol.test(string)) {
+    if (hasUnicode(string)) {
       var strSymbols = stringToArray(string);
       strLength = strSymbols.length;
     }
@@ -82,7 +71,7 @@ define("lodash/truncate", ['./isObject', './isRegExp', './_stringSize', './_stri
       return omission;
     }
     var result = strSymbols
-      ? strSymbols.slice(0, end).join('')
+      ? castSlice(strSymbols, 0, end).join('')
       : string.slice(0, end);
 
     if (separator === undefined) {
@@ -105,7 +94,7 @@ define("lodash/truncate", ['./isObject', './isRegExp', './_stringSize', './_stri
         }
         result = result.slice(0, newEnd === undefined ? end : newEnd);
       }
-    } else if (string.indexOf(separator, end) != end) {
+    } else if (string.indexOf(baseToString(separator), end) != end) {
       var index = result.lastIndexOf(separator);
       if (index > -1) {
         result = result.slice(0, index);

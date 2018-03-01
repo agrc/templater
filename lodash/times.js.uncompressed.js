@@ -1,4 +1,4 @@
-define("lodash/times", ['./_baseCastFunction', './_baseTimes', './toInteger'], function(baseCastFunction, baseTimes, toInteger) {
+define("lodash/times", ['./_baseTimes', './_castFunction', './toInteger'], function(baseTimes, castFunction, toInteger) {
 
   /** Used as references for various `Number` constants. */
   var MAX_SAFE_INTEGER = 9007199254740991;
@@ -14,6 +14,7 @@ define("lodash/times", ['./_baseCastFunction', './_baseTimes', './toInteger'], f
    * each invocation. The iteratee is invoked with one argument; (index).
    *
    * @static
+   * @since 0.1.0
    * @memberOf _
    * @category Util
    * @param {number} n The number of times to invoke `iteratee`.
@@ -24,8 +25,8 @@ define("lodash/times", ['./_baseCastFunction', './_baseTimes', './toInteger'], f
    * _.times(3, String);
    * // => ['0', '1', '2']
    *
-   *  _.times(4, _.constant(true));
-   * // => [true, true, true, true]
+   *  _.times(4, _.constant(0));
+   * // => [0, 0, 0, 0]
    */
   function times(n, iteratee) {
     n = toInteger(n);
@@ -35,7 +36,7 @@ define("lodash/times", ['./_baseCastFunction', './_baseTimes', './toInteger'], f
     var index = MAX_ARRAY_LENGTH,
         length = nativeMin(n, MAX_ARRAY_LENGTH);
 
-    iteratee = baseCastFunction(iteratee);
+    iteratee = castFunction(iteratee);
     n -= MAX_ARRAY_LENGTH;
 
     var result = baseTimes(length, iteratee);

@@ -1,2 +1,2 @@
 //>>built
-define("lodash/union",["./_baseFlatten","./_baseUniq","./rest"],function(e,t,i){var a=i(function(i){return t(e(i,1,!0))});return a});//# sourceMappingURL=union.js.map
+define("lodash/union",["./_baseFlatten","./_baseRest","./_baseUniq","./isArrayLikeObject"],function(e,t,i,a){return t(function(t){return i(e(t,1,a,!0))})});//# sourceMappingURL=union.js.map

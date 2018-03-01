@@ -1,25 +1,26 @@
-define("lodash/cond", ['./_apply', './_arrayMap', './_baseIteratee', './rest'], function(apply, arrayMap, baseIteratee, rest) {
+define("lodash/cond", ['./_apply', './_arrayMap', './_baseIteratee', './_baseRest'], function(apply, arrayMap, baseIteratee, baseRest) {
 
-  /** Used as the `TypeError` message for "Functions" methods. */
+  /** Error message constants. */
   var FUNC_ERROR_TEXT = 'Expected a function';
 
   /**
-   * Creates a function that iterates over `pairs` invoking the corresponding
+   * Creates a function that iterates over `pairs` and invokes the corresponding
    * function of the first predicate to return truthy. The predicate-function
    * pairs are invoked with the `this` binding and arguments of the created
    * function.
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Util
    * @param {Array} pairs The predicate-function pairs.
-   * @returns {Function} Returns the new function.
+   * @returns {Function} Returns the new composite function.
    * @example
    *
    * var func = _.cond([
    *   [_.matches({ 'a': 1 }),           _.constant('matches A')],
    *   [_.conforms({ 'b': _.isNumber }), _.constant('matches B')],
-   *   [_.constant(true),                _.constant('no match')]
+   *   [_.stubTrue,                      _.constant('no match')]
    * ]);
    *
    * func({ 'a': 1, 'b': 2 });
@@ -32,16 +33,17 @@ define("lodash/cond", ['./_apply', './_arrayMap', './_baseIteratee', './rest'], 
    * // => 'no match'
    */
   function cond(pairs) {
-    var length = pairs ? pairs.length : 0;
+    var length = pairs == null ? 0 : pairs.length,
+        toIteratee = baseIteratee;
 
     pairs = !length ? [] : arrayMap(pairs, function(pair) {
       if (typeof pair[1] != 'function') {
         throw new TypeError(FUNC_ERROR_TEXT);
       }
-      return [baseIteratee(pair[0]), pair[1]];
+      return [toIteratee(pair[0]), pair[1]];
     });
 
-    return rest(function(args) {
+    return baseRest(function(args) {
       var index = -1;
       while (++index < length) {
         var pair = pairs[index];

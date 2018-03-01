@@ -1,4 +1,4 @@
-define("lodash/methodOf", ['./_baseInvoke', './rest'], function(baseInvoke, rest) {
+define("lodash/methodOf", ['./_baseInvoke', './_baseRest'], function(baseInvoke, baseRest) {
 
   /**
    * The opposite of `_.method`; this method creates a function that invokes
@@ -7,10 +7,11 @@ define("lodash/methodOf", ['./_baseInvoke', './rest'], function(baseInvoke, rest
    *
    * @static
    * @memberOf _
+   * @since 3.7.0
    * @category Util
    * @param {Object} object The object to query.
    * @param {...*} [args] The arguments to invoke the method with.
-   * @returns {Function} Returns the new function.
+   * @returns {Function} Returns the new invoker function.
    * @example
    *
    * var array = _.times(3, _.constant),
@@ -22,7 +23,7 @@ define("lodash/methodOf", ['./_baseInvoke', './rest'], function(baseInvoke, rest
    * _.map([['a', '2'], ['c', '0']], _.methodOf(object));
    * // => [2, 0]
    */
-  var methodOf = rest(function(object, args) {
+  var methodOf = baseRest(function(object, args) {
     return function(path) {
       return baseInvoke(object, path, args);
     };

@@ -1,15 +1,17 @@
-define("lodash/startsWith", ['./_baseClamp', './toInteger', './toString'], function(baseClamp, toInteger, toString) {
+define("lodash/startsWith", ['./_baseClamp', './_baseToString', './toInteger', './toString'], function(baseClamp, baseToString, toInteger, toString) {
 
   /**
    * Checks if `string` starts with the given target string.
    *
    * @static
    * @memberOf _
+   * @since 3.0.0
    * @category String
-   * @param {string} [string=''] The string to search.
+   * @param {string} [string=''] The string to inspect.
    * @param {string} [target] The string to search for.
    * @param {number} [position=0] The position to search from.
-   * @returns {boolean} Returns `true` if `string` starts with `target`, else `false`.
+   * @returns {boolean} Returns `true` if `string` starts with `target`,
+   *  else `false`.
    * @example
    *
    * _.startsWith('abc', 'a');
@@ -23,8 +25,12 @@ define("lodash/startsWith", ['./_baseClamp', './toInteger', './toString'], funct
    */
   function startsWith(string, target, position) {
     string = toString(string);
-    position = baseClamp(toInteger(position), 0, string.length);
-    return string.lastIndexOf(target, position) == position;
+    position = position == null
+      ? 0
+      : baseClamp(toInteger(position), 0, string.length);
+
+    target = baseToString(target);
+    return string.slice(position, position + target.length) == target;
   }
 
   return startsWith;

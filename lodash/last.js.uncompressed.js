@@ -8,6 +8,7 @@ define("lodash/last", [], function() {
    *
    * @static
    * @memberOf _
+   * @since 0.1.0
    * @category Array
    * @param {Array} array The array to query.
    * @returns {*} Returns the last element of `array`.
@@ -17,7 +18,7 @@ define("lodash/last", [], function() {
    * // => 3
    */
   function last(array) {
-    var length = array ? array.length : 0;
+    var length = array == null ? 0 : array.length;
     return length ? array[length - 1] : undefined;
   }
 

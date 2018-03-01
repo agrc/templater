@@ -1,2 +1,2 @@
 //>>built
-define("lodash/isArray",[],function(){var e=Array.isArray;return e});//# sourceMappingURL=isArray.js.map
+define("lodash/isArray",[],function(){return Array.isArray});//# sourceMappingURL=isArray.js.map

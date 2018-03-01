@@ -1,1 +1,1 @@
-{"version":3,"sources":["clone.js.uncompressed.js"],"names":["define","baseClone","clone","value"],"mappings":";AAAAA,OAAO,gBAAiB,gBAAiB,SAASC,GA0BhD,QAASC,GAAMC,GACb,MAAOF,GAAUE,GAAO,GAAO,GAGjC,MAAOD","file":"clone.js.uncompressed.js"}
+{"version":3,"sources":["clone.js.uncompressed.js"],"names":["define","baseClone","clone","value","CLONE_SYMBOLS_FLAG"],"mappings":";AAAAA,OAAO,gBAAiB,gBAAiB,SAASC,GA+BhD,QAASC,GAAMC,GACb,MAAOF,GAAUE,EAAOC,GA7B1B,GAAIA,GAAqB,CAgCzB,OAAOF","file":"clone.js.uncompressed.js"}

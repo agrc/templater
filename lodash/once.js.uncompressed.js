@@ -7,6 +7,7 @@ define("lodash/once", ['./before'], function(before) {
    *
    * @static
    * @memberOf _
+   * @since 0.1.0
    * @category Function
    * @param {Function} func The function to restrict.
    * @returns {Function} Returns the new restricted function.
@@ -15,7 +16,7 @@ define("lodash/once", ['./before'], function(before) {
    * var initialize = _.once(createApplication);
    * initialize();
    * initialize();
-   * // `initialize` invokes `createApplication` once
+   * // => `createApplication` is invoked once
    */
   function once(func) {
     return before(2, func);

@@ -1,1 +1,1 @@
-{"version":3,"sources":["toPairs.js.uncompressed.js"],"names":["define","baseToPairs","keys","toPairs","object"],"mappings":";AAAAA,OAAO,kBAAmB,iBAAkB,UAAW,SAASC,EAAaC,GAuB3E,QAASC,GAAQC,GACf,MAAOH,GAAYG,EAAQF,EAAKE,IAGlC,MAAOD","file":"toPairs.js.uncompressed.js"}
+{"version":3,"sources":["toPairs.js.uncompressed.js"],"names":["define","createToPairs","keys"],"mappings":";AAAAA,OAAO,kBAAmB,mBAAoB,UAAW,SAASC,EAAeC,GA4B/E,MAFcD,GAAcC","file":"toPairs.js.uncompressed.js"}

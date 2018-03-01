@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_nativeCreate",["./_getNative"],function(e){var t=e(Object,"create");return t});//# sourceMappingURL=_nativeCreate.js.map
+define("lodash/_nativeCreate",["./_getNative"],function(e){return e(Object,"create")});//# sourceMappingURL=_nativeCreate.js.map

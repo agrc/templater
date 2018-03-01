@@ -1,16 +1,16 @@
-define("lodash/_createOver", ['./_apply', './_arrayMap', './_baseFlatten', './_baseIteratee', './rest'], function(apply, arrayMap, baseFlatten, baseIteratee, rest) {
+define("lodash/_createOver", ['./_apply', './_arrayMap', './_baseIteratee', './_baseRest', './_baseUnary', './_flatRest'], function(apply, arrayMap, baseIteratee, baseRest, baseUnary, flatRest) {
 
   /**
    * Creates a function like `_.over`.
    *
    * @private
    * @param {Function} arrayFunc The function to iterate over iteratees.
-   * @returns {Function} Returns the new invoker function.
+   * @returns {Function} Returns the new over function.
    */
   function createOver(arrayFunc) {
-    return rest(function(iteratees) {
-      iteratees = arrayMap(baseFlatten(iteratees, 1), baseIteratee);
-      return rest(function(args) {
+    return flatRest(function(iteratees) {
+      iteratees = arrayMap(iteratees, baseUnary(baseIteratee));
+      return baseRest(function(args) {
         var thisArg = this;
         return arrayFunc(iteratees, function(iteratee) {
           return apply(iteratee, thisArg, args);

@@ -1,4 +1,4 @@
-define("lodash/_baseSortedIndexBy", [], function() {
+define("lodash/_baseSortedIndexBy", ['./isSymbol'], function(isSymbol) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -21,30 +21,36 @@ define("lodash/_baseSortedIndexBy", [], function() {
    * @param {*} value The value to evaluate.
    * @param {Function} iteratee The iteratee invoked per element.
    * @param {boolean} [retHighest] Specify returning the highest qualified index.
-   * @returns {number} Returns the index at which `value` should be inserted into `array`.
+   * @returns {number} Returns the index at which `value` should be inserted
+   *  into `array`.
    */
   function baseSortedIndexBy(array, value, iteratee, retHighest) {
     value = iteratee(value);
 
     var low = 0,
-        high = array ? array.length : 0,
+        high = array == null ? 0 : array.length,
         valIsNaN = value !== value,
         valIsNull = value === null,
-        valIsUndef = value === undefined;
+        valIsSymbol = isSymbol(value),
+        valIsUndefined = value === undefined;
 
     while (low < high) {
       var mid = nativeFloor((low + high) / 2),
           computed = iteratee(array[mid]),
-          isDef = computed !== undefined,
-          isReflexive = computed === computed;
+          othIsDefined = computed !== undefined,
+          othIsNull = computed === null,
+          othIsReflexive = computed === computed,
+          othIsSymbol = isSymbol(computed);
 
       if (valIsNaN) {
-        var setLow = isReflexive || retHighest;
+        var setLow = retHighest || othIsReflexive;
+      } else if (valIsUndefined) {
+        setLow = othIsReflexive && (retHighest || othIsDefined);
       } else if (valIsNull) {
-        setLow = isReflexive && isDef && (retHighest || computed != null);
-      } else if (valIsUndef) {
-        setLow = isReflexive && (retHighest || isDef);
-      } else if (computed == null) {
+        setLow = othIsReflexive && othIsDefined && (retHighest || !othIsNull);
+      } else if (valIsSymbol) {
+        setLow = othIsReflexive && othIsDefined && !othIsNull && (retHighest || !othIsSymbol);
+      } else if (othIsNull || othIsSymbol) {
         setLow = false;
       } else {
         setLow = retHighest ? (computed <= value) : (computed < value);

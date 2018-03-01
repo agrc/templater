@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_isFlattenable",["./_Symbol","./isArguments","./isArray"],function(e,t,i){function a(e){return i(e)||t(e)||!!(o&&e&&e[o])}var r,o=e?e.isConcatSpreadable:r;return a});//# sourceMappingURL=_isFlattenable.js.map

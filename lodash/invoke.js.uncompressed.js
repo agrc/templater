@@ -1,10 +1,11 @@
-define("lodash/invoke", ['./_baseInvoke', './rest'], function(baseInvoke, rest) {
+define("lodash/invoke", ['./_baseInvoke', './_baseRest'], function(baseInvoke, baseRest) {
 
   /**
    * Invokes the method at `path` of `object`.
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Object
    * @param {Object} object The object to query.
    * @param {Array|string} path The path of the method to invoke.
@@ -17,7 +18,7 @@ define("lodash/invoke", ['./_baseInvoke', './rest'], function(baseInvoke, rest) 
    * _.invoke(object, 'a[0].b.c.slice', 1, 3);
    * // => [2, 3]
    */
-  var invoke = rest(baseInvoke);
+  var invoke = baseRest(baseInvoke);
 
   return invoke;
 });

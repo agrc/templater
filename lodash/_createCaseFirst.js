@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_createCaseFirst",["./_stringToArray","./toString"],function(e,t){function i(i){return function(r){r=t(r);var n=d.test(r)?e(r):a,o=n?n[0]:r.charAt(0),s=n?n.slice(1).join(""):r.slice(1);return o[i]()+s}}var a,r="\\ud800-\\udfff",n="\\u0300-\\u036f\\ufe20-\\ufe23",o="\\u20d0-\\u20f0",s="\\ufe0e\\ufe0f",l="\\u200d",d=RegExp("["+l+r+n+o+s+"]");return i});//# sourceMappingURL=_createCaseFirst.js.map
+define("lodash/_createCaseFirst",["./_castSlice","./_hasUnicode","./_stringToArray","./toString"],function(e,t,i,a){function o(o){return function(r){r=a(r);var s=t(r)?i(r):n,l=s?s[0]:r.charAt(0),d=s?e(s,1).join(""):r.slice(1);return l[o]()+d}}var n;return o});//# sourceMappingURL=_createCaseFirst.js.map

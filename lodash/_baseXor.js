@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_baseXor",["./_arrayPush","./_baseDifference","./_baseUniq"],function(e,t,i){function a(a,n,o){for(var r=-1,s=a.length;++r<s;)var l=l?e(t(l,a[r],n,o),t(a[r],l,n,o)):a[r];return l&&l.length?i(l,n,o):[]}return a});//# sourceMappingURL=_baseXor.js.map
+define("lodash/_baseXor",["./_baseDifference","./_baseFlatten","./_baseUniq"],function(e,t,i){function r(r,o,n){var a=r.length;if(a<2)return a?i(r[0]):[];for(var s=-1,d=Array(a);++s<a;)for(var l=r[s],u=-1;++u<a;)u!=s&&(d[s]=e(d[s]||l,r[u],o,n));return i(t(d,1),o,n)}return r});//# sourceMappingURL=_baseXor.js.map

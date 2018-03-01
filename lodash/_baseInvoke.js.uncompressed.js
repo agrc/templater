@@ -1,4 +1,4 @@
-define("lodash/_baseInvoke", ['./_apply', './_baseCastPath', './_isKey', './last', './_parent'], function(apply, baseCastPath, isKey, last, parent) {
+define("lodash/_baseInvoke", ['./_apply', './_castPath', './last', './_parent', './_toKey'], function(apply, castPath, last, parent, toKey) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -14,12 +14,9 @@ define("lodash/_baseInvoke", ['./_apply', './_baseCastPath', './_isKey', './last
    * @returns {*} Returns the result of the invoked method.
    */
   function baseInvoke(object, path, args) {
-    if (!isKey(path, object)) {
-      path = baseCastPath(path);
-      object = parent(object, path);
-      path = last(path);
-    }
-    var func = object == null ? object : object[path];
+    path = castPath(path, object);
+    object = parent(object, path);
+    var func = object == null ? object : object[toKey(last(path))];
     return func == null ? undefined : apply(func, object, args);
   }
 

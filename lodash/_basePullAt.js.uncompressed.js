@@ -1,4 +1,4 @@
-define("lodash/_basePullAt", ['./_baseCastPath', './_isIndex', './_isKey', './last', './_parent'], function(baseCastPath, isIndex, isKey, last, parent) {
+define("lodash/_basePullAt", ['./_baseUnset', './_isIndex'], function(baseUnset, isIndex) {
 
   /** Used for built-in method references. */
   var arrayProto = Array.prototype;
@@ -21,21 +21,12 @@ define("lodash/_basePullAt", ['./_baseCastPath', './_isIndex', './_isKey', './la
 
     while (length--) {
       var index = indexes[length];
-      if (lastIndex == length || index != previous) {
+      if (length == lastIndex || index !== previous) {
         var previous = index;
         if (isIndex(index)) {
           splice.call(array, index, 1);
-        }
-        else if (!isKey(index, array)) {
-          var path = baseCastPath(index),
-              object = parent(array, path);
-
-          if (object != null) {
-            delete object[last(path)];
-          }
-        }
-        else {
-          delete array[index];
+        } else {
+          baseUnset(array, index);
         }
       }
     }

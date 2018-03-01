@@ -1,2 +1,2 @@
 //>>built
-define("lodash/forEachRight",["./_arrayEachRight","./_baseCastFunction","./_baseEachRight","./isArray"],function(e,t,i,a){function o(o,n){return"function"==typeof n&&a(o)?e(o,n):i(o,t(n))}return o});//# sourceMappingURL=forEachRight.js.map
+define("lodash/forEachRight",["./_arrayEachRight","./_baseEachRight","./_castFunction","./isArray"],function(e,t,i,r){function o(o,n){return(r(o)?e:t)(o,i(n))}return o});//# sourceMappingURL=forEachRight.js.map

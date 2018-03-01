@@ -1,0 +1,1 @@
+{"version":3,"sources":["_baseNth.js.uncompressed.js"],"names":["define","isIndex","baseNth","array","n","length","undefined"],"mappings":";AAAAA,OAAO,mBAAoB,cAAe,SAASC,GAajD,QAASC,GAAQC,EAAOC,GACtB,GAAIC,GAASF,EAAME,MACnB,IAAKA,EAIL,MADAD,IAAKA,EAAI,EAAIC,EAAS,EACfJ,EAAQG,EAAGC,GAAUF,EAAMC,GAAKE,EAhBzC,GAAIA,EAmBJ,OAAOJ","file":"_baseNth.js.uncompressed.js"}

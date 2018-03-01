@@ -1,4 +1,4 @@
-define("lodash/_escapeHtmlChar", [], function() {
+define("lodash/_escapeHtmlChar", ['./_basePropertyOf'], function(basePropertyOf) {
 
   /** Used to map characters to HTML entities. */
   var htmlEscapes = {
@@ -6,8 +6,7 @@ define("lodash/_escapeHtmlChar", [], function() {
     '<': '&lt;',
     '>': '&gt;',
     '"': '&quot;',
-    "'": '&#39;',
-    '`': '&#96;'
+    "'": '&#39;'
   };
 
   /**
@@ -17,9 +16,7 @@ define("lodash/_escapeHtmlChar", [], function() {
    * @param {string} chr The matched character to escape.
    * @returns {string} Returns the escaped character.
    */
-  function escapeHtmlChar(chr) {
-    return htmlEscapes[chr];
-  }
+  var escapeHtmlChar = basePropertyOf(htmlEscapes);
 
   return escapeHtmlChar;
 });

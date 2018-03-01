@@ -1,1 +1,1 @@
-{"version":3,"sources":["mean.js.uncompressed.js"],"names":["define","sum","mean","array","length"],"mappings":";AAAAA,OAAO,eAAgB,SAAU,SAASC,GAexC,QAASC,GAAKC,GACZ,MAAOF,GAAIE,IAAUA,EAAQA,EAAMC,OAAS,GAG9C,MAAOF","file":"mean.js.uncompressed.js"}
+{"version":3,"sources":["mean.js.uncompressed.js"],"names":["define","baseMean","identity","mean","array"],"mappings":";AAAAA,OAAO,eAAgB,cAAe,cAAe,SAASC,EAAUC,GAgBtE,QAASC,GAAKC,GACZ,MAAOH,GAASG,EAAOF,GAGzB,MAAOC","file":"mean.js.uncompressed.js"}

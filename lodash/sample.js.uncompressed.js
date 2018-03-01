@@ -1,13 +1,11 @@
-define("lodash/sample", ['./_baseRandom', './isArrayLike', './values'], function(baseRandom, isArrayLike, values) {
-
-  /** Used as a safe reference for `undefined` in pre-ES5 environments. */
-  var undefined;
+define("lodash/sample", ['./_arraySample', './_baseSample', './isArray'], function(arraySample, baseSample, isArray) {
 
   /**
    * Gets a random element from `collection`.
    *
    * @static
    * @memberOf _
+   * @since 2.0.0
    * @category Collection
    * @param {Array|Object} collection The collection to sample.
    * @returns {*} Returns the random element.
@@ -17,10 +15,8 @@ define("lodash/sample", ['./_baseRandom', './isArrayLike', './values'], function
    * // => 2
    */
   function sample(collection) {
-    var array = isArrayLike(collection) ? collection : values(collection),
-        length = array.length;
-
-    return length > 0 ? array[baseRandom(0, length - 1)] : undefined;
+    var func = isArray(collection) ? arraySample : baseSample;
+    return func(collection);
   }
 
   return sample;

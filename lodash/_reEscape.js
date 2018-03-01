@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_reEscape",[],function(){var e=/<%-([\s\S]+?)%>/g;return e});//# sourceMappingURL=_reEscape.js.map
+define("lodash/_reEscape",[],function(){return/<%-([\s\S]+?)%>/g});//# sourceMappingURL=_reEscape.js.map

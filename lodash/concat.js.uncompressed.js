@@ -1,4 +1,4 @@
-define("lodash/concat", ['./_arrayConcat', './_baseFlatten', './isArray', './rest'], function(arrayConcat, baseFlatten, isArray, rest) {
+define("lodash/concat", ['./_arrayPush', './_baseFlatten', './_copyArray', './isArray'], function(arrayPush, baseFlatten, copyArray, isArray) {
 
   /**
    * Creates a new array concatenating `array` with any additional arrays
@@ -6,6 +6,7 @@ define("lodash/concat", ['./_arrayConcat', './_baseFlatten', './isArray', './res
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Array
    * @param {Array} array The array to concatenate.
    * @param {...*} [values] The values to concatenate.
@@ -21,13 +22,20 @@ define("lodash/concat", ['./_arrayConcat', './_baseFlatten', './isArray', './res
    * console.log(array);
    * // => [1]
    */
-  var concat = rest(function(array, values) {
-    if (!isArray(array)) {
-      array = array == null ? [] : [Object(array)];
+  function concat() {
+    var length = arguments.length;
+    if (!length) {
+      return [];
     }
-    values = baseFlatten(values, 1);
-    return arrayConcat(array, values);
-  });
+    var args = Array(length - 1),
+        array = arguments[0],
+        index = length;
+
+    while (index--) {
+      args[index - 1] = arguments[index];
+    }
+    return arrayPush(isArray(array) ? copyArray(array) : [array], baseFlatten(args, 1));
+  }
 
   return concat;
 });

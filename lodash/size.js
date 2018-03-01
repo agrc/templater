@@ -1,2 +1,2 @@
 //>>built
-define("lodash/size",["./isArrayLike","./isString","./keys","./_stringSize"],function(e,t,i,a){function o(o){if(null==o)return 0;if(e(o)){var r=o.length;return r&&t(o)?a(o):r}return i(o).length}return o});//# sourceMappingURL=size.js.map
+define("lodash/size",["./_baseKeys","./_getTag","./isArrayLike","./isString","./_stringSize"],function(e,t,i,a,r){function o(o){if(null==o)return 0;if(i(o))return a(o)?r(o):o.length;var l=t(o);return l==n||l==s?o.size:e(o).length}var n="[object Map]",s="[object Set]";return o});//# sourceMappingURL=size.js.map

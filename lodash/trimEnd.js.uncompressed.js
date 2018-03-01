@@ -1,4 +1,4 @@
-define("lodash/trimEnd", ['./_charsEndIndex', './_stringToArray', './toString'], function(charsEndIndex, stringToArray, toString) {
+define("lodash/trimEnd", ['./_baseToString', './_castSlice', './_charsEndIndex', './_stringToArray', './toString'], function(baseToString, castSlice, charsEndIndex, stringToArray, toString) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -11,10 +11,11 @@ define("lodash/trimEnd", ['./_charsEndIndex', './_stringToArray', './toString'],
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category String
    * @param {string} [string=''] The string to trim.
    * @param {string} [chars=whitespace] The characters to trim.
-   * @param- {Object} [guard] Enables use as an iteratee for functions like `_.map`.
+   * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
    * @returns {string} Returns the trimmed string.
    * @example
    *
@@ -26,20 +27,16 @@ define("lodash/trimEnd", ['./_charsEndIndex', './_stringToArray', './toString'],
    */
   function trimEnd(string, chars, guard) {
     string = toString(string);
-    if (!string) {
-      return string;
-    }
-    if (guard || chars === undefined) {
+    if (string && (guard || chars === undefined)) {
       return string.replace(reTrimEnd, '');
     }
-    chars = (chars + '');
-    if (!chars) {
+    if (!string || !(chars = baseToString(chars))) {
       return string;
     }
-    var strSymbols = stringToArray(string);
-    return strSymbols
-      .slice(0, charsEndIndex(strSymbols, stringToArray(chars)) + 1)
-      .join('');
+    var strSymbols = stringToArray(string),
+        end = charsEndIndex(strSymbols, stringToArray(chars)) + 1;
+
+    return castSlice(strSymbols, 0, end).join('');
   }
 
   return trimEnd;

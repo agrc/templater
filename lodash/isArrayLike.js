@@ -1,2 +1,2 @@
 //>>built
-define("lodash/isArrayLike",["./_getLength","./isFunction","./isLength"],function(e,t,i){function a(a){return null!=a&&i(e(a))&&!t(a)}return a});//# sourceMappingURL=isArrayLike.js.map
+define("lodash/isArrayLike",["./isFunction","./isLength"],function(e,t){function i(i){return null!=i&&t(i.length)&&!e(i)}return i});//# sourceMappingURL=isArrayLike.js.map

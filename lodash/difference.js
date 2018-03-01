@@ -1,2 +1,2 @@
 //>>built
-define("lodash/difference",["./_baseDifference","./_baseFlatten","./isArrayLikeObject","./rest"],function(e,t,i,a){var o=a(function(a,o){return i(a)?e(a,t(o,1,!0)):[]});return o});//# sourceMappingURL=difference.js.map
+define("lodash/difference",["./_baseDifference","./_baseFlatten","./_baseRest","./isArrayLikeObject"],function(e,t,i,a){return i(function(i,o){return a(i)?e(i,t(o,1,a,!0)):[]})});//# sourceMappingURL=difference.js.map

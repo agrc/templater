@@ -1,2 +1,2 @@
 //>>built
-define("dojo/topic",["./Evented"],function(e){var t=new e;return{publish:function(e,i){return t.emit.apply(t,arguments)},subscribe:function(e,i){return t.on.apply(t,arguments)}}});//# sourceMappingURL=topic.js.map
+define("dojo/topic",["./Evented"],function(t){var e=new t;return{publish:function(t,i){return e.emit.apply(e,arguments)},subscribe:function(t,i){return e.on.apply(e,arguments)}}});//# sourceMappingURL=topic.js.map

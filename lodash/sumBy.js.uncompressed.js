@@ -7,9 +7,10 @@ define("lodash/sumBy", ['./_baseIteratee', './_baseSum'], function(baseIteratee,
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Math
    * @param {Array} array The array to iterate over.
-   * @param {Function|Object|string} [iteratee=_.identity] The iteratee invoked per element.
+   * @param {Function} [iteratee=_.identity] The iteratee invoked per element.
    * @returns {number} Returns the sum.
    * @example
    *
@@ -24,7 +25,7 @@ define("lodash/sumBy", ['./_baseIteratee', './_baseSum'], function(baseIteratee,
    */
   function sumBy(array, iteratee) {
     return (array && array.length)
-      ? baseSum(array, baseIteratee(iteratee))
+      ? baseSum(array, baseIteratee(iteratee, 2))
       : 0;
   }
 

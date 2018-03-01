@@ -1,4 +1,4 @@
-define("lodash/bindAll", ['./_arrayEach', './_baseFlatten', './bind', './rest'], function(arrayEach, baseFlatten, bind, rest) {
+define("lodash/bindAll", ['./_arrayEach', './_baseAssignValue', './bind', './_flatRest', './_toKey'], function(arrayEach, baseAssignValue, bind, flatRest, toKey) {
 
   /**
    * Binds methods of an object to the object itself, overwriting the existing
@@ -7,28 +7,29 @@ define("lodash/bindAll", ['./_arrayEach', './_baseFlatten', './bind', './rest'],
    * **Note:** This method doesn't set the "length" property of bound functions.
    *
    * @static
+   * @since 0.1.0
    * @memberOf _
    * @category Util
    * @param {Object} object The object to bind and assign the bound methods to.
-   * @param {...(string|string[])} methodNames The object method names to bind,
-   *  specified individually or in arrays.
+   * @param {...(string|string[])} methodNames The object method names to bind.
    * @returns {Object} Returns `object`.
    * @example
    *
    * var view = {
    *   'label': 'docs',
-   *   'onClick': function() {
+   *   'click': function() {
    *     console.log('clicked ' + this.label);
    *   }
    * };
    *
-   * _.bindAll(view, 'onClick');
-   * jQuery(element).on('click', view.onClick);
-   * // => logs 'clicked docs' when clicked
+   * _.bindAll(view, ['click']);
+   * jQuery(element).on('click', view.click);
+   * // => Logs 'clicked docs' when clicked.
    */
-  var bindAll = rest(function(object, methodNames) {
-    arrayEach(baseFlatten(methodNames, 1), function(key) {
-      object[key] = bind(object[key], object);
+  var bindAll = flatRest(function(object, methodNames) {
+    arrayEach(methodNames, function(key) {
+      key = toKey(key);
+      baseAssignValue(object, key, bind(object[key], object));
     });
     return object;
   });

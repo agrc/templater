@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_isPrototype",[],function(){function e(e){var i=e&&e.constructor,a="function"==typeof i&&i.prototype||t;return e===a}var t=Object.prototype;return e});//# sourceMappingURL=_isPrototype.js.map
+define("lodash/_isPrototype",[],function(){function e(e){var i=e&&e.constructor;return e===("function"==typeof i&&i.prototype||t)}var t=Object.prototype;return e});//# sourceMappingURL=_isPrototype.js.map

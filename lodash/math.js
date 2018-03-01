@@ -1,2 +1,2 @@
 //>>built
-define("lodash/math",["./add","./ceil","./floor","./max","./maxBy","./mean","./min","./minBy","./round","./subtract","./sum","./sumBy"],function(e,t,i,a,o,r,n,s,l,d,h,c){return{add:e,ceil:t,floor:i,max:a,maxBy:o,mean:r,min:n,minBy:s,round:l,subtract:d,sum:h,sumBy:c}});//# sourceMappingURL=math.js.map
+define("lodash/math",["./add","./ceil","./divide","./floor","./max","./maxBy","./mean","./meanBy","./min","./minBy","./multiply","./round","./subtract","./sum","./sumBy"],function(e,t,i,a,r,o,n,s,l,d,c,h,u,m,f){return{add:e,ceil:t,divide:i,floor:a,max:r,maxBy:o,mean:n,meanBy:s,min:l,minBy:d,multiply:c,round:h,subtract:u,sum:m,sumBy:f}});//# sourceMappingURL=math.js.map

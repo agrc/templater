@@ -1,2 +1,2 @@
 //>>built
-define("lodash/lastIndexOf",["./_indexOfNaN","./toInteger"],function(e,t){function i(i,n,s){var d=i?i.length:0;if(!d)return-1;var l=d;if(s!==a&&(l=t(s),l=(0>l?o(d+l,0):r(l,d-1))+1),n!==n)return e(i,l,!0);for(;l--;)if(i[l]===n)return l;return-1}var a,o=Math.max,r=Math.min;return i});//# sourceMappingURL=lastIndexOf.js.map
+define("lodash/lastIndexOf",["./_baseFindIndex","./_baseIsNaN","./_strictLastIndexOf","./toInteger"],function(e,t,i,a){function o(o,l,d){var h=null==o?0:o.length;if(!h)return-1;var c=h;return d!==n&&(c=a(d),c=c<0?r(h+c,0):s(c,h-1)),l===l?i(o,l,c):e(o,t,c,!0)}var n,r=Math.max,s=Math.min;return o});//# sourceMappingURL=lastIndexOf.js.map

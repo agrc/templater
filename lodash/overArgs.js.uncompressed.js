@@ -1,18 +1,18 @@
-define("lodash/overArgs", ['./_apply', './_arrayMap', './_baseFlatten', './_baseIteratee', './rest'], function(apply, arrayMap, baseFlatten, baseIteratee, rest) {
+define("lodash/overArgs", ['./_apply', './_arrayMap', './_baseFlatten', './_baseIteratee', './_baseRest', './_baseUnary', './_castRest', './isArray'], function(apply, arrayMap, baseFlatten, baseIteratee, baseRest, baseUnary, castRest, isArray) {
 
   /* Built-in method references for those with the same name as other `lodash` methods. */
   var nativeMin = Math.min;
 
   /**
-   * Creates a function that invokes `func` with arguments transformed by
-   * corresponding `transforms`.
+   * Creates a function that invokes `func` with its arguments transformed.
    *
    * @static
+   * @since 4.0.0
    * @memberOf _
    * @category Function
    * @param {Function} func The function to wrap.
-   * @param {...(Function|Function[])} [transforms] The functions to transform
-   * arguments, specified individually or in arrays.
+   * @param {...(Function|Function[])} [transforms=[_.identity]]
+   *  The argument transforms.
    * @returns {Function} Returns the new function.
    * @example
    *
@@ -26,7 +26,7 @@ define("lodash/overArgs", ['./_apply', './_arrayMap', './_baseFlatten', './_base
    *
    * var func = _.overArgs(function(x, y) {
    *   return [x, y];
-   * }, square, doubled);
+   * }, [square, doubled]);
    *
    * func(9, 3);
    * // => [81, 6]
@@ -34,11 +34,13 @@ define("lodash/overArgs", ['./_apply', './_arrayMap', './_baseFlatten', './_base
    * func(10, 5);
    * // => [100, 10]
    */
-  var overArgs = rest(function(func, transforms) {
-    transforms = arrayMap(baseFlatten(transforms, 1), baseIteratee);
+  var overArgs = castRest(function(func, transforms) {
+    transforms = (transforms.length == 1 && isArray(transforms[0]))
+      ? arrayMap(transforms[0], baseUnary(baseIteratee))
+      : arrayMap(baseFlatten(transforms, 1), baseUnary(baseIteratee));
 
     var funcsLength = transforms.length;
-    return rest(function(args) {
+    return baseRest(function(args) {
       var index = -1,
           length = nativeMin(args.length, funcsLength);
 

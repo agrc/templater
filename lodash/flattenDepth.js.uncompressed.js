@@ -8,6 +8,7 @@ define("lodash/flattenDepth", ['./_baseFlatten', './toInteger'], function(baseFl
    *
    * @static
    * @memberOf _
+   * @since 4.4.0
    * @category Array
    * @param {Array} array The array to flatten.
    * @param {number} [depth=1] The maximum recursion depth.
@@ -23,7 +24,7 @@ define("lodash/flattenDepth", ['./_baseFlatten', './toInteger'], function(baseFl
    * // => [1, 2, 3, [4], 5]
    */
   function flattenDepth(array, depth) {
-    var length = array ? array.length : 0;
+    var length = array == null ? 0 : array.length;
     if (!length) {
       return [];
     }

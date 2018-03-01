@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_overRest",["./_apply"],function(e){function t(t,r,o){return r=a(r===i?t.length-1:r,0),function(){for(var i=arguments,n=-1,s=a(i.length-r,0),l=Array(s);++n<s;)l[n]=i[r+n];n=-1;for(var d=Array(r+1);++n<r;)d[n]=i[n];return d[r]=o(l),e(t,this,d)}}var i,a=Math.max;return t});//# sourceMappingURL=_overRest.js.map

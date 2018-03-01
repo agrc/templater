@@ -1,7 +1,4 @@
-define("lodash/findLast", ['./_baseEachRight', './_baseFind', './_baseFindIndex', './_baseIteratee', './isArray'], function(baseEachRight, baseFind, baseFindIndex, baseIteratee, isArray) {
-
-  /** Used as a safe reference for `undefined` in pre-ES5 environments. */
-  var undefined;
+define("lodash/findLast", ['./_createFind', './findLastIndex'], function(createFind, findLastIndex) {
 
   /**
    * This method is like `_.find` except that it iterates over elements of
@@ -9,9 +6,11 @@ define("lodash/findLast", ['./_baseEachRight', './_baseFind', './_baseFindIndex'
    *
    * @static
    * @memberOf _
+   * @since 2.0.0
    * @category Collection
-   * @param {Array|Object} collection The collection to search.
-   * @param {Function|Object|string} [predicate=_.identity] The function invoked per iteration.
+   * @param {Array|Object} collection The collection to inspect.
+   * @param {Function} [predicate=_.identity] The function invoked per iteration.
+   * @param {number} [fromIndex=collection.length-1] The index to search from.
    * @returns {*} Returns the matched element, else `undefined`.
    * @example
    *
@@ -20,14 +19,7 @@ define("lodash/findLast", ['./_baseEachRight', './_baseFind', './_baseFindIndex'
    * });
    * // => 3
    */
-  function findLast(collection, predicate) {
-    predicate = baseIteratee(predicate, 3);
-    if (isArray(collection)) {
-      var index = baseFindIndex(collection, predicate, true);
-      return index > -1 ? collection[index] : undefined;
-    }
-    return baseFind(collection, predicate, baseEachRight);
-  }
+  var findLast = createFind(findLastIndex);
 
   return findLast;
 });

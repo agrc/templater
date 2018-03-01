@@ -1,16 +1,19 @@
-define("lodash/differenceWith", ['./_baseDifference', './_baseFlatten', './isArrayLikeObject', './last', './rest'], function(baseDifference, baseFlatten, isArrayLikeObject, last, rest) {
+define("lodash/differenceWith", ['./_baseDifference', './_baseFlatten', './_baseRest', './isArrayLikeObject', './last'], function(baseDifference, baseFlatten, baseRest, isArrayLikeObject, last) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
 
   /**
    * This method is like `_.difference` except that it accepts `comparator`
-   * which is invoked to compare elements of `array` to `values`. Result values
-   * are chosen from the first array. The comparator is invoked with two arguments:
-   * (arrVal, othVal).
+   * which is invoked to compare elements of `array` to `values`. The order and
+   * references of result values are determined by the first array. The comparator
+   * is invoked with two arguments: (arrVal, othVal).
+   *
+   * **Note:** Unlike `_.pullAllWith`, this method returns a new array.
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Array
    * @param {Array} array The array to inspect.
    * @param {...Array} [values] The values to exclude.
@@ -23,13 +26,13 @@ define("lodash/differenceWith", ['./_baseDifference', './_baseFlatten', './isArr
    * _.differenceWith(objects, [{ 'x': 1, 'y': 2 }], _.isEqual);
    * // => [{ 'x': 2, 'y': 1 }]
    */
-  var differenceWith = rest(function(array, values) {
+  var differenceWith = baseRest(function(array, values) {
     var comparator = last(values);
     if (isArrayLikeObject(comparator)) {
       comparator = undefined;
     }
     return isArrayLikeObject(array)
-      ? baseDifference(array, baseFlatten(values, 1, true), undefined, comparator)
+      ? baseDifference(array, baseFlatten(values, 1, isArrayLikeObject, true), undefined, comparator)
       : [];
   });
 

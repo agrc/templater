@@ -1,2 +1,2 @@
 //>>built
-define("lodash/isNative",["./isFunction","./_isHostObject","./isObjectLike"],function(e,t,i){function a(a){return null==a?!1:e(a)?l.test(s.call(a)):i(a)&&(t(a)?l:r).test(a)}var o=/[\\^$.*+?()[\]{}|]/g,r=/^\[object .+?Constructor\]$/,n=Object.prototype,s=Function.prototype.toString,d=n.hasOwnProperty,l=RegExp("^"+s.call(d).replace(o,"\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,"$1.*?")+"$");return a});//# sourceMappingURL=isNative.js.map
+define("lodash/isNative",["./_baseIsNative","./_isMaskable"],function(e,t){function i(i){if(t(i))throw new Error(a);return e(i)}var a="Unsupported core-js use. Try https://npms.io/search?q=ponyfill.";return i});//# sourceMappingURL=isNative.js.map

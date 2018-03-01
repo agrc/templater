@@ -1,2 +1,2 @@
 //>>built
-define("lodash/isNumber",["./isObjectLike"],function(e){function t(t){return"number"==typeof t||e(t)&&o.call(t)==i}var i="[object Number]",a=Object.prototype,o=a.toString;return t});//# sourceMappingURL=isNumber.js.map
+define("lodash/isNumber",["./_baseGetTag","./isObjectLike"],function(e,t){function i(i){return"number"==typeof i||t(i)&&e(i)==a}var a="[object Number]";return i});//# sourceMappingURL=isNumber.js.map

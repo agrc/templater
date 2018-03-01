@@ -1,10 +1,11 @@
-define("lodash/toPath", ['./_arrayMap', './isArray', './_stringToPath'], function(arrayMap, isArray, stringToPath) {
+define("lodash/toPath", ['./_arrayMap', './_copyArray', './isArray', './isSymbol', './_stringToPath', './_toKey', './toString'], function(arrayMap, copyArray, isArray, isSymbol, stringToPath, toKey, toString) {
 
   /**
    * Converts `value` to a property path array.
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Util
    * @param {*} value The value to convert.
    * @returns {Array} Returns the new property path array.
@@ -15,18 +16,12 @@ define("lodash/toPath", ['./_arrayMap', './isArray', './_stringToPath'], functio
    *
    * _.toPath('a[0].b.c');
    * // => ['a', '0', 'b', 'c']
-   *
-   * var path = ['a', 'b', 'c'],
-   *     newPath = _.toPath(path);
-   *
-   * console.log(newPath);
-   * // => ['a', 'b', 'c']
-   *
-   * console.log(path === newPath);
-   * // => false
    */
   function toPath(value) {
-    return isArray(value) ? arrayMap(value, String) : stringToPath(value);
+    if (isArray(value)) {
+      return arrayMap(value, toKey);
+    }
+    return isSymbol(value) ? [value] : copyArray(stringToPath(toString(value)));
   }
 
   return toPath;

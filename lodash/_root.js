@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_root",["./_checkGlobal"],function(e){var t,i={"function":!0,object:!0},a=i[typeof exports]&&exports&&!exports.nodeType?exports:t,o=i[typeof module]&&module&&!module.nodeType?module:t,r=e(a&&o&&"object"==typeof global&&global),n=e(i[typeof self]&&self),s=e(i[typeof window]&&window),l=e(i[typeof this]&&this),d=r||s!==(l&&l.window)&&s||n||l||Function("return this")();return d});//# sourceMappingURL=_root.js.map
+define("lodash/_root",["./_freeGlobal"],function(e){var t="object"==typeof self&&self&&self.Object===Object&&self;return e||t||Function("return this")()});//# sourceMappingURL=_root.js.map

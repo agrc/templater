@@ -1,7 +1,7 @@
 define("lodash/_baseLodash", [], function() {
 
   /**
-   * The function whose prototype all chaining wrappers inherit from.
+   * The function whose prototype chain sequence wrappers inherit from.
    *
    * @private
    */

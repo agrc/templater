@@ -1,2 +1,2 @@
 //>>built
-define("lodash/zip",["./rest","./unzip"],function(e,t){var i=e(t);return i});//# sourceMappingURL=zip.js.map
+define("lodash/zip",["./_baseRest","./unzip"],function(e,t){return e(t)});//# sourceMappingURL=zip.js.map

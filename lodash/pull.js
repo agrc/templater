@@ -1,2 +1,2 @@
 //>>built
-define("lodash/pull",["./pullAll","./rest"],function(e,t){var i=t(e);return i});//# sourceMappingURL=pull.js.map
+define("lodash/pull",["./_baseRest","./pullAll"],function(e,t){return e(t)});//# sourceMappingURL=pull.js.map

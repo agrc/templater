@@ -1,2 +1,2 @@
 //>>built
-define("lodash/max",["./_baseExtremum","./gt","./identity"],function(e,t,i){function r(r){return r&&r.length?e(r,i,t):o}var o;return r});//# sourceMappingURL=max.js.map
+define("lodash/max",["./_baseExtremum","./_baseGt","./identity"],function(e,t,i){function a(a){return a&&a.length?e(a,i,t):r}var r;return a});//# sourceMappingURL=max.js.map

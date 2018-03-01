@@ -1,2 +1,2 @@
 //>>built
-define("lodash/pick",["./_baseFlatten","./_basePick","./rest"],function(e,t,i){var a=i(function(i,a){return null==i?{}:t(i,e(a,1))});return a});//# sourceMappingURL=pick.js.map
+define("lodash/pick",["./_basePick","./_flatRest"],function(e,t){return t(function(t,i){return null==t?{}:e(t,i)})});//# sourceMappingURL=pick.js.map

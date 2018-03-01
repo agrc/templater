@@ -1,0 +1,1 @@
+{"version":3,"sources":["_baseIsArguments.js.uncompressed.js"],"names":["define","baseGetTag","isObjectLike","baseIsArguments","value","argsTag"],"mappings":";AAAAA,OAAO,2BAA4B,gBAAiB,kBAAmB,SAASC,EAAYC,GAY1F,QAASC,GAAgBC,GACvB,MAAOF,GAAaE,IAAUH,EAAWG,IAAUC,EAVrD,GAAIA,GAAU,oBAad,OAAOF","file":"_baseIsArguments.js.uncompressed.js"}

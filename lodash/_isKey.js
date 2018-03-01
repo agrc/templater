@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_isKey",["./isArray"],function(e){function t(t,r){return"number"==typeof t?!0:!e(t)&&(o.test(t)||!i.test(t)||null!=r&&t in Object(r))}var i=/\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,o=/^\w*$/;return t});//# sourceMappingURL=_isKey.js.map
+define("lodash/_isKey",["./isArray","./isSymbol"],function(e,t){function i(i,o){if(e(i))return!1;var n=typeof i;return!("number"!=n&&"symbol"!=n&&"boolean"!=n&&null!=i&&!t(i))||(r.test(i)||!a.test(i)||null!=o&&i in Object(o))}var a=/\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,r=/^\w*$/;return i});//# sourceMappingURL=_isKey.js.map

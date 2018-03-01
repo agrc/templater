@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_assignValue",["./eq"],function(e){function t(t,a,o){var r=t[a];n.call(t,a)&&e(r,o)&&(o!==i||a in t)||(t[a]=o)}var i,a=Object.prototype,n=a.hasOwnProperty;return t});//# sourceMappingURL=_assignValue.js.map
+define("lodash/_assignValue",["./_baseAssignValue","./eq"],function(e,t){function i(i,r,n){var s=i[r];o.call(i,r)&&t(s,n)&&(n!==a||r in i)||e(i,r,n)}var a,r=Object.prototype,o=r.hasOwnProperty;return i});//# sourceMappingURL=_assignValue.js.map

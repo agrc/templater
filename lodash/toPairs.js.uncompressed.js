@@ -1,14 +1,17 @@
-define("lodash/toPairs", ['./_baseToPairs', './keys'], function(baseToPairs, keys) {
+define("lodash/toPairs", ['./_createToPairs', './keys'], function(createToPairs, keys) {
 
   /**
-   * Creates an array of own enumerable key-value pairs for `object` which
-   * can be consumed by `_.fromPairs`.
+   * Creates an array of own enumerable string keyed-value pairs for `object`
+   * which can be consumed by `_.fromPairs`. If `object` is a map or set, its
+   * entries are returned.
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
+   * @alias entries
    * @category Object
    * @param {Object} object The object to query.
-   * @returns {Array} Returns the new array of key-value pairs.
+   * @returns {Array} Returns the key-value pairs.
    * @example
    *
    * function Foo() {
@@ -21,9 +24,7 @@ define("lodash/toPairs", ['./_baseToPairs', './keys'], function(baseToPairs, key
    * _.toPairs(new Foo);
    * // => [['a', 1], ['b', 2]] (iteration order is not guaranteed)
    */
-  function toPairs(object) {
-    return baseToPairs(object, keys(object));
-  }
+  var toPairs = createToPairs(keys);
 
   return toPairs;
 });

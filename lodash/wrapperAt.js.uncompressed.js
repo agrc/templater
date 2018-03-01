@@ -1,4 +1,4 @@
-define("lodash/wrapperAt", ['./_LazyWrapper', './_LodashWrapper', './_baseAt', './_baseFlatten', './_isIndex', './rest', './thru'], function(LazyWrapper, LodashWrapper, baseAt, baseFlatten, isIndex, rest, thru) {
+define("lodash/wrapperAt", ['./_LazyWrapper', './_LodashWrapper', './_baseAt', './_flatRest', './_isIndex', './thru'], function(LazyWrapper, LodashWrapper, baseAt, flatRest, isIndex, thru) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -8,9 +8,9 @@ define("lodash/wrapperAt", ['./_LazyWrapper', './_LodashWrapper', './_baseAt', '
    *
    * @name at
    * @memberOf _
+   * @since 1.0.0
    * @category Seq
-   * @param {...(string|string[])} [paths] The property paths of elements to pick,
-   *  specified individually or in arrays.
+   * @param {...(string|string[])} [paths] The property paths to pick.
    * @returns {Object} Returns the new `lodash` wrapper instance.
    * @example
    *
@@ -18,12 +18,8 @@ define("lodash/wrapperAt", ['./_LazyWrapper', './_LodashWrapper', './_baseAt', '
    *
    * _(object).at(['a[0].b.c', 'a[1]']).value();
    * // => [3, 4]
-   *
-   * _(['a', 'b', 'c']).at(0, 2).value();
-   * // => ['a', 'c']
    */
-  var wrapperAt = rest(function(paths) {
-    paths = baseFlatten(paths, 1);
+  var wrapperAt = flatRest(function(paths) {
     var length = paths.length,
         start = length ? paths[0] : 0,
         value = this.__wrapped__,

@@ -1,0 +1,2 @@
+//>>built
+define("lodash/toFinite",["./toNumber"],function(e){function t(t){if(!t)return 0===t?t:0;if((t=e(t))===i||t===-i){return(t<0?-1:1)*a}return t===t?t:0}var i=1/0,a=1.7976931348623157e308;return t});//# sourceMappingURL=toFinite.js.map

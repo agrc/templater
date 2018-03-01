@@ -1,22 +1,23 @@
-define("lodash/union", ['./_baseFlatten', './_baseUniq', './rest'], function(baseFlatten, baseUniq, rest) {
+define("lodash/union", ['./_baseFlatten', './_baseRest', './_baseUniq', './isArrayLikeObject'], function(baseFlatten, baseRest, baseUniq, isArrayLikeObject) {
 
   /**
    * Creates an array of unique values, in order, from all given arrays using
-   * [`SameValueZero`](http://ecma-international.org/ecma-262/6.0/#sec-samevaluezero)
+   * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
    * for equality comparisons.
    *
    * @static
    * @memberOf _
+   * @since 0.1.0
    * @category Array
    * @param {...Array} [arrays] The arrays to inspect.
    * @returns {Array} Returns the new array of combined values.
    * @example
    *
-   * _.union([2, 1], [4, 2], [1, 2]);
-   * // => [2, 1, 4]
+   * _.union([2], [1, 2]);
+   * // => [2, 1]
    */
-  var union = rest(function(arrays) {
-    return baseUniq(baseFlatten(arrays, 1, true));
+  var union = baseRest(function(arrays) {
+    return baseUniq(baseFlatten(arrays, 1, isArrayLikeObject, true));
   });
 
   return union;

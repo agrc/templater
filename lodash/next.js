@@ -1,2 +1,2 @@
 //>>built
-define("lodash/next",["./toArray"],function(e){function t(){this.__values__===i&&(this.__values__=e(this.value()));var t=this.__index__>=this.__values__.length,a=t?i:this.__values__[this.__index__++];return{done:t,value:a}}var i;return t});//# sourceMappingURL=next.js.map
+define("lodash/next",["./toArray"],function(e){function t(){this.__values__===i&&(this.__values__=e(this.value()));var t=this.__index__>=this.__values__.length;return{done:t,value:t?i:this.__values__[this.__index__++]}}var i;return t});//# sourceMappingURL=next.js.map

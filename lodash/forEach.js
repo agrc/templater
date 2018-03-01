@@ -1,2 +1,2 @@
 //>>built
-define("lodash/forEach",["./_arrayEach","./_baseCastFunction","./_baseEach","./isArray"],function(e,t,i,a){function o(o,r){return"function"==typeof r&&a(o)?e(o,r):i(o,t(r))}return o});//# sourceMappingURL=forEach.js.map
+define("lodash/forEach",["./_arrayEach","./_baseEach","./_castFunction","./isArray"],function(e,t,i,a){function r(r,o){return(a(r)?e:t)(r,i(o))}return r});//# sourceMappingURL=forEach.js.map

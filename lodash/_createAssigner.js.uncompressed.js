@@ -1,4 +1,4 @@
-define("lodash/_createAssigner", ['./_isIterateeCall', './rest'], function(isIterateeCall, rest) {
+define("lodash/_createAssigner", ['./_baseRest', './_isIterateeCall'], function(baseRest, isIterateeCall) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -11,13 +11,13 @@ define("lodash/_createAssigner", ['./_isIterateeCall', './rest'], function(isIte
    * @returns {Function} Returns the new assigner function.
    */
   function createAssigner(assigner) {
-    return rest(function(object, sources) {
+    return baseRest(function(object, sources) {
       var index = -1,
           length = sources.length,
           customizer = length > 1 ? sources[length - 1] : undefined,
           guard = length > 2 ? sources[2] : undefined;
 
-      customizer = typeof customizer == 'function'
+      customizer = (assigner.length > 3 && typeof customizer == 'function')
         ? (length--, customizer)
         : undefined;
 

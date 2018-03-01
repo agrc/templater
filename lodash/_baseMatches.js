@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_baseMatches",["./_baseIsMatch","./_getMatchData"],function(e,t){function i(i){var r=t(i);if(1==r.length&&r[0][2]){var n=r[0][0],a=r[0][1];return function(e){return null==e?!1:e[n]===a&&(a!==o||n in Object(e))}}return function(t){return t===i||e(t,i,r)}}var o;return i});//# sourceMappingURL=_baseMatches.js.map
+define("lodash/_baseMatches",["./_baseIsMatch","./_getMatchData","./_matchesStrictComparable"],function(e,t,i){function a(a){var r=t(a);return 1==r.length&&r[0][2]?i(r[0][0],r[0][1]):function(t){return t===a||e(t,a,r)}}return a});//# sourceMappingURL=_baseMatches.js.map

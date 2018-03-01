@@ -1,2 +1,2 @@
 //>>built
-define("dijit/_base/manager",["dojo/_base/array","dojo/_base/config","dojo/_base/lang","../registry","../main"],function(t,e,o,i,n){var s={};return t.forEach(["byId","getUniqueId","findWidgets","_destroyAll","byNode","getEnclosingWidget"],function(t){s[t]=i[t]}),o.mixin(s,{defaultDuration:e.defaultDuration||200}),o.mixin(n,s),n});//# sourceMappingURL=manager.js.map
+define("dijit/_base/manager",["dojo/_base/array","dojo/_base/config","dojo/_base/lang","../registry","../main"],function(t,e,i,o,n){var s={};return t.forEach(["byId","getUniqueId","findWidgets","_destroyAll","byNode","getEnclosingWidget"],function(t){s[t]=o[t]}),i.mixin(s,{defaultDuration:e.defaultDuration||200}),i.mixin(n,s),n});//# sourceMappingURL=manager.js.map

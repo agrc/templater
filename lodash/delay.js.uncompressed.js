@@ -1,4 +1,4 @@
-define("lodash/delay", ['./_baseDelay', './rest', './toNumber'], function(baseDelay, rest, toNumber) {
+define("lodash/delay", ['./_baseDelay', './_baseRest', './toNumber'], function(baseDelay, baseRest, toNumber) {
 
   /**
    * Invokes `func` after `wait` milliseconds. Any additional arguments are
@@ -6,6 +6,7 @@ define("lodash/delay", ['./_baseDelay', './rest', './toNumber'], function(baseDe
    *
    * @static
    * @memberOf _
+   * @since 0.1.0
    * @category Function
    * @param {Function} func The function to delay.
    * @param {number} wait The number of milliseconds to delay invocation.
@@ -16,9 +17,9 @@ define("lodash/delay", ['./_baseDelay', './rest', './toNumber'], function(baseDe
    * _.delay(function(text) {
    *   console.log(text);
    * }, 1000, 'later');
-   * // => logs 'later' after one second
+   * // => Logs 'later' after one second.
    */
-  var delay = rest(function(func, wait, args) {
+  var delay = baseRest(function(func, wait, args) {
     return baseDelay(func, toNumber(wait) || 0, args);
   });
 

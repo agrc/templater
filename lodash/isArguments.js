@@ -1,2 +1,2 @@
 //>>built
-define("lodash/isArguments",["./isArrayLikeObject"],function(e){function t(t){return e(t)&&o.call(t,"callee")&&(!n.call(t,"callee")||r.call(t)==i)}var i="[object Arguments]",a=Object.prototype,o=a.hasOwnProperty,r=a.toString,n=a.propertyIsEnumerable;return t});//# sourceMappingURL=isArguments.js.map
+define("lodash/isArguments",["./_baseIsArguments","./isObjectLike"],function(e,t){var i=Object.prototype,a=i.hasOwnProperty,r=i.propertyIsEnumerable;return e(function(){return arguments}())?e:function(e){return t(e)&&a.call(e,"callee")&&!r.call(e,"callee")}});//# sourceMappingURL=isArguments.js.map

@@ -20,6 +20,7 @@ define("lodash/_LazyWrapper", ['./_baseCreate', './_baseLodash'], function(baseC
     this.__views__ = [];
   }
 
+  // Ensure `LazyWrapper` is an instance of `baseLodash`.
   LazyWrapper.prototype = baseCreate(baseLodash.prototype);
   LazyWrapper.prototype.constructor = LazyWrapper;
 

@@ -1,2 +1,2 @@
 //>>built
-define("lodash/isSymbol",["./isObjectLike"],function(e){function t(t){return"symbol"==typeof t||e(t)&&o.call(t)==i}var i="[object Symbol]",a=Object.prototype,o=a.toString;return t});//# sourceMappingURL=isSymbol.js.map
+define("lodash/isSymbol",["./_baseGetTag","./isObjectLike"],function(e,t){function i(i){return"symbol"==typeof i||t(i)&&e(i)==a}var a="[object Symbol]";return i});//# sourceMappingURL=isSymbol.js.map

@@ -1,4 +1,4 @@
-define("lodash/_stackClear", [], function() {
+define("lodash/_stackClear", ['./_ListCache'], function(ListCache) {
 
   /**
    * Removes all key-value entries from the stack.
@@ -8,7 +8,8 @@ define("lodash/_stackClear", [], function() {
    * @memberOf Stack
    */
   function stackClear() {
-    this.__data__ = { 'array': [], 'map': null };
+    this.__data__ = new ListCache;
+    this.size = 0;
   }
 
   return stackClear;

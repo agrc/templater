@@ -1,4 +1,4 @@
-define("lodash/update", ['./_baseCastFunction', './_baseUpdate'], function(baseCastFunction, baseUpdate) {
+define("lodash/update", ['./_baseUpdate', './_castFunction'], function(baseUpdate, castFunction) {
 
   /**
    * This method is like `_.set` except that accepts `updater` to produce the
@@ -9,6 +9,7 @@ define("lodash/update", ['./_baseCastFunction', './_baseUpdate'], function(baseC
    *
    * @static
    * @memberOf _
+   * @since 4.6.0
    * @category Object
    * @param {Object} object The object to modify.
    * @param {Array|string} path The path of the property to set.
@@ -27,7 +28,7 @@ define("lodash/update", ['./_baseCastFunction', './_baseUpdate'], function(baseC
    * // => 0
    */
   function update(object, path, updater) {
-    return object == null ? object : baseUpdate(object, path, baseCastFunction(updater));
+    return object == null ? object : baseUpdate(object, path, castFunction(updater));
   }
 
   return update;

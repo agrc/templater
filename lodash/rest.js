@@ -1,2 +1,2 @@
 //>>built
-define("lodash/rest",["./_apply","./toInteger"],function(e,t){function i(i,o){if("function"!=typeof i)throw new TypeError(r);return o=n(o===a?i.length-1:t(o),0),function(){for(var t=arguments,a=-1,r=n(t.length-o,0),s=Array(r);++a<r;)s[a]=t[o+a];switch(o){case 0:return i.call(this,s);case 1:return i.call(this,t[0],s);case 2:return i.call(this,t[0],t[1],s)}var l=Array(o+1);for(a=-1;++a<o;)l[a]=t[a];return l[o]=s,e(i,this,l)}}var a,r="Expected a function",n=Math.max;return i});//# sourceMappingURL=rest.js.map
+define("lodash/rest",["./_baseRest","./toInteger"],function(e,t){function i(i,n){if("function"!=typeof i)throw new TypeError(r);return n=n===a?n:t(n),e(i,n)}var a,r="Expected a function";return i});//# sourceMappingURL=rest.js.map

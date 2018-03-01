@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_initCloneObject",["./_baseCreate","./_isPrototype"],function(e,t){function i(i){return"function"!=typeof i.constructor||t(i)?{}:e(a(i))}var a=Object.getPrototypeOf;return i});//# sourceMappingURL=_initCloneObject.js.map
+define("lodash/_initCloneObject",["./_baseCreate","./_getPrototype","./_isPrototype"],function(e,t,i){function a(a){return"function"!=typeof a.constructor||i(a)?{}:e(t(a))}return a});//# sourceMappingURL=_initCloneObject.js.map

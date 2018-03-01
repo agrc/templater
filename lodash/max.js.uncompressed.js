@@ -1,13 +1,14 @@
-define("lodash/max", ['./_baseExtremum', './gt', './identity'], function(baseExtremum, gt, identity) {
+define("lodash/max", ['./_baseExtremum', './_baseGt', './identity'], function(baseExtremum, baseGt, identity) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
 
   /**
-   * Computes the maximum value of `array`. If `array` is empty or falsey
+   * Computes the maximum value of `array`. If `array` is empty or falsey,
    * `undefined` is returned.
    *
    * @static
+   * @since 0.1.0
    * @memberOf _
    * @category Math
    * @param {Array} array The array to iterate over.
@@ -22,7 +23,7 @@ define("lodash/max", ['./_baseExtremum', './gt', './identity'], function(baseExt
    */
   function max(array) {
     return (array && array.length)
-      ? baseExtremum(array, identity, gt)
+      ? baseExtremum(array, identity, baseGt)
       : undefined;
   }
 

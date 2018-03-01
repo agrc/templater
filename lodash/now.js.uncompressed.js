@@ -1,4 +1,4 @@
-define("lodash/now", [], function() {
+define("lodash/now", ['./_root'], function(root) {
 
   /**
    * Gets the timestamp of the number of milliseconds that have elapsed since
@@ -6,7 +6,7 @@ define("lodash/now", [], function() {
    *
    * @static
    * @memberOf _
-   * @type {Function}
+   * @since 2.4.0
    * @category Date
    * @returns {number} Returns the timestamp.
    * @example
@@ -14,9 +14,11 @@ define("lodash/now", [], function() {
    * _.defer(function(stamp) {
    *   console.log(_.now() - stamp);
    * }, _.now());
-   * // => logs the number of milliseconds it took for the deferred function to be invoked
+   * // => Logs the number of milliseconds it took for the deferred invocation.
    */
-  var now = Date.now;
+  var now = function() {
+    return root.Date.now();
+  };
 
   return now;
 });

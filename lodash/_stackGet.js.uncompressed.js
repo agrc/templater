@@ -1,4 +1,4 @@
-define("lodash/_stackGet", ['./_assocGet'], function(assocGet) {
+define("lodash/_stackGet", [], function() {
 
   /**
    * Gets the stack value for `key`.
@@ -10,10 +10,7 @@ define("lodash/_stackGet", ['./_assocGet'], function(assocGet) {
    * @returns {*} Returns the entry value.
    */
   function stackGet(key) {
-    var data = this.__data__,
-        array = data.array;
-
-    return array ? assocGet(array, key) : data.map.get(key);
+    return this.__data__.get(key);
   }
 
   return stackGet;

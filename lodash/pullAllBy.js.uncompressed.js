@@ -9,10 +9,11 @@ define("lodash/pullAllBy", ['./_baseIteratee', './_basePullAll'], function(baseI
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Array
    * @param {Array} array The array to modify.
    * @param {Array} values The values to remove.
-   * @param {Function|Object|string} [iteratee=_.identity] The iteratee invoked per element.
+   * @param {Function} [iteratee=_.identity] The iteratee invoked per element.
    * @returns {Array} Returns `array`.
    * @example
    *
@@ -24,7 +25,7 @@ define("lodash/pullAllBy", ['./_baseIteratee', './_basePullAll'], function(baseI
    */
   function pullAllBy(array, values, iteratee) {
     return (array && array.length && values && values.length)
-      ? basePullAll(array, values, baseIteratee(iteratee))
+      ? basePullAll(array, values, baseIteratee(iteratee, 2))
       : array;
   }
 

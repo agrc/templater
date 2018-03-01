@@ -1,1 +1,1 @@
-{"version":3,"sources":["matches.js.uncompressed.js"],"names":["define","baseClone","baseMatches","matches","source"],"mappings":";AAAAA,OAAO,kBAAmB,eAAgB,kBAAmB,SAASC,EAAWC,GAyB/E,QAASC,GAAQC,GACf,MAAOF,GAAYD,EAAUG,GAAQ,IAGvC,MAAOD","file":"matches.js.uncompressed.js"}
+{"version":3,"sources":["matches.js.uncompressed.js"],"names":["define","baseClone","baseMatches","matches","source","CLONE_DEEP_FLAG"],"mappings":";AAAAA,OAAO,kBAAmB,eAAgB,kBAAmB,SAASC,EAAWC,GAiC/E,QAASC,GAAQC,GACf,MAAOF,GAAYD,EAAUG,EAAQC,IA/BvC,GAAIA,GAAkB,CAkCtB,OAAOF","file":"matches.js.uncompressed.js"}

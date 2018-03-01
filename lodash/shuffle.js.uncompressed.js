@@ -1,7 +1,4 @@
-define("lodash/shuffle", ['./sampleSize'], function(sampleSize) {
-
-  /** Used as references for the maximum length and index of an array. */
-  var MAX_ARRAY_LENGTH = 4294967295;
+define("lodash/shuffle", ['./_arrayShuffle', './_baseShuffle', './isArray'], function(arrayShuffle, baseShuffle, isArray) {
 
   /**
    * Creates an array of shuffled values, using a version of the
@@ -9,6 +6,7 @@ define("lodash/shuffle", ['./sampleSize'], function(sampleSize) {
    *
    * @static
    * @memberOf _
+   * @since 0.1.0
    * @category Collection
    * @param {Array|Object} collection The collection to shuffle.
    * @returns {Array} Returns the new shuffled array.
@@ -18,7 +16,8 @@ define("lodash/shuffle", ['./sampleSize'], function(sampleSize) {
    * // => [4, 1, 3, 2]
    */
   function shuffle(collection) {
-    return sampleSize(collection, MAX_ARRAY_LENGTH);
+    var func = isArray(collection) ? arrayShuffle : baseShuffle;
+    return func(collection);
   }
 
   return shuffle;

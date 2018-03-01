@@ -1,4 +1,4 @@
-define("lodash/_baseGet", ['./_baseCastPath', './_isKey'], function(baseCastPath, isKey) {
+define("lodash/_baseGet", ['./_castPath', './_toKey'], function(castPath, toKey) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -12,13 +12,13 @@ define("lodash/_baseGet", ['./_baseCastPath', './_isKey'], function(baseCastPath
    * @returns {*} Returns the resolved value.
    */
   function baseGet(object, path) {
-    path = isKey(path, object) ? [path + ''] : baseCastPath(path);
+    path = castPath(path, object);
 
     var index = 0,
         length = path.length;
 
     while (object != null && index < length) {
-      object = object[path[index++]];
+      object = object[toKey(path[index++])];
     }
     return (index && index == length) ? object : undefined;
   }

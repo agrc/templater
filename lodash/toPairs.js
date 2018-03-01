@@ -1,2 +1,2 @@
 //>>built
-define("lodash/toPairs",["./_baseToPairs","./keys"],function(e,t){function i(i){return e(i,t(i))}return i});//# sourceMappingURL=toPairs.js.map
+define("lodash/toPairs",["./_createToPairs","./keys"],function(e,t){return e(t)});//# sourceMappingURL=toPairs.js.map

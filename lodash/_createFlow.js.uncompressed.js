@@ -1,19 +1,16 @@
-define("lodash/_createFlow", ['./_LodashWrapper', './_baseFlatten', './_getData', './_getFuncName', './isArray', './_isLaziable', './rest'], function(LodashWrapper, baseFlatten, getData, getFuncName, isArray, isLaziable, rest) {
+define("lodash/_createFlow", ['./_LodashWrapper', './_flatRest', './_getData', './_getFuncName', './isArray', './_isLaziable'], function(LodashWrapper, flatRest, getData, getFuncName, isArray, isLaziable) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
 
-  /** Used as the size to enable large array optimizations. */
-  var LARGE_ARRAY_SIZE = 200;
-
-  /** Used as the `TypeError` message for "Functions" methods. */
+  /** Error message constants. */
   var FUNC_ERROR_TEXT = 'Expected a function';
 
-  /** Used to compose bitmasks for wrapper metadata. */
-  var CURRY_FLAG = 8,
-      PARTIAL_FLAG = 32,
-      ARY_FLAG = 128,
-      REARG_FLAG = 256;
+  /** Used to compose bitmasks for function metadata. */
+  var WRAP_CURRY_FLAG = 8,
+      WRAP_PARTIAL_FLAG = 32,
+      WRAP_ARY_FLAG = 128,
+      WRAP_REARG_FLAG = 256;
 
   /**
    * Creates a `_.flow` or `_.flowRight` function.
@@ -23,9 +20,7 @@ define("lodash/_createFlow", ['./_LodashWrapper', './_baseFlatten', './_getData'
    * @returns {Function} Returns the new flow function.
    */
   function createFlow(fromRight) {
-    return rest(function(funcs) {
-      funcs = baseFlatten(funcs, 1);
-
+    return flatRest(function(funcs) {
       var length = funcs.length,
           index = length,
           prereq = LodashWrapper.prototype.thru;
@@ -50,20 +45,21 @@ define("lodash/_createFlow", ['./_LodashWrapper', './_baseFlatten', './_getData'
             data = funcName == 'wrapper' ? getData(func) : undefined;
 
         if (data && isLaziable(data[0]) &&
-              data[1] == (ARY_FLAG | CURRY_FLAG | PARTIAL_FLAG | REARG_FLAG) &&
+              data[1] == (WRAP_ARY_FLAG | WRAP_CURRY_FLAG | WRAP_PARTIAL_FLAG | WRAP_REARG_FLAG) &&
               !data[4].length && data[9] == 1
             ) {
           wrapper = wrapper[getFuncName(data[0])].apply(wrapper, data[3]);
         } else {
-          wrapper = (func.length == 1 && isLaziable(func)) ? wrapper[funcName]() : wrapper.thru(func);
+          wrapper = (func.length == 1 && isLaziable(func))
+            ? wrapper[funcName]()
+            : wrapper.thru(func);
         }
       }
       return function() {
         var args = arguments,
             value = args[0];
 
-        if (wrapper && args.length == 1 &&
-            isArray(value) && value.length >= LARGE_ARRAY_SIZE) {
+        if (wrapper && args.length == 1 && isArray(value)) {
           return wrapper.plant(value).value();
         }
         var index = 0,

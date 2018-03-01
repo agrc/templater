@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_getNative",["./isNative"],function(e){function t(t,a){var n=t[a];return e(n)?n:i}var i;return t});//# sourceMappingURL=_getNative.js.map
+define("lodash/_getNative",["./_baseIsNative","./_getValue"],function(e,t){function i(i,o){var n=t(i,o);return e(n)?n:a}var a;return i});//# sourceMappingURL=_getNative.js.map

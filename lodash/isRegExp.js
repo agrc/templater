@@ -1,2 +1,2 @@
 //>>built
-define("lodash/isRegExp",["./isObject"],function(e){function t(t){return e(t)&&o.call(t)==i}var i="[object RegExp]",a=Object.prototype,o=a.toString;return t});//# sourceMappingURL=isRegExp.js.map
+define("lodash/isRegExp",["./_baseIsRegExp","./_baseUnary","./_nodeUtil"],function(e,t,i){var a=i&&i.isRegExp;return a?t(a):e});//# sourceMappingURL=isRegExp.js.map

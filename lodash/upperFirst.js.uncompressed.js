@@ -5,6 +5,7 @@ define("lodash/upperFirst", ['./_createCaseFirst'], function(createCaseFirst) {
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category String
    * @param {string} [string=''] The string to convert.
    * @returns {string} Returns the converted string.

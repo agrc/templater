@@ -1,1 +1,1 @@
-{"version":3,"sources":["at.js.uncompressed.js"],"names":["define","baseAt","baseFlatten","rest","at","object","paths"],"mappings":";AAAAA,OAAO,aAAc,YAAa,iBAAkB,UAAW,SAASC,EAAQC,EAAaC,GAsB3F,GAAIC,GAAKD,EAAK,SAASE,EAAQC,GAC7B,MAAOL,GAAOI,EAAQH,EAAYI,EAAO,KAG3C,OAAOF","file":"at.js.uncompressed.js"}
+{"version":3,"sources":["at.js.uncompressed.js"],"names":["define","baseAt","flatRest"],"mappings":";AAAAA,OAAO,aAAc,YAAa,eAAgB,SAASC,EAAQC,GAqBjE,MAFSA,GAASD","file":"at.js.uncompressed.js"}

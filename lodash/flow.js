@@ -1,2 +1,2 @@
 //>>built
-define("lodash/flow",["./_createFlow"],function(e){var t=e();return t});//# sourceMappingURL=flow.js.map
+define("lodash/flow",["./_createFlow"],function(e){return e()});//# sourceMappingURL=flow.js.map

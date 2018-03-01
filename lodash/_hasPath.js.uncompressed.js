@@ -1,7 +1,4 @@
-define("lodash/_hasPath", ['./_baseCastPath', './isArguments', './isArray', './_isIndex', './_isKey', './isLength', './isString', './last', './_parent'], function(baseCastPath, isArguments, isArray, isIndex, isKey, isLength, isString, last, parent) {
-
-  /** Used as a safe reference for `undefined` in pre-ES5 environments. */
-  var undefined;
+define("lodash/_hasPath", ['./_castPath', './isArguments', './isArray', './_isIndex', './isLength', './_toKey'], function(castPath, isArguments, isArray, isIndex, isLength, toKey) {
 
   /**
    * Checks if `path` exists on `object`.
@@ -13,23 +10,25 @@ define("lodash/_hasPath", ['./_baseCastPath', './isArguments', './isArray', './_
    * @returns {boolean} Returns `true` if `path` exists, else `false`.
    */
   function hasPath(object, path, hasFunc) {
-    if (object == null) {
-      return false;
-    }
-    var result = hasFunc(object, path);
-    if (!result && !isKey(path)) {
-      path = baseCastPath(path);
-      object = parent(object, path);
-      if (object != null) {
-        path = last(path);
-        result = hasFunc(object, path);
+    path = castPath(path, object);
+
+    var index = -1,
+        length = path.length,
+        result = false;
+
+    while (++index < length) {
+      var key = toKey(path[index]);
+      if (!(result = object != null && hasFunc(object, key))) {
+        break;
       }
+      object = object[key];
     }
-    var length = object ? object.length : undefined;
-    return result || (
-      !!length && isLength(length) && isIndex(path, length) &&
-      (isArray(object) || isString(object) || isArguments(object))
-    );
+    if (result || ++index != length) {
+      return result;
+    }
+    length = object == null ? 0 : object.length;
+    return !!length && isLength(length) && isIndex(key, length) &&
+      (isArray(object) || isArguments(object));
   }
 
   return hasPath;

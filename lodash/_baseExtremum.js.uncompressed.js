@@ -1,4 +1,4 @@
-define("lodash/_baseExtremum", [], function() {
+define("lodash/_baseExtremum", ['./isSymbol'], function(isSymbol) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -22,7 +22,7 @@ define("lodash/_baseExtremum", [], function() {
           current = iteratee(value);
 
       if (current != null && (computed === undefined
-            ? current === current
+            ? (current === current && !isSymbol(current))
             : comparator(current, computed)
           )) {
         var computed = current,

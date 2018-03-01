@@ -1,4 +1,7 @@
-define("lodash/findIndex", ['./_baseFindIndex', './_baseIteratee'], function(baseFindIndex, baseIteratee) {
+define("lodash/findIndex", ['./_baseFindIndex', './_baseIteratee', './toInteger'], function(baseFindIndex, baseIteratee, toInteger) {
+
+  /* Built-in method references for those with the same name as other `lodash` methods. */
+  var nativeMax = Math.max;
 
   /**
    * This method is like `_.find` except that it returns the index of the first
@@ -6,9 +9,11 @@ define("lodash/findIndex", ['./_baseFindIndex', './_baseIteratee'], function(bas
    *
    * @static
    * @memberOf _
+   * @since 1.1.0
    * @category Array
-   * @param {Array} array The array to search.
-   * @param {Function|Object|string} [predicate=_.identity] The function invoked per iteration.
+   * @param {Array} array The array to inspect.
+   * @param {Function} [predicate=_.identity] The function invoked per iteration.
+   * @param {number} [fromIndex=0] The index to search from.
    * @returns {number} Returns the index of the found element, else `-1`.
    * @example
    *
@@ -33,10 +38,16 @@ define("lodash/findIndex", ['./_baseFindIndex', './_baseIteratee'], function(bas
    * _.findIndex(users, 'active');
    * // => 2
    */
-  function findIndex(array, predicate) {
-    return (array && array.length)
-      ? baseFindIndex(array, baseIteratee(predicate, 3))
-      : -1;
+  function findIndex(array, predicate, fromIndex) {
+    var length = array == null ? 0 : array.length;
+    if (!length) {
+      return -1;
+    }
+    var index = fromIndex == null ? 0 : toInteger(fromIndex);
+    if (index < 0) {
+      index = nativeMax(length + index, 0);
+    }
+    return baseFindIndex(array, baseIteratee(predicate, 3), index);
   }
 
   return findIndex;

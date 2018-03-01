@@ -5,6 +5,7 @@ define("lodash/isNil", [], function() {
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Lang
    * @param {*} value The value to check.
    * @returns {boolean} Returns `true` if `value` is nullish, else `false`.

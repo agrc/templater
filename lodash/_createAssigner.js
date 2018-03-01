@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_createAssigner",["./_isIterateeCall","./rest"],function(e,t){function i(i){return t(function(t,n){var o=-1,r=n.length,s=r>1?n[r-1]:a,l=r>2?n[2]:a;for(s="function"==typeof s?(r--,s):a,l&&e(n[0],n[1],l)&&(s=3>r?a:s,r=1),t=Object(t);++o<r;){var d=n[o];d&&i(t,d,o,s)}return t})}var a;return i});//# sourceMappingURL=_createAssigner.js.map
+define("lodash/_createAssigner",["./_baseRest","./_isIterateeCall"],function(e,t){function i(i){return e(function(e,r){var n=-1,o=r.length,s=o>1?r[o-1]:a,l=o>2?r[2]:a;for(s=i.length>3&&"function"==typeof s?(o--,s):a,l&&t(r[0],r[1],l)&&(s=o<3?a:s,o=1),e=Object(e);++n<o;){var d=r[n];d&&i(e,d,n,s)}return e})}var a;return i});//# sourceMappingURL=_createAssigner.js.map

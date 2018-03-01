@@ -1,6 +1,6 @@
 require({cache:{
-'url:app/templates/App.html':"<div>\n    <div class=\"container-fluid\">\n        <h1>Generate New Post\n            <a href='ChangeLog.html' class='version'>${version}</a>\n        </h1>\n        <h6>*Required</h6>\n        <div class=\"row\">\n            <div class=\"col-md-4 input\">\n                <div class=\"form-group\">\n                    <label>*Title</label>\n                    <input type=\"text\" class='form-control required' data-dojo-attach-point='title'>\n                </div>\n                <div class=\"form-group\">\n                    <label>*Type</label>\n                    <select class=\"form-control\" data-dojo-attach-point='type'>\n                        <option value=\"post\">Post</option>\n                        <option value=\"page\">Page</option>\n                    </select>\n                </div>\n                <div class=\"checkbox\">\n                    <label>\n                        <input data-dojo-attach-point='featured' type=\"checkbox\"> Featured\n                    </label>\n                </div>\n                <div class=\"form-group\">\n                    <label>Tags (comma-separated)</label>\n                    <input class='form-control' data-dojo-attach-point='tags'>\n                </div>\n                <div class=\"panel panel-default\">\n                    <div class='panel-heading'>Author</div>\n                    <div class=\"panel-body\">\n                        <div class=\"form-group\">\n                            <label>*Display Name</label>\n                            <input type=\"text\" class='form-control required' data-dojo-attach-point='display_name'>\n                        </div>\n                        <div class=\"form-group\">\n                            <label>*Email</label>\n                            <input type=\"email\" class='form-control required' data-dojo-attach-point='email'>\n                        </div>\n                    </div>\n                </div>\n                <button class=\"btn btn-primary btn-lg btn-block\" disabled\n                    data-dojo-attach-point='submitBtn'\n                    data-dojo-attach-event='click: generate'>Generate</button>\n            </div>\n            <div class=\"col-md-8 hidden\"\n                data-dojo-attach-point='outputContainer'>\n                <div class=\"form-group\">\n                    <label>File Path</label>\n                    <input type=\"text\" class=\"form-control\"\n                        data-dojo-attach-point='fileName'>\n                </div>\n                <div class=\"form-group\">\n                    <label>Contents</label>\n                    <textarea id=\"\" rows=\"20\" class='form-control'\n                        data-dojo-attach-point='output'\n                    ></textarea>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n",
-'url:app/templates/_post.md':"---\nlayout: {{type}}\nstatus: publish\npublished: true\ntitle: '{{title}}'\nauthor:\n  display_name: {{display_name}}\n  email: {{email}}\ndate: {{date}}\ncategories:\n{{#if featured}}\n- Featured\n{{else}}\n\n{{/if}}\ntags:\n{{#each tags}}\n- {{this}}\n{{/each}}\n\n---\n\n[post body goes here]\n"}});
+'url:app/templates/App.html':"<div>\n    <div class=\"container-fluid\">\n        <h1>Generate New Post\n            <a href='ChangeLog.html' class='version'>${version}</a>\n        </h1>\n        <h6>*Required</h6>\n        <div class=\"row\">\n            <div class=\"col-md-4 input\">\n                <div class=\"form-group\">\n                    <label>*Title</label>\n                    <input type=\"text\" class='form-control required' data-dojo-attach-point='title'>\n                </div>\n                <div class=\"form-group\">\n                    <label>*Type</label>\n                    <select class=\"form-control\" data-dojo-attach-point='type'>\n                        <option value=\"post\">Post</option>\n                        <option value=\"page\">Page</option>\n                    </select>\n                </div>\n                <div class=\"form-group\">\n                    <select class=\"form-control\" data-dojo-attach-point='categories' multiple size=\"5\">\n                        <option>Featured</option>\n                        <option>Developer</option>\n                        <option>SGID Blog</option>\n                        <option>GPS-surveyor</option>\n                        <option>Guestblog</option>\n                    </select>\n                </div>\n                <div class=\"form-group\">\n                    <label>Tags (comma-separated)</label>\n                    <input class='form-control' data-dojo-attach-point='tags'>\n                </div>\n                <div class=\"panel panel-default\">\n                    <div class='panel-heading'>Author</div>\n                    <div class=\"panel-body\">\n                        <div class=\"form-group\">\n                            <label>*Display Name</label>\n                            <input type=\"text\" class='form-control required' data-dojo-attach-point='display_name'>\n                        </div>\n                        <div class=\"form-group\">\n                            <label>*Email</label>\n                            <input type=\"email\" class='form-control required' data-dojo-attach-point='email'>\n                        </div>\n                    </div>\n                </div>\n                <button class=\"btn btn-primary btn-lg btn-block\" disabled\n                    data-dojo-attach-point='submitBtn'\n                    data-dojo-attach-event='click: generate'>Generate</button>\n            </div>\n            <div class=\"col-md-8 hidden\"\n                data-dojo-attach-point='outputContainer'>\n                <div class=\"form-group\">\n                    <label>File Path</label>\n                    <input type=\"text\" class=\"form-control\"\n                        data-dojo-attach-point='fileName'>\n                </div>\n                <div class=\"form-group\">\n                    <label>Contents</label>\n                    <textarea id=\"\" rows=\"20\" class='form-control'\n                        data-dojo-attach-point='output'\n                    ></textarea>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n",
+'url:app/templates/_post.md':"---\ntitle: '{{title}}'\nauthor:\n  display_name: {{display_name}}\n  email: {{email}}\ndate: {{date}}\n{{#if categories.length}}\ncategories:\n{{#each categories}}\n  - {{this}}\n{{/each}}\n{{else}}\ncategories: []\n{{/if}}\n{{#if tags.length}}\ntags:\n{{#each tags}}\n  - {{this}}\n{{/each}}\n{{else}}\ntags: []\n{{/if}}\n---\n\n[post body goes here]\n"}});
 define("app/App", [
     'dijit/_TemplatedMixin',
     'dijit/_WidgetBase',
@@ -36,7 +36,7 @@ define("app/App", [
     return declare([_WidgetBase, _TemplatedMixin], {
         templateString: template,
 
-        version: '1.2.0',
+        version: '1.3.0',
 
         // requiredFields: domNode[]
         requiredFields: null,
@@ -86,12 +86,17 @@ define("app/App", [
             //      returns relavent data as an object for local storage
             console.log('app.App:serialize', arguments);
 
-            var tags
-            if (this.tags.value.trim().length === 0) {
-                tags = [];
-            } else {
+            var tags = []
+            if (this.tags.value.trim().length > 0) {
                 tags = this.tags.value.split(',').map(function (value) {
                     return value.trim();
+                });
+            }
+
+            var categories = [];
+            if (this.categories.selectedOptions.length > 0) {
+                categories = Array.from(this.categories.selectedOptions).map(function (option) {
+                    return option.value;
                 });
             }
 
@@ -100,8 +105,7 @@ define("app/App", [
                 display_name: this.display_name.value,
                 email: this.email.value,
                 date: this.getDateString(new Date()),
-                type: this.type.value,
-                featured: this.featured.checked,
+                categories: categories,
                 tags: tags
             };
         },

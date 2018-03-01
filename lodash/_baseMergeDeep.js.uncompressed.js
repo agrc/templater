@@ -1,4 +1,4 @@
-define("lodash/_baseMergeDeep", ['./_assignMergeValue', './_baseClone', './_copyArray', './isArguments', './isArray', './isArrayLikeObject', './isFunction', './isObject', './isPlainObject', './isTypedArray', './toPlainObject'], function(assignMergeValue, baseClone, copyArray, isArguments, isArray, isArrayLikeObject, isFunction, isObject, isPlainObject, isTypedArray, toPlainObject) {
+define("lodash/_baseMergeDeep", ['./_assignMergeValue', './_cloneBuffer', './_cloneTypedArray', './_copyArray', './_initCloneObject', './isArguments', './isArray', './isArrayLikeObject', './isBuffer', './isFunction', './isObject', './isPlainObject', './isTypedArray', './_safeGet', './toPlainObject'], function(assignMergeValue, cloneBuffer, cloneTypedArray, copyArray, initCloneObject, isArguments, isArray, isArrayLikeObject, isBuffer, isFunction, isObject, isPlainObject, isTypedArray, safeGet, toPlainObject) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
@@ -15,11 +15,12 @@ define("lodash/_baseMergeDeep", ['./_assignMergeValue', './_baseClone', './_copy
    * @param {number} srcIndex The index of `source`.
    * @param {Function} mergeFunc The function to merge values.
    * @param {Function} [customizer] The function to customize assigned values.
-   * @param {Object} [stack] Tracks traversed source values and their merged counterparts.
+   * @param {Object} [stack] Tracks traversed source values and their merged
+   *  counterparts.
    */
   function baseMergeDeep(object, source, key, srcIndex, mergeFunc, customizer, stack) {
-    var objValue = object[key],
-        srcValue = source[key],
+    var objValue = safeGet(object, key),
+        srcValue = safeGet(source, key),
         stacked = stack.get(srcValue);
 
     if (stacked) {
@@ -33,42 +34,49 @@ define("lodash/_baseMergeDeep", ['./_assignMergeValue', './_baseClone', './_copy
     var isCommon = newValue === undefined;
 
     if (isCommon) {
+      var isArr = isArray(srcValue),
+          isBuff = !isArr && isBuffer(srcValue),
+          isTyped = !isArr && !isBuff && isTypedArray(srcValue);
+
       newValue = srcValue;
-      if (isArray(srcValue) || isTypedArray(srcValue)) {
+      if (isArr || isBuff || isTyped) {
         if (isArray(objValue)) {
           newValue = objValue;
         }
         else if (isArrayLikeObject(objValue)) {
           newValue = copyArray(objValue);
         }
-        else {
+        else if (isBuff) {
           isCommon = false;
-          newValue = baseClone(srcValue, !customizer);
+          newValue = cloneBuffer(srcValue, true);
+        }
+        else if (isTyped) {
+          isCommon = false;
+          newValue = cloneTypedArray(srcValue, true);
+        }
+        else {
+          newValue = [];
         }
       }
       else if (isPlainObject(srcValue) || isArguments(srcValue)) {
+        newValue = objValue;
         if (isArguments(objValue)) {
           newValue = toPlainObject(objValue);
         }
         else if (!isObject(objValue) || (srcIndex && isFunction(objValue))) {
-          isCommon = false;
-          newValue = baseClone(srcValue, !customizer);
-        }
-        else {
-          newValue = objValue;
+          newValue = initCloneObject(srcValue);
         }
       }
       else {
         isCommon = false;
       }
     }
-    stack.set(srcValue, newValue);
-
     if (isCommon) {
       // Recursively merge objects and arrays (susceptible to call stack limits).
+      stack.set(srcValue, newValue);
       mergeFunc(newValue, srcValue, srcIndex, customizer, stack);
+      stack['delete'](srcValue);
     }
-    stack['delete'](srcValue);
     assignMergeValue(object, key, newValue);
   }
 

@@ -1,2 +1,2 @@
 //>>built
-define("lodash/upperFirst",["./_createCaseFirst"],function(e){var t=e("toUpperCase");return t});//# sourceMappingURL=upperFirst.js.map
+define("lodash/upperFirst",["./_createCaseFirst"],function(e){return e("toUpperCase")});//# sourceMappingURL=upperFirst.js.map

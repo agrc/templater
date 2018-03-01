@@ -1,10 +1,10 @@
-define("lodash/curry", ['./_createWrapper'], function(createWrapper) {
+define("lodash/curry", ['./_createWrap'], function(createWrap) {
 
   /** Used as a safe reference for `undefined` in pre-ES5 environments. */
   var undefined;
 
-  /** Used to compose bitmasks for wrapper metadata. */
-  var CURRY_FLAG = 8;
+  /** Used to compose bitmasks for function metadata. */
+  var WRAP_CURRY_FLAG = 8;
 
   /**
    * Creates a function that accepts arguments of `func` and either invokes
@@ -20,10 +20,11 @@ define("lodash/curry", ['./_createWrapper'], function(createWrapper) {
    *
    * @static
    * @memberOf _
+   * @since 2.0.0
    * @category Function
    * @param {Function} func The function to curry.
    * @param {number} [arity=func.length] The arity of `func`.
-   * @param- {Object} [guard] Enables use as an iteratee for functions like `_.map`.
+   * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
    * @returns {Function} Returns the new curried function.
    * @example
    *
@@ -48,7 +49,7 @@ define("lodash/curry", ['./_createWrapper'], function(createWrapper) {
    */
   function curry(func, arity, guard) {
     arity = guard ? undefined : arity;
-    var result = createWrapper(func, CURRY_FLAG, undefined, undefined, undefined, undefined, undefined, arity);
+    var result = createWrap(func, WRAP_CURRY_FLAG, undefined, undefined, undefined, undefined, undefined, arity);
     result.placeholder = curry.placeholder;
     return result;
   }

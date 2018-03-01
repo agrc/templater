@@ -1,2 +1,2 @@
 //>>built
-define("lodash/findLastIndex",["./_baseFindIndex","./_baseIteratee"],function(e,t){function i(i,r){return i&&i.length?e(i,t(r,3),!0):-1}return i});//# sourceMappingURL=findLastIndex.js.map
+define("lodash/findLastIndex",["./_baseFindIndex","./_baseIteratee","./toInteger"],function(e,t,i){function a(a,s,l){var d=null==a?0:a.length;if(!d)return-1;var h=d-1;return l!==o&&(h=i(l),h=l<0?n(d+h,0):r(h,d-1)),e(a,t(s,3),h,!0)}var o,n=Math.max,r=Math.min;return a});//# sourceMappingURL=findLastIndex.js.map

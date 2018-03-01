@@ -1,28 +1,20 @@
-define("lodash/isNumber", ['./isObjectLike'], function(isObjectLike) {
+define("lodash/isNumber", ['./_baseGetTag', './isObjectLike'], function(baseGetTag, isObjectLike) {
 
   /** `Object#toString` result references. */
   var numberTag = '[object Number]';
 
-  /** Used for built-in method references. */
-  var objectProto = Object.prototype;
-
-  /**
-   * Used to resolve the [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
-   * of values.
-   */
-  var objectToString = objectProto.toString;
-
   /**
    * Checks if `value` is classified as a `Number` primitive or object.
    *
-   * **Note:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are classified
-   * as numbers, use the `_.isFinite` method.
+   * **Note:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are
+   * classified as numbers, use the `_.isFinite` method.
    *
    * @static
    * @memberOf _
+   * @since 0.1.0
    * @category Lang
    * @param {*} value The value to check.
-   * @returns {boolean} Returns `true` if `value` is correctly classified, else `false`.
+   * @returns {boolean} Returns `true` if `value` is a number, else `false`.
    * @example
    *
    * _.isNumber(3);
@@ -39,7 +31,7 @@ define("lodash/isNumber", ['./isObjectLike'], function(isObjectLike) {
    */
   function isNumber(value) {
     return typeof value == 'number' ||
-      (isObjectLike(value) && objectToString.call(value) == numberTag);
+      (isObjectLike(value) && baseGetTag(value) == numberTag);
   }
 
   return isNumber;

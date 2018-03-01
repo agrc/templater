@@ -1,1 +1,1 @@
-{"version":3,"sources":["isObject.js.uncompressed.js"],"names":["define","isObject","value","type"],"mappings":";AAAAA,OAAO,qBAAuB,WAyB5B,QAASC,GAASC,GAChB,GAAIC,SAAcD,EAClB,SAASA,IAAkB,UAARC,GAA4B,YAARA,GAGzC,MAAOF","file":"isObject.js.uncompressed.js"}
+{"version":3,"sources":["isObject.js.uncompressed.js"],"names":["define","isObject","value","type"],"mappings":";AAAAA,OAAO,qBAAuB,WA2B5B,QAASC,GAASC,GAChB,GAAIC,SAAcD,EAClB,OAAgB,OAATA,IAA0B,UAARC,GAA4B,YAARA,GAG/C,MAAOF","file":"isObject.js.uncompressed.js"}

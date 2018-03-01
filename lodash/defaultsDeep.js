@@ -1,2 +1,2 @@
 //>>built
-define("lodash/defaultsDeep",["./_apply","./_mergeDefaults","./mergeWith","./rest"],function(e,t,i,a){var o,r=a(function(a){return a.push(o,t),e(i,o,a)});return r});//# sourceMappingURL=defaultsDeep.js.map
+define("lodash/defaultsDeep",["./_apply","./_baseRest","./_customDefaultsMerge","./mergeWith"],function(e,t,i,a){var o;return t(function(t){return t.push(o,i),e(a,o,t)})});//# sourceMappingURL=defaultsDeep.js.map

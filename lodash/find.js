@@ -1,2 +1,2 @@
 //>>built
-define("lodash/find",["./_baseEach","./_baseFind","./_baseFindIndex","./_baseIteratee","./isArray"],function(e,t,i,a,o){function r(r,s){if(s=a(s,3),o(r)){var d=i(r,s);return d>-1?r[d]:n}return t(r,s,e)}var n;return r});//# sourceMappingURL=find.js.map
+define("lodash/find",["./_createFind","./findIndex"],function(e,t){return e(t)});//# sourceMappingURL=find.js.map

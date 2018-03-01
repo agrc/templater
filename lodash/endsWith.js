@@ -1,2 +1,2 @@
 //>>built
-define("lodash/endsWith",["./_baseClamp","./toInteger","./toString"],function(e,t,i){function a(a,n,r){a=i(a),n="string"==typeof n?n:n+"";var s=a.length;return r=r===o?s:e(t(r),0,s),r-=n.length,r>=0&&a.indexOf(n,r)==r}var o;return a});//# sourceMappingURL=endsWith.js.map
+define("lodash/endsWith",["./_baseClamp","./_baseToString","./toInteger","./toString"],function(e,t,i,a){function o(o,r,s){o=a(o),r=t(r);var d=o.length;s=s===n?d:e(i(s),0,d);var l=s;return(s-=r.length)>=0&&o.slice(s,l)==r}var n;return o});//# sourceMappingURL=endsWith.js.map

@@ -1,0 +1,2 @@
+//>>built
+define("lodash/_baseIsArguments",["./_baseGetTag","./isObjectLike"],function(e,t){function i(i){return t(i)&&e(i)==a}var a="[object Arguments]";return i});//# sourceMappingURL=_baseIsArguments.js.map

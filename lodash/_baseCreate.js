@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_baseCreate",["./isObject"],function(e){function t(t){return e(t)?i(t):{}}var i=Object.create;return t});//# sourceMappingURL=_baseCreate.js.map
+define("lodash/_baseCreate",["./isObject"],function(e){var t,i=Object.create;return function(){function a(){}return function(r){if(!e(r))return{};if(i)return i(r);a.prototype=r;var n=new a;return a.prototype=t,n}}()});//# sourceMappingURL=_baseCreate.js.map

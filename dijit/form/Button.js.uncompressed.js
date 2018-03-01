@@ -67,16 +67,18 @@ define("dijit/form/Button", [
 			}
 		},
 
-		_fillContent: function(/*DomNode*/ source){
-			// Overrides _Templated._fillContent().
-			// If button label is specified as srcNodeRef.innerHTML rather than
-			// this.params.label, handle it here.
-			// TODO: remove the method in 2.0, parser will do it all for me
-			if(source && (!this.params || !("label" in this.params))){
-				var sourceLabel = lang.trim(source.innerHTML);
-				if(sourceLabel){
-					this.label = sourceLabel; // _applyAttributes will be called after buildRendering completes to update the DOM
-				}
+		postCreate: function(){
+			this.inherited(arguments);
+			this._setLabelFromContainer();
+		},
+
+		_setLabelFromContainer: function(){
+			if(this.containerNode && !this.label){
+				// When markup was set as srcNodeRef.innerHTML, copy it to this.label, in case someone tries to
+				// reference that variable.  Alternately, could have a _getLabelAttr() method to return
+				// this.containerNode.innerHTML.
+				this.label = lang.trim(this.containerNode.innerHTML);
+				this.onLabelSet();		// set this.titleNode.title etc. according to label
 			}
 		},
 
@@ -94,13 +96,7 @@ define("dijit/form/Button", [
 			this.set("label", content);
 		},
 
-		_setLabelAttr: function(/*String*/ content){
-			// summary:
-			//		Hook for set('label', ...) to work.
-			// description:
-			//		Set the label (text) of the button; takes an HTML string.
-			//		If the label is hidden (showLabel=false) then and no title has
-			//		been specified, then label is also set as title attribute of icon.
+		onLabelSet: function(){
 			this.inherited(arguments);
 			if(!this.showLabel && !("title" in this.params)){
 				this.titleNode.title = lang.trim(this.containerNode.innerText || this.containerNode.textContent || '');
@@ -110,7 +106,7 @@ define("dijit/form/Button", [
 
 	if(has("dojo-bidi")){
 		Button = declare("dijit.form.Button", Button, {
-			_setLabelAttr: function(/*String*/ content){
+			onLabelSet: function(){
 				this.inherited(arguments);
 				if(this.titleNode.title){
 					this.applyTextDir(this.titleNode, this.titleNode.title);

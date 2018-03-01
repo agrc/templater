@@ -1,2 +1,2 @@
 //>>built
-define("lodash/assignIn",["./_assignValue","./_copyObject","./_createAssigner","./isArrayLike","./_isPrototype","./keysIn"],function(e,t,i,a,o,r){var n=Object.prototype,s=n.propertyIsEnumerable,d=!s.call({valueOf:1},"valueOf"),l=i(function(i,n){if(d||o(n)||a(n))return void t(n,r(n),i);for(var s in n)e(i,s,n[s])});return l});//# sourceMappingURL=assignIn.js.map
+define("lodash/assignIn",["./_copyObject","./_createAssigner","./keysIn"],function(e,t,i){return t(function(t,a){e(a,i(a),t)})});//# sourceMappingURL=assignIn.js.map

@@ -1,4 +1,4 @@
-define("lodash/forEachRight", ['./_arrayEachRight', './_baseCastFunction', './_baseEachRight', './isArray'], function(arrayEachRight, baseCastFunction, baseEachRight, isArray) {
+define("lodash/forEachRight", ['./_arrayEachRight', './_baseEachRight', './_castFunction', './isArray'], function(arrayEachRight, baseEachRight, castFunction, isArray) {
 
   /**
    * This method is like `_.forEach` except that it iterates over elements of
@@ -6,22 +6,23 @@ define("lodash/forEachRight", ['./_arrayEachRight', './_baseCastFunction', './_b
    *
    * @static
    * @memberOf _
+   * @since 2.0.0
    * @alias eachRight
    * @category Collection
    * @param {Array|Object} collection The collection to iterate over.
    * @param {Function} [iteratee=_.identity] The function invoked per iteration.
    * @returns {Array|Object} Returns `collection`.
+   * @see _.forEach
    * @example
    *
    * _.forEachRight([1, 2], function(value) {
    *   console.log(value);
    * });
-   * // => logs `2` then `1`
+   * // => Logs `2` then `1`.
    */
   function forEachRight(collection, iteratee) {
-    return (typeof iteratee == 'function' && isArray(collection))
-      ? arrayEachRight(collection, iteratee)
-      : baseEachRight(collection, baseCastFunction(iteratee));
+    var func = isArray(collection) ? arrayEachRight : baseEachRight;
+    return func(collection, castFunction(iteratee));
   }
 
   return forEachRight;

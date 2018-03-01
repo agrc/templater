@@ -6,6 +6,7 @@ define("lodash/isObjectLike", [], function() {
    *
    * @static
    * @memberOf _
+   * @since 4.0.0
    * @category Lang
    * @param {*} value The value to check.
    * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
@@ -24,7 +25,7 @@ define("lodash/isObjectLike", [], function() {
    * // => false
    */
   function isObjectLike(value) {
-    return !!value && typeof value == 'object';
+    return value != null && typeof value == 'object';
   }
 
   return isObjectLike;

@@ -1,2 +1,2 @@
 //>>built
-define("lodash/_baseSortedUniq",["./_baseSortedUniqBy"],function(e){function t(t){return e(t)}return t});//# sourceMappingURL=_baseSortedUniq.js.map
+define("lodash/_baseSortedUniq",["./eq"],function(e){function t(t,i){for(var a=-1,o=t.length,n=0,r=[];++a<o;){var s=t[a],d=i?i(s):s;if(!a||!e(d,l)){var l=d;r[n++]=0===s?0:s}}return r}return t});//# sourceMappingURL=_baseSortedUniq.js.map
