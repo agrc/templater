@@ -5,6 +5,7 @@ node_modules/
 src/bootstrap-css-only/
 src/components-jasmine/
 src/dijit/
+src/dojo-themes/
 src/dojo/
 src/dojox/
 src/favico.js/
