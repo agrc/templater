@@ -30,6 +30,6 @@
     "uglify-js": "^2.6.2"
   },
   "dependencies": {
-    "lodash-amd": "^4.6.1"
+    "lodash-amd": "^4.17.13"
   }
 }
