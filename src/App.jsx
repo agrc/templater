@@ -1,6 +1,7 @@
 import handlebars from 'handlebars';
 import { kebabCase } from 'lodash';
 import { useState } from 'react';
+import CopyToClipboard from 'react-copy-to-clipboard';
 import useLocalStorage from './useLocalStorage';
 import postTemplate from './_post.md?raw';
 
@@ -158,10 +159,16 @@ function App() {
       <div className="col-span-2">
         <label>
           <span>File Path</span>
+          <CopyToClipboard text={output.fileName}>
+            <button className="bg-orange-200 py-0 px-1 float-right rounded-md border border-orange-600 ">Copy</button>
+          </CopyToClipboard>
           <input type="text" className="form-element" value={output.fileName} disabled />
         </label>
         <label>
           <span>Contents</span>
+          <CopyToClipboard text={output.yaml}>
+            <button className="bg-orange-200 py-0 px-1 float-right rounded-md border border-orange-600 ">Copy</button>
+          </CopyToClipboard>
           <textarea id="" rows="20" className="form-element" value={output.yaml} disabled></textarea>
         </label>
       </div>
