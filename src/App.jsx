@@ -127,7 +127,7 @@ function App() {
             type="text"
             className="form-element"
             value={state.tags.join(',')}
-            onChange={(event) => updateState('tags', event.target.value.trim().split(','))}
+            onChange={(event) => updateState('tags', event.target.value.trim().toLowerCase().split(','))}
           />
         </label>
         <div className="border-gray-300 rounded-md border mt-3">
