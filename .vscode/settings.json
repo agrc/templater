@@ -1,6 +1,11 @@
 {
   "cSpell.words": [
+    "Guestblog",
+    "nojekyll",
+    "packagejson",
+    "tailwindcss",
     "templater",
     "templating"
-  ]
+  ],
+  "editor.formatOnSave": true
 }
