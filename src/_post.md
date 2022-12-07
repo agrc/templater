@@ -1,7 +1,7 @@
 ---
 title: '{{title}}'
 author:
-  display_name: {{display_name}}
+  display_name: {{displayName}}
   email: {{email}}
 date: {{date}}
 {{#if categories.length}}

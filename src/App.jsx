@@ -6,12 +6,21 @@ import postTemplate from './_post.md?raw';
 
 const categories = ['Featured', 'Developer', 'SGID Blog', 'GPS-surveyor', 'Guestblog'];
 const requiredFields = ['title', 'type', 'displayName', 'email'];
+function getDateString() {
+  // summary:
+  //      formats current date
+
+  const parts = new Date().toISOString().split('T');
+
+  return parts[0] + ' ' + parts[1].split('.')[0];
+}
+
 function App() {
   const [state, setState] = useLocalStorage('templater-state', {
     title: '',
     type: 'post',
     categories: [],
-    tags: '',
+    tags: [],
     displayName: '',
     email: '',
   });
@@ -43,7 +52,13 @@ function App() {
   const generate = () => {
     const template = handlebars.compile(postTemplate);
 
-    setOutput({ yaml: template(state), fileName: getFileNameString(new Date(), state.title, state.type) });
+    setOutput({
+      yaml: template({
+        ...state,
+        date: getDateString(),
+      }),
+      fileName: getFileNameString(new Date(), state.title, state.type),
+    });
   };
 
   const getFileNameString = (date, title, type) => {
@@ -111,8 +126,8 @@ function App() {
           <input
             type="text"
             className="form-element"
-            value={state.tags}
-            onChange={(event) => updateState('tags', event.target.value)}
+            value={state.tags.join(',')}
+            onChange={(event) => updateState('tags', event.target.value.trim().split(','))}
           />
         </label>
         <div className="border-gray-300 rounded-md border mt-3">
