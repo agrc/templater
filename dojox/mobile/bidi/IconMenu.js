@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/bidi/IconMenu",["dojo/_base/declare","./common"],function(e,t){return e(null,{_setTextDirAttr:function(e){this._created&&this.textDir===e||(this._set("textDir",e),t.setTextDirForButtons(this))}})});//# sourceMappingURL=IconMenu.js.map

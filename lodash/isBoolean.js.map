@@ -1,1 +1,0 @@
-{"version":3,"sources":["isBoolean.js.uncompressed.js"],"names":["define","baseGetTag","isObjectLike","isBoolean","value","boolTag"],"mappings":";AAAAA,OAAO,oBAAqB,gBAAiB,kBAAmB,SAASC,EAAYC,GAsBnF,QAASC,GAAUC,GACjB,OAAiB,IAAVA,IAA4B,IAAVA,GACtBF,EAAaE,IAAUH,EAAWG,IAAUC,EArBjD,GAAIA,GAAU,kBAwBd,OAAOF","file":"isBoolean.js.uncompressed.js"}

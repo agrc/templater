@@ -1,2 +1,0 @@
-//>>built
-define("lodash/isBuffer",["./_root","./stubFalse"],function(e,t){var i,a="object"==typeof exports&&exports&&!exports.nodeType&&exports,o=a&&"object"==typeof module&&module&&!module.nodeType&&module,n=o&&o.exports===a,r=n?e.Buffer:i;return(r?r.isBuffer:i)||t});//# sourceMappingURL=isBuffer.js.map

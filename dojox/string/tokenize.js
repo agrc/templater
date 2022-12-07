@@ -1,2 +1,0 @@
-//>>built
-define("dojox/string/tokenize",["dojo/_base/lang","dojo/_base/sniff"],function(e,t){e.getObject("dojox.string",!0).tokenize;return function(e,i,a,o){for(var n,r,s=[],l=0;n=i.exec(e);){if(r=e.slice(l,i.lastIndex-n[0].length),r.length&&s.push(r),a){if(t("opera")){for(var d=n.slice(0);d.length<n.length;)d.push(null);n=d}var c=a.apply(o,n.slice(1).concat(s.length));void 0!==c&&s.push(c)}l=i.lastIndex}return r=e.slice(l),r.length&&s.push(r),s}});//# sourceMappingURL=tokenize.js.map

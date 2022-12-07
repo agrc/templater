@@ -1,2 +1,0 @@
-//>>built
-define("dojox/drawing/manager/_registry",[],function(){var e={tool:{},stencil:{},drawing:{},plugin:{},button:{}};return{register:function(t,a){"drawing"==a?e.drawing[t.id]=t:"tool"==a?e.tool[t.name]=t:"stencil"==a?e.stencil[t.name]=t:"plugin"==a?e.plugin[t.name]=t:"button"==a&&(e.button[t.toolType]=t)},getRegistered:function(t,a){return a?e[t][a]:e[t]}}});//# sourceMappingURL=_registry.js.map

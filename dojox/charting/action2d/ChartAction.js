@@ -1,2 +1,0 @@
-//>>built
-define("dojox/charting/action2d/ChartAction",["dojo/_base/connect","dojo/_base/declare","./Base"],function(e,t,a){return t("dojox.charting.action2d.ChartAction",a,{constructor:function(e,t){},connect:function(){for(var t=0;t<this._listeners.length;++t)this._listeners[t].handle=e.connect(this.chart.node,this._listeners[t].eventName,this,this._listeners[t].methodName)},disconnect:function(){for(var t=0;t<this._listeners.length;++t)e.disconnect(this._listeners[t].handle),delete this._listeners[t].handle}})});//# sourceMappingURL=ChartAction.js.map

@@ -1,1 +1,0 @@
-{"version":3,"sources":["isWeakMap.js.uncompressed.js"],"names":["define","getTag","isObjectLike","isWeakMap","value","weakMapTag"],"mappings":";AAAAA,OAAO,oBAAqB,YAAa,kBAAmB,SAASC,EAAQC,GAsB3E,QAASC,GAAUC,GACjB,MAAOF,GAAaE,IAAUH,EAAOG,IAAUC,EApBjD,GAAIA,GAAa,kBAuBjB,OAAOF","file":"isWeakMap.js.uncompressed.js"}

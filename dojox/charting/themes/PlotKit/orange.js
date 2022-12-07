@@ -1,2 +1,0 @@
-//>>built
-define("dojox/charting/themes/PlotKit/orange",["./base","../../Theme"],function(e,t){return e.orange=e.base.clone(),e.orange.chart.fill=e.orange.plotarea.fill="#f5eee6",e.orange.colors=t.defineColors({hue:31,saturation:60,low:40,high:88}),e.orange});//# sourceMappingURL=orange.js.map

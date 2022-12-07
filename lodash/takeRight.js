@@ -1,2 +1,0 @@
-//>>built
-define("lodash/takeRight",["./_baseSlice","./toInteger"],function(e,t){function i(i,o,n){var r=null==i?0:i.length;return r?(o=n||o===a?1:t(o),o=r-o,e(i,o<0?0:o,r)):[]}var a;return i});//# sourceMappingURL=takeRight.js.map

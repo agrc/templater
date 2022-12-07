@@ -1,2 +1,0 @@
-//>>built
-define("dojox/widget/_CalendarMonth",["dojo/_base/declare","./_CalendarMonthView"],function(e,t){return e("dojox.widget._CalendarMonth",null,{constructor:function(){this._addView(t)}})});//# sourceMappingURL=_CalendarMonth.js.map

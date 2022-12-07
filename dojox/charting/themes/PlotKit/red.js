@@ -1,2 +1,0 @@
-//>>built
-define("dojox/charting/themes/PlotKit/red",["./base","../../Theme"],function(e,t){return e.red=e.base.clone(),e.red.chart.fill=e.red.plotarea.fill="#f5e6e6",e.red.colors=t.defineColors({hue:1,saturation:60,low:40,high:88}),e.red});//# sourceMappingURL=red.js.map

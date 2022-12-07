@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/StoreCarousel",["dojo/_base/declare","./Carousel","./_StoreMixin"],function(e,t,i){return e("dojox.mobile.StoreCarousel",[t,i],{})});//# sourceMappingURL=StoreCarousel.js.map

@@ -1,1 +1,0 @@
-{"version":3,"sources":["Geometry.js.uncompressed.js"],"names":["define","declare","coordinates","shape","constructor","coords","this"],"mappings":";AAAAA,OAAO,iCACN,sBACE,SAASC,GAEX,MAAOA,GAAQ,gCAAiC,MAc/CC,YAAc,KAIdC,MAAO,KAEPC,YAAa,SAASC,GAMrBC,KAAKJ,YAAcG","file":"Geometry.js.uncompressed.js"}

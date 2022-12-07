@@ -1,2 +1,0 @@
-//>>built
-define("lodash/trimEnd",["./_baseToString","./_castSlice","./_charsEndIndex","./_stringToArray","./toString"],function(e,t,i,a,r){function n(n,l,d){if((n=r(n))&&(d||l===o))return n.replace(s,"");if(!n||!(l=e(l)))return n;var h=a(n),u=i(h,a(l))+1;return t(h,0,u).join("")}var o,s=/\s+$/;return n});//# sourceMappingURL=trimEnd.js.map

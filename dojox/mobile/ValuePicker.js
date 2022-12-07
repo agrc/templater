@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/ValuePicker",["dojo/_base/declare","./_PickerBase","./ValuePickerSlot"],function(e,t){return e("dojox.mobile.ValuePicker",t,{baseClass:"mblValuePicker",onValueChanged:function(e){}})});//# sourceMappingURL=ValuePicker.js.map

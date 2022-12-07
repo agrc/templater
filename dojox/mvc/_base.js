@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mvc/_base",["dojo/_base/kernel","dojo/_base/lang","./getStateful","./StatefulModel","./Bind","./_DataBindingMixin","./_patches"],function(e,t,i,a){e.experimental("dojox.mvc");var o=t.getObject("dojox.mvc",!0);return o.newStatefulModel=function(e){if(e.data)return i(e.data,a.getStatefulOptions);if(e.store&&t.isFunction(e.store.query)){var o,n=e.store.query(e.query);return n.then?n.then(function(t){return o=i(t,a.getStatefulOptions),o.store=e.store,o}):(o=i(n,a.getStatefulOptions),o.store=e.store,o)}},o});//# sourceMappingURL=_base.js.map

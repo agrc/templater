@@ -1,2 +1,0 @@
-//>>built
-define("dojox/widget/AnalogGauge",["dojo","dijit","dojox","dojo/require!dojox/widget/gauge/_Gauge,dojox/gauges/AnalogGauge"],function(e,t,i){e.provide("dojox.widget.AnalogGauge"),e.require("dojox.widget.gauge._Gauge"),e.require("dojox.gauges.AnalogGauge"),i.widget.AnalogGauge=i.gauges.AnalogGauge,i.widget.gauge.AnalogLineIndicator=i.gauges.AnalogLineIndicator});//# sourceMappingURL=AnalogGauge.js.map

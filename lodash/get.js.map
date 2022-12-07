@@ -1,1 +1,0 @@
-{"version":3,"sources":["get.js.uncompressed.js"],"names":["define","baseGet","get","object","path","defaultValue","result","undefined"],"mappings":";AAAAA,OAAO,cAAe,cAAe,SAASC,GA8B5C,QAASC,GAAIC,EAAQC,EAAMC,GACzB,GAAIC,GAAmB,MAAVH,EAAiBI,EAAYN,EAAQE,EAAQC,EAC1D,OAAOE,KAAWC,EAAYF,EAAeC,EA7B/C,GAAIC,EAgCJ,OAAOL","file":"get.js.uncompressed.js"}

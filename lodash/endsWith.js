@@ -1,2 +1,0 @@
-//>>built
-define("lodash/endsWith",["./_baseClamp","./_baseToString","./toInteger","./toString"],function(e,t,i,a){function o(o,r,s){o=a(o),r=t(r);var l=o.length;s=s===n?l:e(i(s),0,l);var d=s;return(s-=r.length)>=0&&o.slice(s,d)==r}var n;return o});//# sourceMappingURL=endsWith.js.map

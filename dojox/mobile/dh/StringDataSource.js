@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/dh/StringDataSource",["dojo/_base/declare"],function(e){return e("dojox.mobile.dh.StringDataSource",null,{text:"",constructor:function(e){this.text=e},getData:function(){return this.text}})});//# sourceMappingURL=StringDataSource.js.map

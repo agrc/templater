@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/bidi/RoundRectCategory",["dojo/_base/declare","./common"],function(e,t){return e(null,{_setLabelAttr:function(e){this.textDir&&(e=t.enforceTextDirWithUcc(e,this.textDir)),this.inherited(arguments)},_setTextDirAttr:function(e){e&&this.textDir!==e&&(this.textDir=e,this.label=t.removeUCCFromText(this.label),this.set("label",this.label))}})});//# sourceMappingURL=RoundRectCategory.js.map

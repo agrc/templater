@@ -1,2 +1,0 @@
-//>>built
-define("lodash/isBoolean",["./_baseGetTag","./isObjectLike"],function(e,t){function i(i){return!0===i||!1===i||t(i)&&e(i)==a}var a="[object Boolean]";return i});//# sourceMappingURL=isBoolean.js.map

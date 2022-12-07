@@ -1,2 +1,0 @@
-//>>built
-define("dojo/store/util/QueryResults",["../../_base/array","../../_base/lang","../../when"],function(e,t,a){var i=function(r){function d(t){r[t]=function(){var d=arguments,n=a(r,function(a){return Array.prototype.unshift.call(d,a),i(e[t].apply(e,d))});if("forEach"!==t||o)return n}}if(!r)return r;var o=!!r.then;return o&&(r=t.delegate(r)),d("forEach"),d("filter"),d("map"),null==r.total&&(r.total=a(r,function(e){return e.length})),r};return t.setObject("dojo.store.util.QueryResults",i),i});//# sourceMappingURL=QueryResults.js.map

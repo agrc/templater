@@ -1,2 +1,0 @@
-//>>built
-define("dojox/form/DateTextBox",["dojo/_base/kernel","dojo/dom-style","dojox/widget/Calendar","dijit/form/_DateTimeTextBox","dojo/_base/declare"],function(e,t,a,i,o){return e.experimental("dojox/form/DateTextBox"),o("dojox.form.DateTextBox",i,{baseClass:"dijitTextBox dijitComboBox dojoxDateTextBox",popupClass:a,_selector:"date",openDropDown:function(){this.inherited(arguments),t.set(this.dropDown.domNode.parentNode,"position","absolute")}})});//# sourceMappingURL=DateTextBox.js.map

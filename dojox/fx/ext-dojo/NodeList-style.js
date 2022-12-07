@@ -1,2 +1,0 @@
-//>>built
-define("dojox/fx/ext-dojo/NodeList-style",["dojo/_base/lang","dojo/query","dojo/NodeList-fx","dojo/fx","../style"],function(e,t,a,i,r){var n=t.NodeList;return e.extend(n,{addClassFx:function(e,t){return i.combine(this.map(function(a){return r.addClass(a,e,t)}))},removeClassFx:function(e,t){return i.combine(this.map(function(a){return r.removeClass(a,e,t)}))},toggleClassFx:function(e,t,a){return i.combine(this.map(function(i){return r.toggleClass(i,e,t,a)}))}}),n});//# sourceMappingURL=NodeList-style.js.map

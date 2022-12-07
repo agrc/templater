@@ -1,2 +1,0 @@
-//>>built
-define("lodash/_baseFlatten",["./_arrayPush","./_isFlattenable"],function(e,t){function i(a,o,n,r,s){var l=-1,d=a.length;for(n||(n=t),s||(s=[]);++l<d;){var c=a[l];o>0&&n(c)?o>1?i(c,o-1,n,r,s):e(s,c):r||(s[s.length]=c)}return s}return i});//# sourceMappingURL=_baseFlatten.js.map

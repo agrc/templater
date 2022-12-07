@@ -1,2 +1,0 @@
-//>>built
-define("dojox/timing/doLater",["./_base"],function(e){return dojo.experimental("dojox.timing.doLater"),e.doLater=function(t,i,a){if(t)return!1;var r=e.doLater.caller,o=e.doLater.caller.arguments;return a=a||100,i=i||dojo.global,setTimeout(function(){r.apply(i,o)},a),!0},e.doLater});//# sourceMappingURL=doLater.js.map

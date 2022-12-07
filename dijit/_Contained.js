@@ -1,2 +1,0 @@
-//>>built
-define("dijit/_Contained",["dojo/_base/declare","./registry"],function(e,t){return e("dijit._Contained",null,{_getSibling:function(e){var t=this.getParent();return t&&t._getSiblingOfChild&&t._getSiblingOfChild(this,"previous"==e?-1:1)||null},getPreviousSibling:function(){return this._getSibling("previous")},getNextSibling:function(){return this._getSibling("next")},getIndexInParent:function(){var e=this.getParent();return e&&e.getIndexOfChild?e.getIndexOfChild(this):-1}})});//# sourceMappingURL=_Contained.js.map

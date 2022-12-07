@@ -1,1 +1,0 @@
-{"version":3,"sources":["forOwnRight.js.uncompressed.js"],"names":["define","baseForOwnRight","castFunction","forOwnRight","object","iteratee"],"mappings":";AAAAA,OAAO,sBAAuB,qBAAsB,mBAAoB,SAASC,EAAiBC,GA4BhG,QAASC,GAAYC,EAAQC,GAC3B,MAAOD,IAAUH,EAAgBG,EAAQF,EAAaG,IAGxD,MAAOF","file":"forOwnRight.js.uncompressed.js"}

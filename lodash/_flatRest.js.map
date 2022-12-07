@@ -1,1 +1,0 @@
-{"version":3,"sources":["_flatRest.js.uncompressed.js"],"names":["define","flatten","overRest","setToString","flatRest","func","undefined"],"mappings":";AAAAA,OAAO,oBAAqB,YAAa,cAAe,kBAAmB,SAASC,EAASC,EAAUC,GAYrG,QAASC,GAASC,GAChB,MAAOF,GAAYD,EAASG,EAAMC,EAAWL,GAAUI,EAAO,IAVhE,GAAIC,EAaJ,OAAOF","file":"_flatRest.js.uncompressed.js"}

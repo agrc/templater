@@ -1,2 +1,0 @@
-//>>built
-define("dojox/lang/async/topic",["dojo","dijit","dojox"],function(e,t,i){e.provide("dojox.lang.async.topic"),function(){var t=e,a=i.lang.async.topic;a.from=function(e){return function(){var i,a=function(){i&&(t.unsubscribe(i),i=null)},o=new t.Deferred(a);return i=t.subscribe(e,function(){a(),o.callback(arguments)}),o}},a.failOn=function(e){return function(){var i,a=function(){i&&(t.unsubscribe(i),i=null)},o=new t.Deferred(a);return i=t.subscribe(e,function(e){a(),o.errback(new Error(arguments))}),o}}}()});//# sourceMappingURL=topic.js.map

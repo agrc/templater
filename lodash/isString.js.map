@@ -1,1 +1,0 @@
-{"version":3,"sources":["isString.js.uncompressed.js"],"names":["define","baseGetTag","isArray","isObjectLike","isString","value","stringTag"],"mappings":";AAAAA,OAAO,mBAAoB,gBAAiB,YAAa,kBAAmB,SAASC,EAAYC,EAASC,GAsBxG,QAASC,GAASC,GAChB,MAAuB,gBAATA,KACVH,EAAQG,IAAUF,EAAaE,IAAUJ,EAAWI,IAAUC,EArBpE,GAAIA,GAAY,iBAwBhB,OAAOF","file":"isString.js.uncompressed.js"}

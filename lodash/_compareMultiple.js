@@ -1,2 +1,0 @@
-//>>built
-define("lodash/_compareMultiple",["./_compareAscending"],function(e){function t(t,i,a){for(var o=-1,n=t.criteria,r=i.criteria,s=n.length,l=a.length;++o<s;){var d=e(n[o],r[o]);if(d){if(o>=l)return d;return d*("desc"==a[o]?-1:1)}}return t.index-i.index}return t});//# sourceMappingURL=_compareMultiple.js.map

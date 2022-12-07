@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/RoundRectStoreList",["dojo/_base/declare","./RoundRectList","./_StoreListMixin"],function(e,t,i){return e("dojox.mobile.RoundRectStoreList",[t,i],{})});//# sourceMappingURL=RoundRectStoreList.js.map

@@ -1,2 +1,0 @@
-//>>built
-define("dojox/color/MeanColorModel",["dojo/_base/array","dojo/_base/declare","./NeutralColorModel"],function(e,t,i){return t("dojox.color.MeanColorModel",i,{constructor:function(e,t){},computeNeutral:function(e,t,i,a){var r=e;return 0!=a.length&&(r=a.length<3?i/a.length:0==(1&a.length)?(a[a.length/2-1]+a[a.length/2])/2:a[Math.floor(a.length/2)]),r}})});//# sourceMappingURL=MeanColorModel.js.map

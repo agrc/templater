@@ -1,2 +1,0 @@
-//>>built
-define("lodash/orderBy",["./_baseOrderBy","./isArray"],function(e,t){function i(i,r,n,o){return null==i?[]:(t(r)||(r=null==r?[]:[r]),n=o?a:n,t(n)||(n=null==n?[]:[n]),e(i,r,n))}var a;return i});//# sourceMappingURL=orderBy.js.map

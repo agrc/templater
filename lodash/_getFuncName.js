@@ -1,2 +1,0 @@
-//>>built
-define("lodash/_getFuncName",["./_realNames"],function(e){function t(t){for(var i=t.name+"",o=e[i],n=a.call(e,i)?o.length:0;n--;){var r=o[n],s=r.func;if(null==s||s==t)return r.name}return i}var i=Object.prototype,a=i.hasOwnProperty;return t});//# sourceMappingURL=_getFuncName.js.map

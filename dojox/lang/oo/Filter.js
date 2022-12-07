@@ -1,2 +1,0 @@
-//>>built
-define("dojox/lang/oo/Filter",["dojo","dijit","dojox"],function(e,t,i){e.provide("dojox.lang.oo.Filter"),function(){var e=i.lang.oo,t=e.Filter=function(e,t){this.bag=e,this.filter="object"==typeof t?function(){return t.exec.apply(t,arguments)}:t},a=function(e){this.map=e};a.prototype.exec=function(e){return this.map.hasOwnProperty(e)?this.map[e]:e},e.filter=function(e,i){return new t(e,new a(i))}}()});//# sourceMappingURL=Filter.js.map

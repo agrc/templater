@@ -1,2 +1,0 @@
-//>>built
-define("dojo/_base/json",["./kernel","../json"],function(dojo,json){return dojo.fromJson=function(js){return eval("("+js+")")},dojo._escapeString=json.stringify,dojo.toJsonIndentStr="\t",dojo.toJson=function(t,e){return json.stringify(t,function(t,e){if(e){var i=e.__json__||e.json;if("function"==typeof i)return i.call(e)}return e},e&&dojo.toJsonIndentStr)},dojo});//# sourceMappingURL=json.js.map

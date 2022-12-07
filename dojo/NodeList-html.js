@@ -1,2 +1,0 @@
-//>>built
-define("dojo/NodeList-html",["./query","./_base/lang","./html"],function(t,e,i){var n=t.NodeList;return e.extend(n,{html:function(t,e){var n=new i._ContentSetter(e||{});return this.forEach(function(e){n.node=e,n.set(t),n.tearDown()}),this}}),n});//# sourceMappingURL=NodeList-html.js.map

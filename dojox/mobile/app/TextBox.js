@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/app/TextBox",["dojo","dijit","dojox","dojo/require!dojox/mobile/TextBox"],function(e,t,i){e.provide("dojox.mobile.app.TextBox"),e.deprecated("dojox.mobile.app.TextBox is deprecated","dojox.mobile.app.TextBox moved to dojox.mobile.TextBox",1.8),e.require("dojox.mobile.TextBox"),i.mobile.app.TextBox=i.mobile.TextBox});//# sourceMappingURL=TextBox.js.map

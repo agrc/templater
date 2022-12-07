@@ -1,1 +1,0 @@
-{"version":3,"sources":["_atBindingExtension.js.uncompressed.js"],"names":["define","config","has","_WidgetBase","atBindingExtension","add","extensionPerWidget","prototype"],"mappings":";AAAAA,OAAO,iCACN,oBACA,WACA,oBACA,wBACE,SAASC,EAAQC,EAAKC,EAAaC,GACrCF,EAAIG,IAAI,4BAA6BJ,EAAY,SAASK,oBACtDJ,EAAI,6BACPE,EAAmBD,EAAYI","file":"_atBindingExtension.js.uncompressed.js"}

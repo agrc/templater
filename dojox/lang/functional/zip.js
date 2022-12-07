@@ -1,2 +1,0 @@
-//>>built
-define("dojox/lang/functional/zip",["dojo/_base/lang","./lambda"],function(e,t){e.mixin(t,{zip:function(){for(var e,t,i=arguments[0].length,a=arguments.length,o=1,n=new Array(i);o<a;i=Math.min(i,arguments[o++].length));for(o=0;o<i;++o){for(t=new Array(a),e=0;e<a;t[e]=arguments[e][o],++e);n[o]=t}return n},unzip:function(e){return t.zip.apply(null,e)}})});//# sourceMappingURL=zip.js.map

@@ -1,1 +1,0 @@
-{"version":3,"sources":["Point.js.uncompressed.js"],"names":["define","declare","Geometry","setPoint","p","this","coordinates","getPoint"],"mappings":";AAAAA,OAAO,8BACN,qBACA,cACE,SAASC,EAASC,GAEpB,MAAOD,GAAQ,6BAA8BC,GAI5CC,SAAU,SAASC,GAKlBC,KAAKC,YAAcF,GAGpBG,SAAU,WAKT,MAAOF,MAAKC","file":"Point.js.uncompressed.js"}

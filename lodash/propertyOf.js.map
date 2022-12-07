@@ -1,1 +1,0 @@
-{"version":3,"sources":["propertyOf.js.uncompressed.js"],"names":["define","baseGet","propertyOf","object","path","undefined"],"mappings":";AAAAA,OAAO,qBAAsB,cAAe,SAASC,GA0BnD,QAASC,GAAWC,GAClB,MAAO,UAASC,GACd,MAAiB,OAAVD,EAAiBE,EAAYJ,EAAQE,EAAQC,IAzBxD,GAAIC,EA6BJ,OAAOH","file":"propertyOf.js.uncompressed.js"}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["ZoomAndPan.js.uncompressed.js"],"names":["define","declare","_getDelta","event","this","inherited","arguments","chart","isRightToLeft"],"mappings":";AAAAA,OAAO,2CAA4C,sBAClD,SAASC,GAGT,MAAOA,GAAQ,MACdC,UAAW,SAASC,GAEnB,MADYC,MAAKC,UAAUC,YACXF,KAAKG,MAAMC,iBAAkB,EAAI","file":"ZoomAndPan.js.uncompressed.js"}

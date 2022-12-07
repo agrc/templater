@@ -1,2 +1,0 @@
-//>>built
-define("dojox/charting/bidi/widget/Chart",["dojo/_base/declare"],function(e){function t(e){return/^(ltr|rtl|auto)$/.test(e)?e:null}return e(null,{postMixInProperties:function(){this.textDir=this.params.textDir?this.params.textDir:this.params.dir},_setTextDirAttr:function(e){null!=t(e)&&(this._set("textDir",e),this.chart.setTextDir(e))},_setDirAttr:function(e){this._set("dir",e),this.chart.setDir(e)}})});//# sourceMappingURL=Chart.js.map

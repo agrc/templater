@@ -1,2 +1,0 @@
-//>>built
-define("dojo/request/default",["exports","require","../has"],function(e,t,a){var i,r=a("config-requestProvider");i="./xhr",r||(r=i),e.getPlatformDefaultId=function(){return i},e.load=function(e,a,d,o){t(["platform"==e?i:r],function(e){d(e)})}});//# sourceMappingURL=default.js.map

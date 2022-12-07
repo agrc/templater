@@ -1,2 +1,0 @@
-//>>built
-define("dojox/geo/openlayers/Point",["dojo/_base/declare","./Geometry"],function(e,t){return e("dojox.geo.openlayers.Point",t,{setPoint:function(e){this.coordinates=e},getPoint:function(){return this.coordinates}})});//# sourceMappingURL=Point.js.map

@@ -1,2 +1,0 @@
-//>>built
-define("dojox/charting/themes/Shrooms",["../SimpleTheme","./common"],function(e,t){return t.Shrooms=new e({colors:["#bf1313","#69bf13","#13bfbf","#6913bf","#bf6913","#13bf13","#1369bf","#bf13bf","#bfbf13","#13bf69","#1313bf","#bf1369"]}),t.Shrooms});//# sourceMappingURL=Shrooms.js.map

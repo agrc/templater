@@ -1,2 +1,0 @@
-//>>built
-define("dojo/promise/Promise",["../_base/lang"],function(e){"use strict";function t(){throw new TypeError("abstract")}return e.extend(function(){},{then:function(e,a,i){t()},cancel:function(e,a){t()},isResolved:function(){t()},isRejected:function(){t()},isFulfilled:function(){t()},isCanceled:function(){t()},always:function(e){return this.then(e,e)},otherwise:function(e){return this.then(null,e)},trace:function(){return this},traceRejected:function(){return this},toString:function(){return"[object Promise]"}})});//# sourceMappingURL=Promise.js.map

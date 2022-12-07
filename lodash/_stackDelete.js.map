@@ -1,1 +1,0 @@
-{"version":3,"sources":["_stackDelete.js.uncompressed.js"],"names":["define","stackDelete","key","data","this","__data__","result","size"],"mappings":";AAAAA,OAAO,yBAA2B,WAWhC,QAASC,GAAYC,GACnB,GAAIC,GAAOC,KAAKC,SACZC,EAASH,EAAa,OAAED,EAG5B,OADAE,MAAKG,KAAOJ,EAAKI,KACVD,EAGT,MAAOL","file":"_stackDelete.js.uncompressed.js"}

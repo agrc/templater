@@ -1,1 +1,0 @@
-{"version":3,"sources":["_countHolders.js.uncompressed.js"],"names":["define","countHolders","array","placeholder","length","result"],"mappings":";AAAAA,OAAO,0BAA4B,WAUjC,QAASC,GAAaC,EAAOC,GAI3B,IAHA,GAAIC,GAASF,EAAME,OACfC,EAAS,EAEND,KACDF,EAAME,KAAYD,KAClBE,CAGN,OAAOA,GAGT,MAAOJ","file":"_countHolders.js.uncompressed.js"}

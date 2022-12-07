@@ -1,2 +1,0 @@
-//>>built
-define("dojox/charting/themes/Ireland",["../SimpleTheme","./common"],function(e,t){return t.Ireland=new e({colors:["#abdbcb","#435a51","#70998b","#78d596","#5f8074"]}),t.Ireland});//# sourceMappingURL=Ireland.js.map

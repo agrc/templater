@@ -1,2 +1,0 @@
-//>>built
-define("lodash/isNative",["./_baseIsNative","./_isMaskable"],function(e,t){function i(i){if(t(i))throw new Error(a);return e(i)}var a="Unsupported core-js use. Try https://npms.io/search?q=ponyfill.";return i});//# sourceMappingURL=isNative.js.map

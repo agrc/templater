@@ -1,1 +1,0 @@
-{"version":3,"sources":["delay.js.uncompressed.js"],"names":["define","baseDelay","baseRest","toNumber","func","wait","args"],"mappings":";AAAAA,OAAO,gBAAiB,eAAgB,cAAe,cAAe,SAASC,EAAWC,EAAUC,GAyBlG,MAJYD,GAAS,SAASE,EAAMC,EAAMC,GACxC,MAAOL,GAAUG,EAAMD,EAASE,IAAS,EAAGC","file":"delay.js.uncompressed.js"}

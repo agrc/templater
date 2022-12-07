@@ -1,2 +1,0 @@
-//>>built
-define("lodash/_createCaseFirst",["./_castSlice","./_hasUnicode","./_stringToArray","./toString"],function(e,t,i,a){function r(r){return function(n){n=a(n);var s=t(n)?i(n):o,l=s?s[0]:n.charAt(0),d=s?e(s,1).join(""):n.slice(1);return l[r]()+d}}var o;return r});//# sourceMappingURL=_createCaseFirst.js.map

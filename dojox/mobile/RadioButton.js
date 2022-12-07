@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/RadioButton",["dojo/_base/declare","dijit/form/_RadioButtonMixin","./CheckBox"],function(e,t,i){return e("dojox.mobile.RadioButton",[i,t],{_setTypeAttr:null,baseClass:"mblRadioButton"})});//# sourceMappingURL=RadioButton.js.map

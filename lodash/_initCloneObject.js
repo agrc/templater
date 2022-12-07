@@ -1,2 +1,0 @@
-//>>built
-define("lodash/_initCloneObject",["./_baseCreate","./_getPrototype","./_isPrototype"],function(e,t,i){function a(a){return"function"!=typeof a.constructor||i(a)?{}:e(t(a))}return a});//# sourceMappingURL=_initCloneObject.js.map

@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/EdgeToEdgeDataList",["dojo/_base/kernel","dojo/_base/declare","./EdgeToEdgeList","./_DataListMixin"],function(e,t,i,a){return e.deprecated("dojox/mobile/EdgeToEdgeDataList","Use dojox/mobile/EdgeToEdgeStoreList instead","2.0"),t("dojox.mobile.EdgeToEdgeDataList",[i,a],{})});//# sourceMappingURL=EdgeToEdgeDataList.js.map

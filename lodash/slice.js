@@ -1,2 +1,0 @@
-//>>built
-define("lodash/slice",["./_baseSlice","./_isIterateeCall","./toInteger"],function(e,t,i){function r(r,o,a){var s=null==r?0:r.length;return s?(a&&"number"!=typeof a&&t(r,o,a)?(o=0,a=s):(o=null==o?0:i(o),a=a===n?s:i(a)),e(r,o,a)):[]}var n;return r});//# sourceMappingURL=slice.js.map

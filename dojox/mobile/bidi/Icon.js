@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/bidi/Icon",["dojo/_base/declare","dojo/dom-style","../_css3"],function(e,t,i){return e(null,{_setCustomTransform:function(){"rtl"==(this.dir||t.get(this.domNode,"direction"))&&(t.set(this.domNode.firstChild,i.add({direction:"ltr"},{})),t.set(this.domNode,i.add({},{transform:"scaleX(-1)"})))}})});//# sourceMappingURL=Icon.js.map

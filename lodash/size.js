@@ -1,2 +1,0 @@
-//>>built
-define("lodash/size",["./_baseKeys","./_getTag","./isArrayLike","./isString","./_stringSize"],function(e,t,i,a,n){function r(r){if(null==r)return 0;if(i(r))return a(r)?n(r):r.length;var l=t(r);return l==o||l==s?r.size:e(r).length}var o="[object Map]",s="[object Set]";return r});//# sourceMappingURL=size.js.map

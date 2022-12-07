@@ -1,1 +1,0 @@
-{"version":3,"sources":["fromPairs.js.uncompressed.js"],"names":["define","fromPairs","pairs","index","length","result","pair"],"mappings":";AAAAA,OAAO,sBAAwB,WAiB7B,QAASC,GAAUC,GAKjB,IAJA,GAAIC,IAAS,EACTC,EAAkB,MAATF,EAAgB,EAAIA,EAAME,OACnCC,OAEKF,EAAQC,GAAQ,CACvB,GAAIE,GAAOJ,EAAMC,EACjBE,GAAOC,EAAK,IAAMA,EAAK,GAEzB,MAAOD,GAGT,MAAOJ","file":"fromPairs.js.uncompressed.js"}

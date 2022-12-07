@@ -1,2 +1,0 @@
-//>>built
-define("lodash/assign",["./_assignValue","./_copyObject","./_createAssigner","./isArrayLike","./_isPrototype","./keys"],function(e,t,i,r,n,o){var a=Object.prototype,s=a.hasOwnProperty;return i(function(i,a){if(n(a)||r(a))return void t(a,o(a),i);for(var d in a)s.call(a,d)&&e(i,d,a[d])})});//# sourceMappingURL=assign.js.map

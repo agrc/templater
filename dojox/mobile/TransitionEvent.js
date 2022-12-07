@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/TransitionEvent",["dojo/_base/declare","dojo/on"],function(e,t){return e("dojox.mobile.TransitionEvent",null,{constructor:function(e,t,i){this.transitionOptions=t,this.target=e,this.triggerEvent=i||null},dispatch:function(){var e={bubbles:!0,cancelable:!0,detail:this.transitionOptions,triggerEvent:this.triggerEvent};t.emit(this.target,"startTransition",e)}})});//# sourceMappingURL=TransitionEvent.js.map

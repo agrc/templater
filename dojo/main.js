@@ -1,2 +1,0 @@
-//>>built
-define("dojo/main",["./_base/kernel","./has","require","./sniff","./_base/lang","./_base/array","./_base/config","./ready","./_base/declare","./_base/connect","./_base/Deferred","./_base/json","./_base/Color","./has!dojo-firebug?./_firebug/firebug","./_base/browser","require"],function(e,t,i,n,o,s,a,r){a.isDebug&&i(["./_firebug/firebug"]);var d=a.require;return d&&(d=s.map(o.isArray(d)?d:[d],function(e){return e.replace(/\./g,"/")}),e.isAsync?i(d):r(1,function(){i(d)})),e});//# sourceMappingURL=main.js.map

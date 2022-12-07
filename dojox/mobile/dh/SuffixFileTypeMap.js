@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/dh/SuffixFileTypeMap",["dojo/_base/lang"],function(e){var t={};return e.setObject("dojox.mobile.dh.SuffixFileTypeMap",t),t.map={html:"html",json:"json"},t.add=function(e,t){this.map[e]=t},t.getContentType=function(e){var t=(e||"").replace(/.*\./,"");return this.map[t]},t});//# sourceMappingURL=SuffixFileTypeMap.js.map

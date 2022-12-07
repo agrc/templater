@@ -1,2 +1,0 @@
-//>>built
-define("lodash/_cloneBuffer",["./_root"],function(e){function t(e,t){if(t)return e.slice();var i=e.length,a=s?s(i):new e.constructor(i);return e.copy(a),a}var i,a="object"==typeof exports&&exports&&!exports.nodeType&&exports,o=a&&"object"==typeof module&&module&&!module.nodeType&&module,n=o&&o.exports===a,r=n?e.Buffer:i,s=r?r.allocUnsafe:i;return t});//# sourceMappingURL=_cloneBuffer.js.map

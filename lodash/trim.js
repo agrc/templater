@@ -1,2 +1,0 @@
-//>>built
-define("lodash/trim",["./_baseToString","./_castSlice","./_charsEndIndex","./_charsStartIndex","./_stringToArray","./toString"],function(e,t,i,a,o,r){function n(n,l,h){if((n=r(n))&&(h||l===s))return n.replace(d,"");if(!n||!(l=e(l)))return n;var c=o(n),u=o(l),m=a(c,u),f=i(c,u)+1;return t(c,m,f).join("")}var s,d=/^\s+|\s+$/g;return n});//# sourceMappingURL=trim.js.map

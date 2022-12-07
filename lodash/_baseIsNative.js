@@ -1,2 +1,0 @@
-//>>built
-define("lodash/_baseIsNative",["./isFunction","./_isMasked","./isObject","./_toSource"],function(e,t,i,a){function o(o){return!(!i(o)||t(o))&&(e(o)?u:r).test(a(o))}var n=/[\\^$.*+?()[\]{}|]/g,r=/^\[object .+?Constructor\]$/,s=Function.prototype,l=Object.prototype,d=s.toString,h=l.hasOwnProperty,u=RegExp("^"+d.call(h).replace(n,"\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,"$1.*?")+"$");return o});//# sourceMappingURL=_baseIsNative.js.map

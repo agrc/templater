@@ -1,1 +1,0 @@
-{"version":3,"sources":["_baseMean.js.uncompressed.js"],"names":["define","baseSum","baseMean","array","iteratee","length","NAN"],"mappings":";AAAAA,OAAO,oBAAqB,cAAe,SAASC,GAclD,QAASC,GAASC,EAAOC,GACvB,GAAIC,GAAkB,MAATF,EAAgB,EAAIA,EAAME,MACvC,OAAOA,GAAUJ,EAAQE,EAAOC,GAAYC,EAAUC,EAbxD,GAAIA,GAAM,GAgBV,OAAOJ","file":"_baseMean.js.uncompressed.js"}

@@ -1,1 +1,0 @@
-{"version":3,"sources":["Collection.js.uncompressed.js"],"names":["define","declare","Geometry","coordinates","setGeometries","g","this","getGeometries"],"mappings":";AAAAA,OAAO,mCACN,qBACA,cACE,SAASC,EAASC,GAEpB,MAAOD,GAAQ,kCAAmCC,GAMjDC,YAAY,KAEZC,cAAe,SAASC,GAKvBC,KAAKH,YAAcE,GAGpBE,cAAe,WAKd,MAAOD,MAAKH","file":"Collection.js.uncompressed.js"}

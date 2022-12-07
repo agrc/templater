@@ -1,2 +1,0 @@
-//>>built
-define("dojox/drawing/util/positioning",["./common"],function(e){var t=4,a=20,i={};return i.label=function(i,r){var o=.5*(i.x+r.x),n=.5*(i.y+r.y),d=e.slope(i,r),s=t/Math.sqrt(1+d*d);return(r.y>i.y&&r.x>i.x||r.y<i.y&&r.x<i.x)&&(s=-s,n-=a),o+=-s*d,n+=s,{x:o,y:n,foo:"bar",align:r.x<i.x?"end":"start"}},i.angle=function(i,r){var o=.7*i.x+.3*r.x,n=.7*i.y+.3*r.y,d=e.slope(i,r),s=t/Math.sqrt(1+d*d);r.x<i.x&&(s=-s),o+=-s*d,n+=s;var l=r.y>i.y?"end":"start";return n+=r.x>i.x?.5*a:-.5*a,{x:o,y:n,align:l}},i});//# sourceMappingURL=positioning.js.map

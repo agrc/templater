@@ -1,2 +1,0 @@
-//>>built
-define("dojox/geo/openlayers/Geometry",["dojo/_base/declare"],function(e){return e("dojox.geo.openlayers.Geometry",null,{coordinates:null,shape:null,constructor:function(e){this.coordinates=e}})});//# sourceMappingURL=Geometry.js.map

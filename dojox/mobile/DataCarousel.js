@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/DataCarousel",["dojo/_base/kernel","dojo/_base/declare","./Carousel","./_DataMixin"],function(e,t,i,a){return e.deprecated("dojox/mobile/DataCarousel","Use dojox/mobile/StoreCarousel instead",2),t("dojox.mobile.DataCarousel",[i,a],{})});//# sourceMappingURL=DataCarousel.js.map

@@ -1,2 +1,0 @@
-//>>built
-define("dojox/widget/gauge/AnalogNeedleIndicator",["dojo","dijit","dojox","dojo/require!dojox/gauges/AnalogNeedleIndicator"],function(e,t,i){e.provide("dojox.widget.gauge.AnalogNeedleIndicator"),e.require("dojox.gauges.AnalogNeedleIndicator"),i.widget.gauge.AnalogNeedleIndicator=i.gauges.AnalogNeedleIndicator});//# sourceMappingURL=AnalogNeedleIndicator.js.map

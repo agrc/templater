@@ -1,2 +1,0 @@
-//>>built
-define("dijit/PopupMenuBarItem",["dojo/_base/declare","./PopupMenuItem","./MenuBarItem"],function(t,e,i){return t("dijit.PopupMenuBarItem",[e,i._MenuBarItemMixin],{})});//# sourceMappingURL=PopupMenuBarItem.js.map

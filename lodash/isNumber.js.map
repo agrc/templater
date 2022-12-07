@@ -1,1 +1,0 @@
-{"version":3,"sources":["isNumber.js.uncompressed.js"],"names":["define","baseGetTag","isObjectLike","isNumber","value","numberTag"],"mappings":";AAAAA,OAAO,mBAAoB,gBAAiB,kBAAmB,SAASC,EAAYC,GA+BlF,QAASC,GAASC,GAChB,MAAuB,gBAATA,IACXF,EAAaE,IAAUH,EAAWG,IAAUC,EA9BjD,GAAIA,GAAY,iBAiChB,OAAOF","file":"isNumber.js.uncompressed.js"}

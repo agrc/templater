@@ -1,1 +1,0 @@
-{"version":3,"sources":["attempt.js.uncompressed.js"],"names":["define","apply","baseRest","isError","undefined","func","args","e","Error"],"mappings":";AAAAA,OAAO,kBAAmB,WAAY,cAAe,aAAc,SAASC,EAAOC,EAAUC,GAG3F,GAAIC,EAgCJ,OARcF,GAAS,SAASG,EAAMC,GACpC,IACE,MAAOL,GAAMI,EAAMD,EAAWE,GAC9B,MAAOC,GACP,MAAOJ,GAAQI,GAAKA,EAAI,GAAIC,OAAMD","file":"attempt.js.uncompressed.js"}

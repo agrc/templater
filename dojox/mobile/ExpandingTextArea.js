@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/ExpandingTextArea",["dojo/_base/declare","dijit/form/_ExpandingTextAreaMixin","./TextArea"],function(e,t,i){return e("dojox.mobile.ExpandingTextArea",[i,t],{baseClass:"mblTextArea mblExpandingTextArea"})});//# sourceMappingURL=ExpandingTextArea.js.map

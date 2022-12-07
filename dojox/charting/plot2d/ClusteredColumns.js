@@ -1,2 +1,0 @@
-//>>built
-define("dojox/charting/plot2d/ClusteredColumns",["dojo/_base/declare","dojo/_base/array","./Columns","./common"],function(e,t,a,i){return e("dojox.charting.plot2d.ClusteredColumns",a,{getBarProperties:function(){var e=this.series.length;t.forEach(this.series,function(t){t.hidden&&e--});var a=i.calculateBarSize(this._hScaler.bounds.scale,this.opt,e);return{gap:a.gap,width:a.size,thickness:a.size,clusterSize:e}}})});//# sourceMappingURL=ClusteredColumns.js.map

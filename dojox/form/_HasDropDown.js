@@ -1,2 +1,0 @@
-//>>built
-define("dojox/form/_HasDropDown",["dojo/_base/kernel","dojo/_base/lang","dijit/_HasDropDown"],function(e,t){return e.deprecated("dojox.form._HasDropDown","Use dijit._HasDropDown instead","2.0"),lang.setObject("dojox.form._HasDropDown",t),t});//# sourceMappingURL=_HasDropDown.js.map

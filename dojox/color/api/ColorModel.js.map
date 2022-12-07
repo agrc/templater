@@ -1,1 +1,0 @@
-{"version":3,"sources":["ColorModel.js.uncompressed.js"],"names":["define","declare","constructor","initialize","items","colorFunc","getColor","value"],"mappings":";AAAAA,OAAO,8BAA+B,sBACrC,SAASC,GAET,MAAOA,GAAQ,6BAA8B,MAI5CC,YAAa,aAKbC,WAAY,SAASC,EAAOC,KAU5BC,SAAU,SAASC","file":"ColorModel.js.uncompressed.js"}

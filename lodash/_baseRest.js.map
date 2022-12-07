@@ -1,1 +1,0 @@
-{"version":3,"sources":["_baseRest.js.uncompressed.js"],"names":["define","identity","overRest","setToString","baseRest","func","start"],"mappings":";AAAAA,OAAO,oBAAqB,aAAc,cAAe,kBAAmB,SAASC,EAAUC,EAAUC,GAUvG,QAASC,GAASC,EAAMC,GACtB,MAAOH,GAAYD,EAASG,EAAMC,EAAOL,GAAWI,EAAO,IAG7D,MAAOD","file":"_baseRest.js.uncompressed.js"}

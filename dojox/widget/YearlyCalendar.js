@@ -1,2 +1,0 @@
-//>>built
-define("dojox/widget/YearlyCalendar",["dojo/_base/declare","./_CalendarBase","./_CalendarYear"],function(e,t,i){return e("dojox.widget.YearlyCalendar",[t,i],{_makeDate:function(e){var t=new Date;return t.setFullYear(e),t}})});//# sourceMappingURL=YearlyCalendar.js.map

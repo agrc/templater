@@ -1,2 +1,0 @@
-//>>built
-define("lodash/isError",["./_baseGetTag","./isObjectLike","./isPlainObject"],function(e,t,i){function r(r){if(!t(r))return!1;var a=e(r);return a==o||a==n||"string"==typeof r.message&&"string"==typeof r.name&&!i(r)}var n="[object DOMException]",o="[object Error]";return r});//# sourceMappingURL=isError.js.map

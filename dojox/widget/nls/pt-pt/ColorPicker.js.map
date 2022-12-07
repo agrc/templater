@@ -1,1 +1,0 @@
-{"version":3,"sources":["ColorPicker.js.uncompressed.js"],"names":["define","redLabel","greenLabel","blueLabel","hueLabel","valueLabel","huePickerTitle","saturationPickerTitle"],"mappings":";AAAAA,OACA,sCACAC,SAAU,IACVC,WAAY,IACZC,UAAW,IACXC,SAAU,IACVC,WAAY,MACZC,eAAgB,yBAChBC,sBAAuB","file":"ColorPicker.js.uncompressed.js"}

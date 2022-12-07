@@ -1,2 +1,0 @@
-//>>built
-define("dojox/charting/bidi/action2d/ZoomAndPan",["dojo/_base/declare"],function(e){return e(null,{_getDelta:function(e){return this.inherited(arguments)*(this.chart.isRightToLeft()?-1:1)}})});//# sourceMappingURL=ZoomAndPan.js.map

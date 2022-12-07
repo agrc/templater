@@ -1,2 +1,0 @@
-//>>built
-define("dojo/_base/event",["./kernel","../on","../has","../dom-geometry"],function(e,t,i,n){if(t._fixEvent){var o=t._fixEvent;t._fixEvent=function(e,t){return e=o(e,t),e&&n.normalizeEvent(e),e}}var r={fix:function(e,i){return t._fixEvent?t._fixEvent(e,i):e},stop:function(e){i("dom-addeventlistener")||e&&e.preventDefault?(e.preventDefault(),e.stopPropagation()):(e=e||window.event,e.cancelBubble=!0,t._preventDefault.call(e))}};return e.fixEvent=r.fix,e.stopEvent=r.stop,r});//# sourceMappingURL=event.js.map

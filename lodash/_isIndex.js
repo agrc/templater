@@ -1,2 +1,0 @@
-//>>built
-define("lodash/_isIndex",[],function(){function e(e,a){var r=typeof e;return!!(a=null==a?t:a)&&("number"==r||"symbol"!=r&&i.test(e))&&e>-1&&e%1==0&&e<a}var t=9007199254740991,i=/^(?:0|[1-9]\d*)$/;return e});//# sourceMappingURL=_isIndex.js.map

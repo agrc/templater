@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/bidi/TreeView",["dojo/_base/declare"],function(e){return e(null,{_customizeListItem:function(e){e.textDir=this.textDir,this.isLeftToRight()||(e.dir="rtl",e.transitionDir=-1)}})});//# sourceMappingURL=TreeView.js.map

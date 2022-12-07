@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/EdgeToEdgeList",["dojo/_base/declare","./RoundRectList"],function(e,t){return e("dojox.mobile.EdgeToEdgeList",t,{filterBoxClass:"mblFilteredEdgeToEdgeListSearchBox",buildRendering:function(){this.inherited(arguments),this.domNode.className="mblEdgeToEdgeList"}})});//# sourceMappingURL=EdgeToEdgeList.js.map

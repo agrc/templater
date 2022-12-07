@@ -1,1 +1,0 @@
-{"version":3,"sources":["LinkDialog.js.uncompressed.js"],"names":["define","createLinkTitle","insertImageTitle","url","text","target","set","currentWindow","parentWindow","topWindow","newWindow"],"mappings":";AAAAA,OACA,mCACCC,gBAAiB,qBACjBC,iBAAkB,kBAClBC,IAAK,OACLC,KAAM,eACNC,OAAQ,OACRC,IAAK,UACLC,cAAe,kBACfC,aAAc,mBACdC,UAAW,gBACXC,UAAW","file":"LinkDialog.js.uncompressed.js"}

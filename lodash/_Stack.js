@@ -1,2 +1,0 @@
-//>>built
-define("lodash/_Stack",["./_ListCache","./_stackClear","./_stackDelete","./_stackGet","./_stackHas","./_stackSet"],function(e,t,i,r,o,n){function a(t){var i=this.__data__=new e(t);this.size=i.size}return a.prototype.clear=t,a.prototype.delete=i,a.prototype.get=r,a.prototype.has=o,a.prototype.set=n,a});//# sourceMappingURL=_Stack.js.map

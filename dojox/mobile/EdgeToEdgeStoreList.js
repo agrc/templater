@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/EdgeToEdgeStoreList",["dojo/_base/declare","./EdgeToEdgeList","./_StoreListMixin"],function(e,t,i){return e("dojox.mobile.EdgeToEdgeStoreList",[t,i],{})});//# sourceMappingURL=EdgeToEdgeStoreList.js.map

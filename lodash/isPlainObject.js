@@ -1,2 +1,0 @@
-//>>built
-define("lodash/isPlainObject",["./_baseGetTag","./_getPrototype","./isObjectLike"],function(e,t,i){function a(a){if(!i(a)||e(a)!=r)return!1;var o=t(a);if(null===o)return!0;var n=l.call(o,"constructor")&&o.constructor;return"function"==typeof n&&n instanceof n&&s.call(n)==d}var r="[object Object]",o=Function.prototype,n=Object.prototype,s=o.toString,l=n.hasOwnProperty,d=s.call(Object);return a});//# sourceMappingURL=isPlainObject.js.map

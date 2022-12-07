@@ -1,2 +1,0 @@
-//>>built
-define("lodash/isFunction",["./_baseGetTag","./isObject"],function(e,t){function i(i){if(!t(i))return!1;var s=e(i);return s==o||s==n||s==a||s==r}var a="[object AsyncFunction]",o="[object Function]",n="[object GeneratorFunction]",r="[object Proxy]";return i});//# sourceMappingURL=isFunction.js.map

@@ -1,2 +1,0 @@
-//>>built
-define("lodash/isArguments",["./_baseIsArguments","./isObjectLike"],function(e,t){var i=Object.prototype,a=i.hasOwnProperty,o=i.propertyIsEnumerable;return e(function(){return arguments}())?e:function(e){return t(e)&&a.call(e,"callee")&&!o.call(e,"callee")}});//# sourceMappingURL=isArguments.js.map

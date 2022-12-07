@@ -1,2 +1,0 @@
-//>>built
-define("dojox/encoding/crypto/_base",["dojo/_base/lang"],function(e){var t=e.getObject("dojox.encoding.crypto",!0);return t.cipherModes={ECB:0,CBC:1,PCBC:2,CFB:3,OFB:4,CTR:5},t.outputTypes={Base64:0,Hex:1,String:2,Raw:3},t});//# sourceMappingURL=_base.js.map

@@ -1,1 +1,0 @@
-{"version":3,"sources":["FeedEntryViewer.js.uncompressed.js"],"names":["define","displayOptions","title","authors","contributors","id","close","updated","summary","content"],"mappings":";AAAAA,OACA,4CACCC,eAAgB,wBAChBC,MAAO,QACPC,QAAS,UACTC,aAAc,iBACdC,GAAI,KACJC,MAAO,WACPC,QAAS,aACTC,QAAS,gBACTC,QAAS","file":"FeedEntryViewer.js.uncompressed.js"}

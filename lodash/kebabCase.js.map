@@ -1,1 +1,0 @@
-{"version":3,"sources":["kebabCase.js.uncompressed.js"],"names":["define","createCompounder","result","word","index","toLowerCase"],"mappings":";AAAAA,OAAO,oBAAqB,uBAAwB,SAASC,GA2B3D,MAJgBA,GAAiB,SAASC,EAAQC,EAAMC,GACtD,MAAOF,IAAUE,EAAQ,IAAM,IAAMD,EAAKE","file":"kebabCase.js.uncompressed.js"}

@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/bidi/Button",["dojo/_base/declare","./common"],function(e,t){return e(null,{_setLabelAttr:function(e){this.inherited(arguments,[this._cv?this._cv(e):e]),this.focusNode.innerHTML=t.enforceTextDirWithUcc(this.focusNode.innerHTML,this.textDir)},_setTextDirAttr:function(e){this._created&&this.textDir===e||(this._set("textDir",e),this.focusNode.innerHTML=t.enforceTextDirWithUcc(t.removeUCCFromText(this.focusNode.innerHTML),this.textDir))}})});//# sourceMappingURL=Button.js.map

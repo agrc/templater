@@ -1,2 +1,0 @@
-//>>built
-define("dojox/charting/themes/Desert",["../SimpleTheme","./common"],function(e,t){return t.Desert=new e({colors:["#ffebd5","#806544","#fdc888","#80766b","#cda26e"]}),t.Desert});//# sourceMappingURL=Desert.js.map

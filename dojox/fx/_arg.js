@@ -1,2 +1,0 @@
-//>>built
-define("dojox/fx/_arg",["dojo/_base/lang"],function(e){var t=e.getObject("dojox.fx._arg",!0);return t.StyleArgs=function(e){this.node=e.node,this.cssClass=e.cssClass},t.ShadowResizeArgs=function(e){this.x=e.x,this.y=e.y},t});//# sourceMappingURL=_arg.js.map

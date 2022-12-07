@@ -1,2 +1,0 @@
-//>>built
-define("lodash/_baseAt",["./get"],function(e){function t(t,a){for(var o=-1,n=a.length,r=Array(n),s=null==t;++o<n;)r[o]=s?i:e(t,a[o]);return r}var i;return t});//# sourceMappingURL=_baseAt.js.map

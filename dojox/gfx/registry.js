@@ -1,2 +1,0 @@
-//>>built
-define("dojox/gfx/registry",["dojo/has","./shape"],function(e,t){e.add("gfxRegistry",1);var i={},a={},r={};return i.register=t.register=function(e){var t=e.declaredClass.split(".").pop(),i=t in a?++a[t]:a[t]=0,n=t+i;return r[n]=e,n},i.byId=t.byId=function(e){return r[e]},i.dispose=t.dispose=function(e,t){if(t&&e.children)for(var a=0;a<e.children.length;++a)i.dispose(e.children[a],!0);var n=e.getUID();r[n]=null,delete r[n]},i});//# sourceMappingURL=registry.js.map

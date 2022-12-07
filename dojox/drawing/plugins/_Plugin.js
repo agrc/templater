@@ -1,2 +1,0 @@
-//>>built
-define("dojox/drawing/plugins/_Plugin",["dojo","../util/oo"],function(e,t){return t.declare(function(t){this._cons=[],e.mixin(this,t),this.button&&this.onClick&&this.connect(this.button,"onClick",this,"onClick")},{util:null,keys:null,mouse:null,drawing:null,stencils:null,anchors:null,canvas:null,node:null,button:null,type:"dojox.drawing.plugins._Plugin",connect:function(){this._cons.push(e.connect.apply(e,arguments))},disconnect:function(t){t&&(e.isArray(t)||(t=[t]),e.forEach(t,e.disconnect,e))}})});//# sourceMappingURL=_Plugin.js.map

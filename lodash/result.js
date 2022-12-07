@@ -1,2 +1,0 @@
-//>>built
-define("lodash/result",["./_castPath","./isFunction","./_toKey"],function(e,t,i){function a(a,n,o){n=e(n,a);var s=-1,l=n.length;for(l||(l=1,a=r);++s<l;){var d=null==a?r:a[i(n[s])];d===r&&(s=l,d=o),a=t(d)?d.call(a):d}return a}var r;return a});//# sourceMappingURL=result.js.map

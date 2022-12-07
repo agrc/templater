@@ -1,2 +1,0 @@
-//>>built
-define("lodash/words",["./_asciiWords","./_hasUnicodeWord","./toString","./_unicodeWords"],function(e,t,i,a){function n(n,o,s){return n=i(n),o=s?r:o,o===r?t(n)?a(n):e(n):n.match(o)||[]}var r;return n});//# sourceMappingURL=words.js.map

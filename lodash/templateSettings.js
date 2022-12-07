@@ -1,2 +1,0 @@
-//>>built
-define("lodash/templateSettings",["./escape","./_reEscape","./_reEvaluate","./_reInterpolate"],function(e,t,i,a){return{escape:t,evaluate:i,interpolate:a,variable:"",imports:{_:{escape:e}}}});//# sourceMappingURL=templateSettings.js.map

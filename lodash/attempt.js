@@ -1,2 +1,0 @@
-//>>built
-define("lodash/attempt",["./_apply","./_baseRest","./isError"],function(e,t,i){var a;return t(function(t,r){try{return e(t,a,r)}catch(e){return i(e)?e:new Error(e)}})});//# sourceMappingURL=attempt.js.map

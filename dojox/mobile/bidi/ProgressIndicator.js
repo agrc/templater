@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/bidi/ProgressIndicator",["dojo/_base/declare","dojo/dom-class"],function(e,t){return e(null,{buildRendering:function(){if(this.inherited(arguments),!this.isLeftToRight()){if(this.closeButton){var e=Math.round(this.closeButtonNode.offsetHeight/2);this.closeButtonNode.style.left=-e+"px"}this.center&&t.add(this.domNode,"mblProgressIndicatorCenterRtl"),t.add(this.containerNode,"mblProgContainerRtl")}}})});//# sourceMappingURL=ProgressIndicator.js.map

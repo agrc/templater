@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mvc/Group",["dojo/_base/declare","dijit/_WidgetBase","dojo/_base/lang"],function(e,t,i){return e("dojox.mvc.Group",t,{target:null,startup:function(){i.isFunction(this.getParent)&&this.getParent()&&this.getParent().removeRepeatNode&&(this.select=this.getParent().select,this.onCheckStateChanged=this.getParent().onCheckStateChanged),this.inherited(arguments)},_setTargetAttr:function(e){this._set("target",e),this.binding!=e&&this.set("ref",e)}})});//# sourceMappingURL=Group.js.map

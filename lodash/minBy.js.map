@@ -1,1 +1,0 @@
-{"version":3,"sources":["minBy.js.uncompressed.js"],"names":["define","baseExtremum","baseIteratee","baseLt","minBy","array","iteratee","length","undefined"],"mappings":";AAAAA,OAAO,gBAAiB,kBAAmB,kBAAmB,aAAc,SAASC,EAAcC,EAAcC,GA4B/G,QAASC,GAAMC,EAAOC,GACpB,MAAQD,IAASA,EAAME,OACnBN,EAAaI,EAAOH,EAAaI,EAAU,GAAIH,GAC/CK,EA5BN,GAAIA,EA+BJ,OAAOJ","file":"minBy.js.uncompressed.js"}

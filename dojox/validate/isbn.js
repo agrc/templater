@@ -1,2 +1,0 @@
-//>>built
-define("dojox/validate/isbn",["dojo/_base/lang","./_base"],function(e,t){return t.isValidIsbn=function(t){var i,a,r=0;switch(e.isString(t)||(t=String(t)),t=t.replace(/[- ]/g,""),i=t.length){case 10:a=i;for(var o=0;o<9;o++)r+=parseInt(t.charAt(o))*a,a--;var n=t.charAt(9).toUpperCase();return(r+="X"==n?10:parseInt(n))%11==0;case 13:a=-1;for(var o=0;o<i;o++)r+=parseInt(t.charAt(o))*(2+a),a*=-1;return r%10==0}return!1},t.isValidIsbn});//# sourceMappingURL=isbn.js.map

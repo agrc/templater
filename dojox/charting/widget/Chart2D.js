@@ -1,2 +1,0 @@
-//>>built
-define("dojox/charting/widget/Chart2D",["dojo/_base/kernel","dojo/_base/lang","./Chart","../Chart2D","../action2d/Highlight","../action2d/Magnify","../action2d/MoveSlice","../action2d/Shake","../action2d/Tooltip"],function(e,t,a){return e.deprecated("dojox.charting.widget.Chart2D","Use dojo.charting.widget.Chart instead and require all other components explicitly","2.0"),t.setObject("dojox.charting.widget.Chart2D",a)});//# sourceMappingURL=Chart2D.js.map

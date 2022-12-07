@@ -1,2 +1,0 @@
-//>>built
-define("dojox/charting/bidi/_bidiutils",{reverseMatrix:function(e,t,a,i){var r=a.l-a.r,o=i?-1:1,d=0,n=0,l=1,s=i?t.width+r:0,m=0;e.matrix&&(o*=Math.abs(e.matrix.xx),l=e.matrix.yy,d=e.matrix.xy,n=e.matrix.yx,m=e.matrix.xy),e.setTransform({xx:o,xy:d,yx:n,yy:l,dx:s,dy:m})}});//# sourceMappingURL=_bidiutils.js.map

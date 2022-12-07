@@ -1,2 +1,0 @@
-//>>built
-define("dojox/charting/plot2d/Areas",["dojo/_base/declare","./Default"],function(e,t){return e("dojox.charting.plot2d.Areas",t,{constructor:function(){this.opt.lines=!0,this.opt.areas=!0}})});//# sourceMappingURL=Areas.js.map

@@ -1,2 +1,0 @@
-//>>built
-define("app/tests/jsReporterSanitizer",function(){var e=jasmine.getJSReport,t=function(e){return e&&e.suites&&(e.suites=e.suites.filter(function(e){return!e.passed}).map(function(e){return t(e)})),e};return jasmine.getJSReport=function(){return t(e())},t});//# sourceMappingURL=jsReporterSanitizer.js.map

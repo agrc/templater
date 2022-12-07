@@ -1,1 +1,0 @@
-{"version":3,"sources":["has.js.uncompressed.js"],"names":["define","has","add","window","indexedDB","webkitIndexedDB","mozIndexedDB"],"mappings":";AAAAA,OAAO,sBAAuB,WAAY,cAAe,SAASC,GAIjE,MADAA,GAAIC,IAAI,eAAgBC,OAAOC,WAAaD,OAAOE,iBAAmBF,OAAOG,eACtEL","file":"has.js.uncompressed.js"}

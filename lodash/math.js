@@ -1,2 +1,0 @@
-//>>built
-define("lodash/math",["./add","./ceil","./divide","./floor","./max","./maxBy","./mean","./meanBy","./min","./minBy","./multiply","./round","./subtract","./sum","./sumBy"],function(e,t,i,a,o,r,n,s,d,l,h,c,u,m,f){return{add:e,ceil:t,divide:i,floor:a,max:o,maxBy:r,mean:n,meanBy:s,min:d,minBy:l,multiply:h,round:c,subtract:u,sum:m,sumBy:f}});//# sourceMappingURL=math.js.map

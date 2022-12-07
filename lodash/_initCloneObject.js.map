@@ -1,1 +1,0 @@
-{"version":3,"sources":["_initCloneObject.js.uncompressed.js"],"names":["define","baseCreate","getPrototype","isPrototype","initCloneObject","object","constructor"],"mappings":";AAAAA,OAAO,2BAA4B,gBAAiB,kBAAmB,kBAAmB,SAASC,EAAYC,EAAcC,GAS3H,QAASC,GAAgBC,GACvB,MAAqC,kBAAtBA,GAAOC,aAA8BH,EAAYE,MAC5DJ,EAAWC,EAAaG,IAI9B,MAAOD","file":"_initCloneObject.js.uncompressed.js"}

@@ -1,2 +1,0 @@
-//>>built
-define("dojox/mobile/RoundRect",["dojo/_base/declare","dojo/dom-class","./Container"],function(e,t,i){return e("dojox.mobile.RoundRect",i,{shadow:!1,baseClass:"mblRoundRect",buildRendering:function(){this.inherited(arguments),this.shadow&&t.add(this.domNode,"mblShadow")}})});//# sourceMappingURL=RoundRect.js.map

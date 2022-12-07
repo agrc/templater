@@ -1,1 +1,0 @@
-{"version":3,"sources":["isNative.js.uncompressed.js"],"names":["define","baseIsNative","isMaskable","isNative","value","Error","CORE_ERROR_TEXT"],"mappings":";AAAAA,OAAO,mBAAoB,kBAAmB,iBAAkB,SAASC,EAAcC,GA+BrF,QAASC,GAASC,GAChB,GAAIF,EAAWE,GACb,KAAM,IAAIC,OAAMC,EAElB,OAAOL,GAAaG,GAhCtB,GAAIE,GAAkB,iEAmCtB,OAAOH","file":"isNative.js.uncompressed.js"}

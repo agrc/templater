@@ -1,2 +1,0 @@
-//>>built
-define("dojox/fx/_core",["dojo/_base/lang","dojo/_base/array","./_base"],function(e,t,a){var i=function(a,i){this.start=a,this.end=i;var r=e.isArray(a),n=r?[]:i-a;r?(t.forEach(this.start,function(e,t){n[t]=this.end[t]-e},this),this.getValue=function(e){var a=[];return t.forEach(this.start,function(t,i){a[i]=n[i]*e+t},this),a}):this.getValue=function(e){return n*e+this.start}};return a._Line=i,i});//# sourceMappingURL=_core.js.map

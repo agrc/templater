@@ -1,1 +1,0 @@
-{"version":3,"sources":["Breadcrumb.js.uncompressed.js"],"names":["define","nodeActions","selectContents","selectElement","deleteElement","deleteContents","moveStart","moveEnd"],"mappings":";AAAAA,OACA,0CACCC,YAAe,qBACfC,eAAkB,oBAClBC,cAAiB,qBACjBC,cAAiB,iBACjBC,eAAkB,gBAClBC,UAAa,gCACbC,QAAW","file":"Breadcrumb.js.uncompressed.js"}

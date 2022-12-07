@@ -1,1 +1,0 @@
-{"version":3,"sources":["maxBy.js.uncompressed.js"],"names":["define","baseExtremum","baseGt","baseIteratee","maxBy","array","iteratee","length","undefined"],"mappings":";AAAAA,OAAO,gBAAiB,kBAAmB,YAAa,mBAAoB,SAASC,EAAcC,EAAQC,GA4BzG,QAASC,GAAMC,EAAOC,GACpB,MAAQD,IAASA,EAAME,OACnBN,EAAaI,EAAOF,EAAaG,EAAU,GAAIJ,GAC/CM,EA5BN,GAAIA,EA+BJ,OAAOJ","file":"maxBy.js.uncompressed.js"}

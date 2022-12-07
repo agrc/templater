@@ -1,1 +1,0 @@
-{"version":3,"sources":["canvas_attach.js.uncompressed.js"],"names":["define","lang","kernel","canvas","getObject","experimental","attachSurface","attachNode"],"mappings":";AAAAA,OAAO,2BAA4B,kBAAmB,oBAAoB,oBAAqB,SAASC,EAAKC,EAAOC,GASnH,MARAF,GAAKG,UAAU,2BAA2B,GAC1CF,EAAOG,aAAa,2BAGpBF,EAAOG,cAAgBH,EAAOI,WAAa,WAC1C,MAAO,OAGDJ","file":"canvas_attach.js.uncompressed.js"}

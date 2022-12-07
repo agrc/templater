@@ -1,1 +1,0 @@
-{"version":3,"sources":["LineString.js.uncompressed.js"],"names":["define","declare","Geometry","setPoints","p","this","coordinates","getPoints"],"mappings":";AAAAA,OAAO,mCACN,qBACA,cACE,SAASC,EAASC,GAEpB,MAAOD,GAAQ,kCAAmCC,GAKjDC,UAAW,SAASC,GAKnBC,KAAKC,YAAcF,GAGpBG,UAAW,WAKV,MAAOF,MAAKC","file":"LineString.js.uncompressed.js"}
