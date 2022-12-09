@@ -56,6 +56,7 @@ function App() {
     setOutput({
       yaml: template({
         ...state,
+        tags: state.tags.map((value) => value.trim()).filter((value) => value.length > 0),
         date: getDateString(),
       }),
       fileName: getFileNameString(new Date(), state.title, state.type),
