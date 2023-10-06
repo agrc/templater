@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "templater",
   "version": "2.0.0",
   "private": true,
   "type": "module",
@@ -7,10 +7,15 @@
     "build": "vite build",
     "deploy": "vite build && echo > dist/.nojekyll && gh-pages -d dist",
     "format": "prettier . --write",
+    "lint": "eslint .",
     "preview": "vite preview",
     "start": "vite"
   },
   "prettier": {
+    "plugins": [
+      "prettier-plugin-organize-imports",
+      "prettier-plugin-packagejson"
+    ],
     "printWidth": 120,
     "singleQuote": true
   },
@@ -44,7 +49,6 @@
       "plugin:react/jsx-runtime",
       "plugin:react-hooks/recommended",
       "plugin:import/recommended",
-      "plugin:jsx-a11y/recommended",
       "prettier"
     ],
     "ignorePatterns": [
