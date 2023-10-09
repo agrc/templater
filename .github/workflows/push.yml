@@ -47,5 +47,11 @@ jobs:
         with:
           show-progress: false
 
+      - name: ⎔ Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+          cache: npm
+
       - name: 🚀 Deploy
         run: npm run deploy
