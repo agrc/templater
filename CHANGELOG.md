@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/agrc/templater/compare/v1.4.0...v1.4.1) (2023-10-09)
+
+
+### 🌲 Dependencies
+
+* **dev:** bump the safe-dependencies group with 2 updates ([2e5df31](https://github.com/agrc/templater/commit/2e5df318bd1f48bd61c74ab7410a08993171f1a4))
+
 ## [1.4.0](https://github.com/agrc/templater/compare/v1.3.0...v1.4.0) (2023-10-09)
 
 
