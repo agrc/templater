@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/agrc/templater/compare/v1.4.1...v1.4.2) (2024-04-12)
+
+
+### 📖 Documentation Improvements
+
+* add deprecation notice ([a542264](https://github.com/agrc/templater/commit/a542264a5a2993e999b98299c9a3014cb54a435a))
+
 ## [1.4.1](https://github.com/agrc/templater/compare/v1.4.0...v1.4.1) (2023-10-09)
 
 
