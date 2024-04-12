@@ -1,5 +1,5 @@
 >[!CAUTION]
->The application is no longer relevant since the website was upgraded to Astro. It will be eventually replaced by [issue templates and github actions](https://github.com/agrc/gis.utah.gov/issues/2531).
+>The application is no longer relevant since the website was upgraded to Astro. It will be eventually replaced by [issue templates and github actions](https://github.com/agrc/gis.utah.gov/issues/2531). See the associated [Porter issue](https://github.com/agrc/porter/issues/315) for more information.
 
 # templater [:link:](http://agrc.github.io/templater)
 
